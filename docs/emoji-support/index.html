@@ -8,8 +8,7 @@
 <meta name=description content="Guide to emoji usage in Hugo">
 <meta name=author content="Hugo Authors">
 <link rel=canonical href=https://reorx.github.io/hugo-PaperModX/docs/emoji-support/>
-<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.29ef51424511b575c39b842ca46d73abfddab4a9392564a1299850ba45e6ab36.css integrity="sha256-Ke9RQkURtXXDm4QspG1zq/3atKk5JWShKZhQukXmqzY=" rel="preload stylesheet" as=style>
-<script defer crossorigin=anonymous src=/hugo-PaperModX/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.6a68a32452711b90e378168c2fbe4585ffb28d495301adfca2f118c2809e6a82.css integrity="sha256-amijJFJxG5DjeBaML75Fhf+yjUlTAa38ovEYwoCeaoI=" rel="preload stylesheet" as=style>
 <link rel=icon href=https://reorx.github.io/hugo-PaperModX/favicon.ico>
 <link rel=icon type=image/png sizes=16x16 href=https://reorx.github.io/hugo-PaperModX/favicon-16x16.png>
 <link rel=icon type=image/png sizes=32x32 href=https://reorx.github.io/hugo-PaperModX/favicon-32x32.png>
@@ -29,10 +28,10 @@
 <meta name=twitter:title content="Emoji Support">
 <meta name=twitter:description content="Guide to emoji usage in Hugo">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"PaperModX Docs","item":"https://reorx.github.io/hugo-PaperModX/docs/"},{"@type":"ListItem","position":2,"name":"Emoji Support","item":"https://reorx.github.io/hugo-PaperModX/docs/emoji-support/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Emoji Support","name":"Emoji Support","description":"Guide to emoji usage in Hugo","keywords":["example"],"articleBody":"Emoji can be enabled in a Hugo project in a number of ways.\nThe emojify function can be called directly in templates or Inline Shortcodes.\nTo enable emoji globally, set enableEmoji to true in your site’s configuration and then you can type emoji shorthand codes directly in content files; e.g.\n🙈 🙈 🙉 🙉 🙊 🙊\nThe Emoji cheat sheet is a useful reference for emoji shorthand codes.\n N.B. The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.\n.emoji { font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols; }  .emojify { font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols; font-size: 2rem; vertical-align: middle; } @media screen and (max-width:650px) { .nowrap { display: block; margin: 25px 0; } } ","wordCount":"164","inLanguage":"en","datePublished":"2019-03-05T00:00:00Z","dateModified":"2019-03-05T00:00:00Z","author":{"@type":"Person","name":"Hugo Authors"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://reorx.github.io/hugo-PaperModX/docs/emoji-support/"},"publisher":{"@type":"Organization","name":"PaperModX","logo":{"@type":"ImageObject","url":"https://reorx.github.io/hugo-PaperModX/favicon.ico"}}}</script><style>#icons{display:flex;flex-wrap:wrap;margin-top:2em}#icons .item{width:80px;height:50px;margin:10px}#icons .item .name{font-size:12px;user-select:all;text-align:center}#icons .item .icon{display:flex;justify-content:center}#icons .item svg{width:30px;height:30px}</style>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Emoji Support","name":"Emoji Support","description":"Guide to emoji usage in Hugo","keywords":["example"],"articleBody":"Emoji can be enabled in a Hugo project in a number of ways.\nThe emojify function can be called directly in templates or Inline Shortcodes.\nTo enable emoji globally, set enableEmoji to true in your site’s configuration and then you can type emoji shorthand codes directly in content files; e.g.\n🙈 🙈 🙉 🙉 🙊 🙊\nThe Emoji cheat sheet is a useful reference for emoji shorthand codes.\n N.B. The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.\n1 2 3  .emoji { font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols; }    .emojify { font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols; font-size: 2rem; vertical-align: middle; } @media screen and (max-width:650px) { .nowrap { display: block; margin: 25px 0; } } ","wordCount":"167","inLanguage":"en","datePublished":"2019-03-05T00:00:00Z","dateModified":"2019-03-05T00:00:00Z","author":{"@type":"Person","name":"Hugo Authors"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://reorx.github.io/hugo-PaperModX/docs/emoji-support/"},"publisher":{"@type":"Organization","name":"PaperModX","logo":{"@type":"ImageObject","url":"https://reorx.github.io/hugo-PaperModX/favicon.ico"}}}</script><style>#icons{display:flex;flex-wrap:wrap;margin-top:2em}#icons .item{width:80px;height:50px;margin:10px}#icons .item .name{font-size:12px;user-select:all;text-align:center}#icons .item .icon{display:flex;justify-content:center}#icons .item svg{width:30px;height:30px}</style>
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style>
-<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
 </head>
 <body id=top>
@@ -96,9 +95,18 @@ Guide to emoji usage in Hugo
 <p>The <a href=http://www.emoji-cheat-sheet.com/>Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
 <hr>
 <p><strong>N.B.</strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>.emoji {
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-html data-lang=html>.emoji {
 font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
-}</code></pre></div>
+}</code></pre></td></tr></table>
+</div>
+</div>
 <style>.emojify{font-family:Apple Color Emoji,Segoe UI Emoji,NotoColorEmoji,Segoe UI Symbol,Android Emoji,EmojiSymbols;font-size:2rem;vertical-align:middle}@media screen and (max-width:650px){.nowrap{display:block;margin:25px 0}}</style>
 </div>
 <footer class=post-footer>

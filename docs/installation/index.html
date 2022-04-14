@@ -8,8 +8,7 @@
 <meta name=description content="Read Install and Update instructions here">
 <meta name=author content="Aditya Telange">
 <link rel=canonical href=https://reorx.github.io/hugo-PaperModX/docs/installation/>
-<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.29ef51424511b575c39b842ca46d73abfddab4a9392564a1299850ba45e6ab36.css integrity="sha256-Ke9RQkURtXXDm4QspG1zq/3atKk5JWShKZhQukXmqzY=" rel="preload stylesheet" as=style>
-<script defer crossorigin=anonymous src=/hugo-PaperModX/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.6a68a32452711b90e378168c2fbe4585ffb28d495301adfca2f118c2809e6a82.css integrity="sha256-amijJFJxG5DjeBaML75Fhf+yjUlTAa38ovEYwoCeaoI=" rel="preload stylesheet" as=style>
 <link rel=icon href=https://reorx.github.io/hugo-PaperModX/favicon.ico>
 <link rel=icon type=image/png sizes=16x16 href=https://reorx.github.io/hugo-PaperModX/favicon-16x16.png>
 <link rel=icon type=image/png sizes=32x32 href=https://reorx.github.io/hugo-PaperModX/favicon-32x32.png>
@@ -29,10 +28,10 @@
 <meta name=twitter:title content="Installation | Update">
 <meta name=twitter:description content="Read Install and Update instructions here">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"PaperModX Docs","item":"https://reorx.github.io/hugo-PaperModX/docs/"},{"@type":"ListItem","position":2,"name":"Installation | Update","item":"https://reorx.github.io/hugo-PaperModX/docs/installation/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Installation | Update","name":"Installation | Update","description":"Read Install and Update instructions here","keywords":[],"articleBody":"Intro  We’ll be using yml/yaml format for all examples down below, I recommend using yml over toml as it is easier to read. You can find any YML to TOML converters if necessary.   Guide Follow Quick Start guide to setup hugo and create a new site.\n Note: Use -f to select yml format\nhugo new site -f yml\n Make sure you install latest version of hugo(=0.83.0).\nAfter you have created a new site, at Step 3 follow the steps:\nMethod 1 Inside the folder of your Hugo site, run:\ngit clone https://github.com/reorx/hugo-PaperModX themes/PaperModX --depth=1 Note: You may use  --branch v5.0 to end of above command if you want to stick to specific release.\n Updating theme :\ncd themes/PaperModX git pull  Method 2 You can use as submodule with\ngit submodule add https://github.com/reorx/hugo-PaperModX.git themes/PaperModX --depth=1 git submodule update --init --recursive # needed when you reclone your repo (submodules may not get cloned automatically) Note: You may use  --branch v5.0 to end of above command if you want to stick to specific release.\n Updating theme :\ngit submodule update --remote --merge  Method 3 Or you can Download as Zip from Github Page and extract in your themes directory\nDirect Links:\n Master Branch (Latest) v5.0 v4.0 v3.0 v2.0 v1.0  Finally … Add in config.yml:\ntheme:\"PaperModX\"Method 4   Install Go programming language in your operating system.\n  Intialize your own hugo mod\n  hugo mod init YOUR_OWN_GIT_REPOSITORY  Add PaperModX in your config.yml file  module: imports: - path: github.com/reorx/hugo-PaperModX  Update theme  hugo mod get -u  Quick Links   Papermod - Features   Papermod - FAQs   Papermod - Variables   Papermod - Icons   ChangeLog    Sample config.yml  Example Site Structure is present here: exampleSite\n Use appropriately\nbaseURL:\"https://examplesite.com/\"title:ExampleSitepaginate:5theme:PaperModXenableRobotsTXT:truebuildDrafts:falsebuildFuture:falsebuildExpired:falsepygmentsUseClasses:truegoogleAnalytics:UA-123-45minify:disableXML:trueminifyOutput:trueparams:env:production# to enable google analytics, opengraph, twitter-cards and schema.title:ExampleSitedescription:\"ExampleSite description\"keywords:[Blog, Portfolio, PaperModX]author:Me# author: [\"Me\", \"You\"] # multiple authorsimages:[\"\"]DateFormat:\"January 2, 2006\"defaultTheme:auto# dark, lightdisableThemeToggle:falseShowReadingTime:trueShowShareButtons:trueShowPostNavLinks:trueShowBreadCrumbs:trueShowCodeCopyButtons:falsedisableSpecial1stPost:falsedisableScrollToTop:falsecomments:falsehidemeta:falsehideSummary:falseshowtoc:falsetocopen:falseassets:# disableHLJS: true # to disable highlight.js# disableFingerprinting: truefavicon:\"\"favicon16x16:\"\"favicon32x32:\"\"apple_touch_icon:\"\"safari_pinned_tab:\"\"label:text:\"Home\"icon:/apple-touch-icon.pngiconHeight:35# profile-modeprofileMode:enabled:false# needs to be explicitly settitle:ExampleSitesubtitle:\"This is subtitle\"imageUrl:\"\"imageWidth:120imageHeight:120imageTitle:my imagebuttons:- name:Postsurl:posts- name:Tagsurl:tags# home-info modehomeInfoParams:Title:\"Hi there \\U0001F44B\"Content:Welcome to my blogsocialIcons:- name:twitterurl:\"https://twitter.com/\"- name:stackoverflowurl:\"https://stackoverflow.com\"- name:githuburl:\"https://github.com/\"analytics:google:SiteVerificationTag:\"XYZabc\"bing:SiteVerificationTag:\"XYZabc\"yandex:SiteVerificationTag:\"XYZabc\"cover:hidden:true# hide everywhere but not in structured datahiddenInList:true# hide on list pages and homehiddenInSingle:true# hide on single pageeditPost:URL:\"https://github.com//content\"Text:\"Suggest Changes\"# edit textappendFilePath:true# to append file path to Edit link# for search# https://fusejs.io/api/options.htmlfuseOpts:isCaseSensitive:falseshouldSort:truelocation:0distance:1000threshold:0.4minMatchCharLength:0keys:[\"title\",\"permalink\",\"summary\",\"content\"]menu:main:- identifier:categoriesname:categoriesurl:/categories/weight:10- identifier:tagsname:tagsurl:/tags/weight:20- identifier:examplename:example.orgurl:https://example.orgweight:30# Read: https://github.com/reorx/hugo-PaperModX/wiki/FAQs#using-hugos-syntax-highlighter-chroma# pygmentsUseClasses: true# markup:# highlight:# # anchorLineNos: true# codeFences: true# guessSyntax: true# lineNos: true# style: monokai Sample Page.md ---title:\"My 1st post\"date:2020-09-15T11:30:03+00:00# weight: 1# aliases: [\"/first\"]tags:[\"first\"]author:\"Me\"# author: [\"Me\", \"You\"] # multiple authorsshowToc:trueTocOpen:falsedraft:falsehidemeta:falsecomments:falsedescription:\"Desc Text.\"canonicalURL:\"https://canonical.url/to/page\"disableHLJS:true# to disable highlightjsdisableShare:falsedisableHLJS:falsehideSummary:falsesearchHidden:trueShowReadingTime:trueShowBreadCrumbs:trueShowPostNavLinks:truecover:image:\"\"# image path/urlalt:\"\"# alt textcaption:\"\"# display caption under coverrelative:false# when using page bundles set this to truehidden:true# only hide on current single pageeditPost:URL:\"https://github.com//content\"Text:\"Suggest Changes\"# edit textappendFilePath:true# to append file path to Edit link---You can use it by creating archetypes/post.md\nhugo new --kind post   ","wordCount":"464","inLanguage":"en","datePublished":"2021-01-20T00:00:00Z","dateModified":"2021-01-20T00:00:00Z","author":{"@type":"Person","name":"Aditya Telange"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://reorx.github.io/hugo-PaperModX/docs/installation/"},"publisher":{"@type":"Organization","name":"PaperModX","logo":{"@type":"ImageObject","url":"https://reorx.github.io/hugo-PaperModX/favicon.ico"}}}</script><style>#icons{display:flex;flex-wrap:wrap;margin-top:2em}#icons .item{width:80px;height:50px;margin:10px}#icons .item .name{font-size:12px;user-select:all;text-align:center}#icons .item .icon{display:flex;justify-content:center}#icons .item svg{width:30px;height:30px}</style>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Installation | Update","name":"Installation | Update","description":"Read Install and Update instructions here","keywords":[],"articleBody":"Intro  We’ll be using yml/yaml format for all examples down below, I recommend using yml over toml as it is easier to read. You can find any YML to TOML converters if necessary.   Guide Follow Quick Start guide to setup hugo and create a new site.\n Note: Use -f to select yml format\nhugo new site -f yml\n Make sure you install latest version of hugo(=0.83.0).\nAfter you have created a new site, at Step 3 follow the steps:\nMethod 1 Inside the folder of your Hugo site, run:\n1  git clone https://github.com/reorx/hugo-PaperModX themes/PaperModX --depth=1   Note: You may use  --branch v5.0 to end of above command if you want to stick to specific release.\n Updating theme :\n1 2  cd themes/PaperModX git pull    Method 2 You can use as submodule with\n1 2  git submodule add https://github.com/reorx/hugo-PaperModX.git themes/PaperModX --depth=1 git submodule update --init --recursive # needed when you reclone your repo (submodules may not get cloned automatically)   Note: You may use  --branch v5.0 to end of above command if you want to stick to specific release.\n Updating theme :\n1  git submodule update --remote --merge    Method 3 Or you can Download as Zip from Github Page and extract in your themes directory\nDirect Links:\n Master Branch (Latest) v5.0 v4.0 v3.0 v2.0 v1.0  Finally … Add in config.yml:\n1  theme:\"PaperModX\"  Method 4   Install Go programming language in your operating system.\n  Intialize your own hugo mod\n  hugo mod init YOUR_OWN_GIT_REPOSITORY  Add PaperModX in your config.yml file  module: imports: - path: github.com/reorx/hugo-PaperModX  Update theme  hugo mod get -u  Quick Links   Papermod - Features   Papermod - FAQs   Papermod - Variables   Papermod - Icons   ChangeLog    Sample config.yml  Example Site Structure is present here: exampleSite\n Use appropriately\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134  baseURL:\"https://examplesite.com/\"title:ExampleSitepaginate:5theme:PaperModXenableRobotsTXT:truebuildDrafts:falsebuildFuture:falsebuildExpired:falsepygmentsUseClasses:truegoogleAnalytics:UA-123-45minify:disableXML:trueminifyOutput:trueparams:env:production# to enable google analytics, opengraph, twitter-cards and schema.title:ExampleSitedescription:\"ExampleSite description\"keywords:[Blog, Portfolio, PaperModX]author:Me# author: [\"Me\", \"You\"] # multiple authorsimages:[\"\"]DateFormat:\"January 2, 2006\"defaultTheme:auto# dark, lightdisableThemeToggle:falseShowReadingTime:trueShowShareButtons:trueShowPostNavLinks:trueShowBreadCrumbs:trueShowCodeCopyButtons:falsedisableSpecial1stPost:falsedisableScrollToTop:falsecomments:falsehidemeta:falsehideSummary:falseshowtoc:falsetocopen:falseassets:# disableFingerprinting: truefavicon:\"\"favicon16x16:\"\"favicon32x32:\"\"apple_touch_icon:\"\"safari_pinned_tab:\"\"label:text:\"Home\"icon:/apple-touch-icon.pngiconHeight:35# profile-modeprofileMode:enabled:false# needs to be explicitly settitle:ExampleSitesubtitle:\"This is subtitle\"imageUrl:\"\"imageWidth:120imageHeight:120imageTitle:my imagebuttons:- name:Postsurl:posts- name:Tagsurl:tags# home-info modehomeInfoParams:Title:\"Hi there \\U0001F44B\"Content:Welcome to my blogsocialIcons:- name:twitterurl:\"https://twitter.com/\"- name:stackoverflowurl:\"https://stackoverflow.com\"- name:githuburl:\"https://github.com/\"analytics:google:SiteVerificationTag:\"XYZabc\"bing:SiteVerificationTag:\"XYZabc\"yandex:SiteVerificationTag:\"XYZabc\"cover:hidden:true# hide everywhere but not in structured datahiddenInList:true# hide on list pages and homehiddenInSingle:true# hide on single pageeditPost:URL:\"https://github.com//content\"Text:\"Suggest Changes\"# edit textappendFilePath:true# to append file path to Edit link# for search# https://fusejs.io/api/options.htmlfuseOpts:isCaseSensitive:falseshouldSort:truelocation:0distance:1000threshold:0.4minMatchCharLength:0keys:[\"title\",\"permalink\",\"summary\",\"content\"]menu:main:- identifier:categoriesname:categoriesurl:/categories/weight:10- identifier:tagsname:tagsurl:/tags/weight:20- identifier:examplename:example.orgurl:https://example.orgweight:30# Read: https://github.com/reorx/hugo-PaperModX/wiki/FAQs#using-hugos-syntax-highlighter-chroma# pygmentsUseClasses: true# markup:# highlight:# # anchorLineNos: true# codeFences: true# guessSyntax: true# lineNos: true# style: monokai   Sample Page.md 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32  ---title:\"My 1st post\"date:2020-09-15T11:30:03+00:00# weight: 1# aliases: [\"/first\"]tags:[\"first\"]author:\"Me\"# author: [\"Me\", \"You\"] # multiple authorsshowToc:trueTocOpen:falsedraft:falsehidemeta:falsecomments:falsedescription:\"Desc Text.\"canonicalURL:\"https://canonical.url/to/page\"disableShare:falsehideSummary:falsesearchHidden:trueShowReadingTime:trueShowBreadCrumbs:trueShowPostNavLinks:truecover:image:\"\"# image path/urlalt:\"\"# alt textcaption:\"\"# display caption under coverrelative:false# when using page bundles set this to truehidden:true# only hide on current single pageeditPost:URL:\"https://github.com//content\"Text:\"Suggest Changes\"# edit textappendFilePath:true# to append file path to Edit link---  You can use it by creating archetypes/post.md\n1  hugo new --kind post     ","wordCount":"631","inLanguage":"en","datePublished":"2021-01-20T00:00:00Z","dateModified":"2021-01-20T00:00:00Z","author":{"@type":"Person","name":"Aditya Telange"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://reorx.github.io/hugo-PaperModX/docs/installation/"},"publisher":{"@type":"Organization","name":"PaperModX","logo":{"@type":"ImageObject","url":"https://reorx.github.io/hugo-PaperModX/favicon.ico"}}}</script><style>#icons{display:flex;flex-wrap:wrap;margin-top:2em}#icons .item{width:80px;height:50px;margin:10px}#icons .item .name{font-size:12px;user-select:all;text-align:center}#icons .item .icon{display:flex;justify-content:center}#icons .item svg{width:30px;height:30px}</style>
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style>
-<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
 </head>
 <body id=top>
@@ -128,13 +127,13 @@ Installation | Update
 </div>
 </details>
 </div>
-<div class=post-content><h2 id=intro>Intro<a hidden class=anchor aria-hidden=true href=#intro>#</a></h2>
+<div class=post-content><h2 id=intro>Intro</h2>
 <ul>
 <li><strong>We&rsquo;ll be using <code>yml/yaml</code> format for all examples down below, I recommend using <code>yml</code> over <code>toml</code> as it is easier to read.</strong></li>
 <li>You can find any <a href="https://www.google.com/search?q=yml+to+toml">YML to TOML</a> converters if necessary.</li>
 </ul>
 <hr>
-<h2 id=guide>Guide<a hidden class=anchor aria-hidden=true href=#guide>#</a></h2>
+<h2 id=guide>Guide</h2>
 <p>Follow <a href=https://gohugo.io/getting-started/quick-start/>Quick Start</a> guide to setup hugo and create a new site.</p>
 <blockquote>
 <p>Note: Use -f to select yml format</p>
@@ -142,25 +141,55 @@ Installation | Update
 </blockquote>
 <p>Make sure you install latest version of <strong><code>hugo(>=0.83.0)</code></strong>.</p>
 <p>After you have created a new site, at <a href=https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme>Step 3</a> follow the steps:</p>
-<h3 id=method-1>Method 1<a hidden class=anchor aria-hidden=true href=#method-1>#</a></h3>
+<h3 id=method-1>Method 1</h3>
 <p>Inside the folder of your Hugo site, run:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>git clone https://github.com/reorx/hugo-PaperModX themes/PaperModX --depth<span class=o>=</span><span class=m>1</span>
-</code></pre></div><p><strong>Note</strong>: You may use <code> --branch v5.0</code> to end of above command if you want to stick to specific release.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>git clone https://github.com/reorx/hugo-PaperModX themes/PaperModX --depth<span class=o>=</span><span class=m>1</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Note</strong>: You may use <code> --branch v5.0</code> to end of above command if you want to stick to specific release.</p>
 <blockquote>
 <p>Updating theme :</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=nb>cd</span> themes/PaperModX
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=nb>cd</span> themes/PaperModX
 git pull
-</code></pre></div></blockquote>
-<h3 id=method-2>Method 2<a hidden class=anchor aria-hidden=true href=#method-2>#</a></h3>
+</code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<h3 id=method-2>Method 2</h3>
 <p>You can use as <a href=https://www.atlassian.com/git/tutorials/git-submodule>submodule</a> with</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>git submodule add https://github.com/reorx/hugo-PaperModX.git themes/PaperModX --depth<span class=o>=</span><span class=m>1</span>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>git submodule add https://github.com/reorx/hugo-PaperModX.git themes/PaperModX --depth<span class=o>=</span><span class=m>1</span>
 git submodule update --init --recursive <span class=c1># needed when you reclone your repo (submodules may not get cloned automatically)</span>
-</code></pre></div><p><strong>Note</strong>: You may use <code> --branch v5.0</code> to end of above command if you want to stick to specific release.</p>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Note</strong>: You may use <code> --branch v5.0</code> to end of above command if you want to stick to specific release.</p>
 <blockquote>
 <p>Updating theme :</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>git submodule update --remote --merge
-</code></pre></div></blockquote>
-<h3 id=method-3>Method 3<a hidden class=anchor aria-hidden=true href=#method-3>#</a></h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>git submodule update --remote --merge
+</code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<h3 id=method-3>Method 3</h3>
 <p>Or you can Download as Zip from Github Page and extract in your themes directory</p>
 <p>Direct Links:</p>
 <ul>
@@ -171,10 +200,17 @@ git submodule update --init --recursive <span class=c1># needed when you reclone
 <li><a href=https://github.com/reorx/hugo-PaperModX/archive/v2.0.zip>v2.0</a></li>
 <li><a href=https://github.com/reorx/hugo-PaperModX/archive/v1.0.zip>v1.0</a></li>
 </ul>
-<h3 id=finally->Finally &mldr;<a hidden class=anchor aria-hidden=true href=#finally->#</a></h3>
+<h3 id=finally->Finally &mldr;</h3>
 <p>Add in <code>config.yml</code>:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>theme</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;PaperModX&#34;</span><span class=w>
-</span></code></pre></div><h3 id=method-4>Method 4<a hidden class=anchor aria-hidden=true href=#method-4>#</a></h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>theme</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;PaperModX&#34;</span><span class=w>
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id=method-4>Method 4</h3>
 <ul>
 <li>
 <p>Install <a href=https://go.dev/doc/install>Go programming language</a> in your operating system.</p>
@@ -195,31 +231,169 @@ git submodule update --init --recursive <span class=c1># needed when you reclone
 </ul>
 <pre tabindex=0><code>hugo mod get -u
 </code></pre><hr>
-<h2 id=quick-links>Quick Links<a hidden class=anchor aria-hidden=true href=#quick-links>#</a></h2>
+<h2 id=quick-links>Quick Links</h2>
 <ul>
 <li>
-<h3 id=papermod---featuresfeatures><a href=../features>Papermod - Features</a><a hidden class=anchor aria-hidden=true href=#papermod---featuresfeatures>#</a></h3>
+<h3 id=papermod---featuresfeatures><a href=../features>Papermod - Features</a></h3>
 </li>
 <li>
-<h3 id=papermod---faqsfaq><a href=../faq>Papermod - FAQs</a><a hidden class=anchor aria-hidden=true href=#papermod---faqsfaq>#</a></h3>
+<h3 id=papermod---faqsfaq><a href=../faq>Papermod - FAQs</a></h3>
 </li>
 <li>
-<h3 id=papermod---variablesvariables><a href=../variables>Papermod - Variables</a><a hidden class=anchor aria-hidden=true href=#papermod---variablesvariables>#</a></h3>
+<h3 id=papermod---variablesvariables><a href=../variables>Papermod - Variables</a></h3>
 </li>
 <li>
-<h3 id=papermod---iconsicons><a href=../icons>Papermod - Icons</a><a hidden class=anchor aria-hidden=true href=#papermod---iconsicons>#</a></h3>
+<h3 id=papermod---iconsicons><a href=../icons>Papermod - Icons</a></h3>
 </li>
 <li>
-<h3 id=changeloghttpsgithubcomreorxhugo-papermodxreleases><a href=https://github.com/reorx/hugo-PaperModX/releases>ChangeLog</a><a hidden class=anchor aria-hidden=true href=#changeloghttpsgithubcomreorxhugo-papermodxreleases>#</a></h3>
+<h3 id=changeloghttpsgithubcomreorxhugo-papermodxreleases><a href=https://github.com/reorx/hugo-PaperModX/releases>ChangeLog</a></h3>
 </li>
 </ul>
 <hr>
-<h2 id=sample-configyml>Sample <code>config.yml</code><a hidden class=anchor aria-hidden=true href=#sample-configyml>#</a></h2>
+<h2 id=sample-configyml>Sample <code>config.yml</code></h2>
 <blockquote>
 <p><strong>Example Site Structure is present here</strong>: <a href=https://github.com/reorx/hugo-PaperModX/tree/exampleSite/>exampleSite</a></p>
 </blockquote>
 <p><strong>Use appropriately</strong></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>baseURL</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;https://examplesite.com/&#34;</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>  1
+</span><span class=lnt>  2
+</span><span class=lnt>  3
+</span><span class=lnt>  4
+</span><span class=lnt>  5
+</span><span class=lnt>  6
+</span><span class=lnt>  7
+</span><span class=lnt>  8
+</span><span class=lnt>  9
+</span><span class=lnt> 10
+</span><span class=lnt> 11
+</span><span class=lnt> 12
+</span><span class=lnt> 13
+</span><span class=lnt> 14
+</span><span class=lnt> 15
+</span><span class=lnt> 16
+</span><span class=lnt> 17
+</span><span class=lnt> 18
+</span><span class=lnt> 19
+</span><span class=lnt> 20
+</span><span class=lnt> 21
+</span><span class=lnt> 22
+</span><span class=lnt> 23
+</span><span class=lnt> 24
+</span><span class=lnt> 25
+</span><span class=lnt> 26
+</span><span class=lnt> 27
+</span><span class=lnt> 28
+</span><span class=lnt> 29
+</span><span class=lnt> 30
+</span><span class=lnt> 31
+</span><span class=lnt> 32
+</span><span class=lnt> 33
+</span><span class=lnt> 34
+</span><span class=lnt> 35
+</span><span class=lnt> 36
+</span><span class=lnt> 37
+</span><span class=lnt> 38
+</span><span class=lnt> 39
+</span><span class=lnt> 40
+</span><span class=lnt> 41
+</span><span class=lnt> 42
+</span><span class=lnt> 43
+</span><span class=lnt> 44
+</span><span class=lnt> 45
+</span><span class=lnt> 46
+</span><span class=lnt> 47
+</span><span class=lnt> 48
+</span><span class=lnt> 49
+</span><span class=lnt> 50
+</span><span class=lnt> 51
+</span><span class=lnt> 52
+</span><span class=lnt> 53
+</span><span class=lnt> 54
+</span><span class=lnt> 55
+</span><span class=lnt> 56
+</span><span class=lnt> 57
+</span><span class=lnt> 58
+</span><span class=lnt> 59
+</span><span class=lnt> 60
+</span><span class=lnt> 61
+</span><span class=lnt> 62
+</span><span class=lnt> 63
+</span><span class=lnt> 64
+</span><span class=lnt> 65
+</span><span class=lnt> 66
+</span><span class=lnt> 67
+</span><span class=lnt> 68
+</span><span class=lnt> 69
+</span><span class=lnt> 70
+</span><span class=lnt> 71
+</span><span class=lnt> 72
+</span><span class=lnt> 73
+</span><span class=lnt> 74
+</span><span class=lnt> 75
+</span><span class=lnt> 76
+</span><span class=lnt> 77
+</span><span class=lnt> 78
+</span><span class=lnt> 79
+</span><span class=lnt> 80
+</span><span class=lnt> 81
+</span><span class=lnt> 82
+</span><span class=lnt> 83
+</span><span class=lnt> 84
+</span><span class=lnt> 85
+</span><span class=lnt> 86
+</span><span class=lnt> 87
+</span><span class=lnt> 88
+</span><span class=lnt> 89
+</span><span class=lnt> 90
+</span><span class=lnt> 91
+</span><span class=lnt> 92
+</span><span class=lnt> 93
+</span><span class=lnt> 94
+</span><span class=lnt> 95
+</span><span class=lnt> 96
+</span><span class=lnt> 97
+</span><span class=lnt> 98
+</span><span class=lnt> 99
+</span><span class=lnt>100
+</span><span class=lnt>101
+</span><span class=lnt>102
+</span><span class=lnt>103
+</span><span class=lnt>104
+</span><span class=lnt>105
+</span><span class=lnt>106
+</span><span class=lnt>107
+</span><span class=lnt>108
+</span><span class=lnt>109
+</span><span class=lnt>110
+</span><span class=lnt>111
+</span><span class=lnt>112
+</span><span class=lnt>113
+</span><span class=lnt>114
+</span><span class=lnt>115
+</span><span class=lnt>116
+</span><span class=lnt>117
+</span><span class=lnt>118
+</span><span class=lnt>119
+</span><span class=lnt>120
+</span><span class=lnt>121
+</span><span class=lnt>122
+</span><span class=lnt>123
+</span><span class=lnt>124
+</span><span class=lnt>125
+</span><span class=lnt>126
+</span><span class=lnt>127
+</span><span class=lnt>128
+</span><span class=lnt>129
+</span><span class=lnt>130
+</span><span class=lnt>131
+</span><span class=lnt>132
+</span><span class=lnt>133
+</span><span class=lnt>134
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>baseURL</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;https://examplesite.com/&#34;</span><span class=w>
 </span><span class=w></span><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=l>ExampleSite</span><span class=w>
 </span><span class=w></span><span class=nt>paginate</span><span class=p>:</span><span class=w> </span><span class=m>5</span><span class=w>
 </span><span class=w></span><span class=nt>theme</span><span class=p>:</span><span class=w> </span><span class=l>PaperModX</span><span class=w>
@@ -262,7 +436,6 @@ git submodule update --init --recursive <span class=c1># needed when you reclone
 </span><span class=w>    </span><span class=nt>tocopen</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
 </span><span class=w>
 </span><span class=w>    </span><span class=nt>assets</span><span class=p>:</span><span class=w>
-</span><span class=w>        </span><span class=c># disableHLJS: true # to disable highlight.js</span><span class=w>
 </span><span class=w>        </span><span class=c># disableFingerprinting: true</span><span class=w>
 </span><span class=w>        </span><span class=nt>favicon</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&lt;link / abs url&gt;&#34;</span><span class=w>
 </span><span class=w>        </span><span class=nt>favicon16x16</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&lt;link / abs url&gt;&#34;</span><span class=w>
@@ -354,9 +527,47 @@ git submodule update --init --recursive <span class=c1># needed when you reclone
 </span><span class=w></span><span class=c>#         guessSyntax: true</span><span class=w>
 </span><span class=w></span><span class=c>#         lineNos: true</span><span class=w>
 </span><span class=w></span><span class=c>#         style: monokai</span><span class=w>
-</span></code></pre></div><hr>
-<h2 id=sample-pagemd>Sample <code>Page.md</code><a hidden class=anchor aria-hidden=true href=#sample-pagemd>#</a></h2>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
+</span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id=sample-pagemd>Sample <code>Page.md</code></h2>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
 </span><span class=w></span><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;My 1st post&#34;</span><span class=w>
 </span><span class=w></span><span class=nt>date</span><span class=p>:</span><span class=w> </span><span class=ld>2020-09-15T11:30:03</span><span class=m>+00</span><span class=p>:</span><span class=m>00</span><span class=w>
 </span><span class=w></span><span class=c># weight: 1</span><span class=w>
@@ -371,9 +582,7 @@ git submodule update --init --recursive <span class=c1># needed when you reclone
 </span><span class=w></span><span class=nt>comments</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
 </span><span class=w></span><span class=nt>description</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;Desc Text.&#34;</span><span class=w>
 </span><span class=w></span><span class=nt>canonicalURL</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;https://canonical.url/to/page&#34;</span><span class=w>
-</span><span class=w></span><span class=nt>disableHLJS</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w> </span><span class=c># to disable highlightjs</span><span class=w>
 </span><span class=w></span><span class=nt>disableShare</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
-</span><span class=w></span><span class=nt>disableHLJS</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
 </span><span class=w></span><span class=nt>hideSummary</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
 </span><span class=w></span><span class=nt>searchHidden</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
 </span><span class=w></span><span class=nt>ShowReadingTime</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
@@ -390,9 +599,18 @@ git submodule update --init --recursive <span class=c1># needed when you reclone
 </span><span class=w>    </span><span class=nt>Text</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;Suggest Changes&#34;</span><span class=w> </span><span class=c># edit text</span><span class=w>
 </span><span class=w>    </span><span class=nt>appendFilePath</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w> </span><span class=c># to append file path to Edit link</span><span class=w>
 </span><span class=w></span><span class=nn>---</span><span class=w>
-</span></code></pre></div><p>You can use it by creating <code>archetypes/post.md</code></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>hugo new --kind post &lt;name&gt;
-</code></pre></div><hr>
+</span></code></pre></td></tr></table>
+</div>
+</div><p>You can use it by creating <code>archetypes/post.md</code></p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>hugo new --kind post &lt;name&gt;
+</code></pre></td></tr></table>
+</div>
+</div><hr>
 </div>
 <footer class=post-footer>
 <nav class=paginav>

@@ -8,8 +8,7 @@
 <meta name=description content="Learn About All Features in original PaperMod">
 <meta name=author content="Aditya Telange">
 <link rel=canonical href=https://reorx.github.io/hugo-PaperModX/docs/features/>
-<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.29ef51424511b575c39b842ca46d73abfddab4a9392564a1299850ba45e6ab36.css integrity="sha256-Ke9RQkURtXXDm4QspG1zq/3atKk5JWShKZhQukXmqzY=" rel="preload stylesheet" as=style>
-<script defer crossorigin=anonymous src=/hugo-PaperModX/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.6a68a32452711b90e378168c2fbe4585ffb28d495301adfca2f118c2809e6a82.css integrity="sha256-amijJFJxG5DjeBaML75Fhf+yjUlTAa38ovEYwoCeaoI=" rel="preload stylesheet" as=style>
 <link rel=icon href=https://reorx.github.io/hugo-PaperModX/favicon.ico>
 <link rel=icon type=image/png sizes=16x16 href=https://reorx.github.io/hugo-PaperModX/favicon-16x16.png>
 <link rel=icon type=image/png sizes=32x32 href=https://reorx.github.io/hugo-PaperModX/favicon-32x32.png>
@@ -29,10 +28,10 @@
 <meta name=twitter:title content="PaperMod Features">
 <meta name=twitter:description content="Learn About All Features in original PaperMod">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"PaperModX Docs","item":"https://reorx.github.io/hugo-PaperModX/docs/"},{"@type":"ListItem","position":2,"name":"PaperMod Features","item":"https://reorx.github.io/hugo-PaperModX/docs/features/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"PaperMod Features","name":"PaperMod Features","description":"Learn About All Features in original PaperMod","keywords":[],"articleBody":" source: https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/\n Intro   We’ll be using yml/yaml format for all examples down below, I recommend using yml over toml as it is easier to read.\n  You can find any YML to TOML converters if necessary.\n   Assets (js/css) The following is enabled by default\n minification - makes the assets size smallest as possible. bundling - bundles all the styles in one single asset fingerprint/integrity check.   Default Theme light/dark/auto params:# defaultTheme: light# defaultTheme: darkdefaultTheme:auto# to switch between dark or light according to browser theme  Theme Switch Toggle (enabled by default) Shows icon besides title of page to change theme\nTo disable it :\ndisableThemeToggle:trueYou can refer following table for better understanding…\n   defaultTheme disableThemeToggle checks local storage? checks system theme? Info     auto true No Yes only system theme    false Yes (if not-2) Yes (2) switch present   dark true No No force dark only    false Yes No switch present   light true No No force light only    false Yes No switch present     Archives Layout Create a page with archive.md in content directory with following content\n. ├── config.yml ├── content/ │ ├── archives.md and add the following to it\n---title:\"Archive\"layout:\"archives\"url:\"/archives/\"summary:archives---Note: Archives Layout does not support Multilingual Month Translations.\n Regular Mode (default-mode)  Home-Info Mode Use 1st entry as some Information\nadd following to config file\nparams:homeInfoParams:Title:Hi there waveContent:Can be Info, links, about...socialIcons:# optional- name:\"\"url:\"\"- name:\"\"url:\"\" Profile Mode Shows Index/Home page as Full Page with Social Links and Image\nadd following to config file\nparams:profileMode:enabled:truetitle:\"\"# optional default will be site titlesubtitle:\"This is subtitle\"imageUrl:\"\"# optionalimageTitle:\"\"# optionalimageWidth:120# custom sizeimageHeight:120# custom sizebuttons:- name:Archiveurl:\"/archive\"- name:Githuburl:\"https://github.com/\"socialIcons:# optional- name:\"\"url:\"\"- name:\"\"url:\"\" Search Page PaperModX uses Fuse.js Basic for seach functionality\nAdd the following to site config, config.yml\noutputs:home:- HTML- RSS- JSON# is necessaryCreate a page with search.md in content directory with following content\n---title:\"Search\"# in any language you wantlayout:\"search\"# is necessary# url: \"/archive\"# description: \"Description for Search\"summary:\"search\"---To hide a particular page from being searched, add it in post’s fron’t matter\n---searchHidden:true Search Page also has Key bindings:\n Arrow keys to move up/down the list Enter key (return) or Right Arrow key to Go to highlighted page Escape key to clear searchbox and results   For Multilingual use search..md ex. search.es.md.\nNote: Search will work only on current language, user is currently on !\nCustomizing Fusejs Options\nRefer https://fusejs.io/api/options.html for Options, Add those as shown below.\nparams:fuseOpts:isCaseSensitive:falseshouldSort:truelocation:0distance:1000threshold:0.4minMatchCharLength:0keys:[\"title\",\"permalink\",\"summary\",\"content\"] Draft Page indication adds [draft] mark to indicate draft pages.\n Post Cover Image In post’s page-variables add :\ncover:image:\"\"# can also paste direct link from external site# ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.pngalt:\"\"caption:\"\"relative:false# To use relative path for cover image, used in hugo Page-bundlesWhen you include images in the Page Bundle, multiple sizes of the image will automatically be provided using the HTML5 srcset field.\nTo reduce generation time and size of the site, you can disable this feature using\nparams:cover:responsiveImages:falseTo enable hyperlinks to the full image size on post pages, use\nparams:cover:linkFullImages:true Share Buttons on post Displays Share Buttons at Bottom of each post\nto show share buttons add\nparams:ShowShareButtons:true Show post reading time Displays Reading Time (the estimated time, in minutes, it takes to read the content.)\nTo show reading time add\nParams:ShowReadingTime:true Show Table of Contents (Toc) on blog post Displays ToC on blog-pages\nTo show ToC add following to page-variables\nShowToc:trueTo keep Toc Open by default on a post add following to page-variables:\nTocOpen:true BreadCrumb Navigation Adds BreadCrumb Navigation above Post’s Title to show subsections and Navigation to Home\nparams:ShowBreadCrumbs:trueCan be diabled for particular page’s front-matter\n---ShowBreadCrumbs:false--- Edit Link for Posts Add a button to suggest changes by using the file path of the post to link to a edit destination.\nFor site config use:\nParams:editPost:URL:\"https://github.com//content\"Text:\"Suggest Changes\"# edit textappendFilePath:true# to append file path to Edit linkCan be modified for individual pages\n---editPost:URL:\"https://github.com//content\"Text:\"Suggest Changes\"# edit textappendFilePath:true# to append file path to Edit link---The example above would yield the following link for the post file posts/post-name.md: https://github.com//content/posts/post-name.md\n   Parameter Required Default Value     editPost.URL true -   editPost.appendFilePath false false   editPost.Text false “Edit”    Since the link generated is a regular HTML anchor tag , you can also use other URL schemas like mailto://, e.g. URL: \"mailto://mail@example.com?subject=Suggesting changes for \"\n Other Posts suggestion below a post Adds a Previous / Next post suggestion under a single post\nparams:ShowPostNavLinks:true Multiple Authors To Use multiple authors for a post, in post-variables:\n---author:[\"Me\",\"You\"]---To use Multiple Authors Site-wide, in config.yml:\nparams:author:[\"Me\",\"You\"] Comments to add comments, create a html file\nlayouts/partials/comments.html\nand paste code provided by your comments provider\nalso in config add this\nparams:comments:trueread more about this hugo-comments\n AccessKeys c - ToC Open/Close g - Go To Top h - Home (according to current lang) t - Theme toggle / - Jumps to search page if in menu What’s AccessKeys ?\n Enhanced SEO Enabled only when env: production\n Rich Results/Snippets Support  Twitter Cards Support  The Twitter Cards metadata, except twitter:image should not require additional configuration, since it is generated from metadata that you should already have (for instance the page title and description). The twitter:image uses the Post Cover Image, if present. In the absence of a cover images, the first image from the images frontmatter (a list) is used. images:- image_01.png- image_02.png Finally, if neither of those are provided, twitter:image comes from the first Page Bundle image with feature in the name, with a fallback to the first image with cover or thumbnail in the name.  OpenGraph support  The OpenGraph metadata, except og:image should not require additional configuration, since it is generated from metadata that you should already have (for instance the page title and description). The og:image uses the Post Cover Image, if present. In the absence of a cover images, the first image from the images frontmatter (a list) is used. images:- image_01.png- image_02.png Finally, if neither of those are provided, og:image comes from the first Page Bundle image with feature in the name, with a fallback to the first image with cover or thumbnail in the name. For pages, you can also add audio (using frontmatter audio: filename.ext) and/or videos. videos:- filename01.mov- filename02.avi   Multilingual Support  Misc Scroll-Bar themed (by default) Smooth Scroll between in-page links (by default) Scroll-to-Top Button (by default) Displays a Scroll-to-Top button in right-bottom corner Google Analytics integration Syntax highlighting RSS feeds ","wordCount":"1043","inLanguage":"en","datePublished":"2021-01-20T00:00:00Z","dateModified":"2021-01-20T00:00:00Z","author":{"@type":"Person","name":"Aditya Telange"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://reorx.github.io/hugo-PaperModX/docs/features/"},"publisher":{"@type":"Organization","name":"PaperModX","logo":{"@type":"ImageObject","url":"https://reorx.github.io/hugo-PaperModX/favicon.ico"}}}</script><style>#icons{display:flex;flex-wrap:wrap;margin-top:2em}#icons .item{width:80px;height:50px;margin:10px}#icons .item .name{font-size:12px;user-select:all;text-align:center}#icons .item .icon{display:flex;justify-content:center}#icons .item svg{width:30px;height:30px}</style>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"PaperMod Features","name":"PaperMod Features","description":"Learn About All Features in original PaperMod","keywords":[],"articleBody":" source: https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/\n Intro   We’ll be using yml/yaml format for all examples down below, I recommend using yml over toml as it is easier to read.\n  You can find any YML to TOML converters if necessary.\n   Assets (js/css) The following is enabled by default\n minification - makes the assets size smallest as possible. bundling - bundles all the styles in one single asset fingerprint/integrity check.   Default Theme light/dark/auto 1 2 3 4  params:# defaultTheme: light# defaultTheme: darkdefaultTheme:auto# to switch between dark or light according to browser theme    Theme Switch Toggle (enabled by default) Shows icon besides title of page to change theme\nTo disable it :\n1  disableThemeToggle:true  You can refer following table for better understanding…\n   defaultTheme disableThemeToggle checks local storage? checks system theme? Info     auto true No Yes only system theme    false Yes (if not-2) Yes (2) switch present   dark true No No force dark only    false Yes No switch present   light true No No force light only    false Yes No switch present     Archives Layout Create a page with archive.md in content directory with following content\n1 2 3 4 5 6 7 8  . ├── config.yml ├── content/ │ ├── archives.md   and add the following to it\n1 2 3 4 5 6 7  ---title:\"Archive\"layout:\"archives\"url:\"/archives/\"summary:archives---  Note: Archives Layout does not support Multilingual Month Translations.\n Regular Mode (default-mode)  Home-Info Mode Use 1st entry as some Information\nadd following to config file\n1 2 3 4 5 6 7 8 9 10  params:homeInfoParams:Title:Hi there waveContent:Can be Info, links, about...socialIcons:# optional- name:\"\"url:\"\"- name:\"\"url:\"\"   Profile Mode Shows Index/Home page as Full Page with Social Links and Image\nadd following to config file\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  params:profileMode:enabled:truetitle:\"\"# optional default will be site titlesubtitle:\"This is subtitle\"imageUrl:\"\"# optionalimageTitle:\"\"# optionalimageWidth:120# custom sizeimageHeight:120# custom sizebuttons:- name:Archiveurl:\"/archive\"- name:Githuburl:\"https://github.com/\"socialIcons:# optional- name:\"\"url:\"\"- name:\"\"url:\"\"   Search Page PaperModX uses Fuse.js Basic for seach functionality\nAdd the following to site config, config.yml\n1 2 3 4 5  outputs:home:- HTML- RSS- JSON# is necessary  Create a page with search.md in content directory with following content\n1 2 3 4 5 6 7 8  ---title:\"Search\"# in any language you wantlayout:\"search\"# is necessary# url: \"/archive\"# description: \"Description for Search\"summary:\"search\"---  To hide a particular page from being searched, add it in post’s fron’t matter\n1 2  ---searchHidden:true   Search Page also has Key bindings:\n Arrow keys to move up/down the list Enter key (return) or Right Arrow key to Go to highlighted page Escape key to clear searchbox and results   For Multilingual use search..md ex. search.es.md.\nNote: Search will work only on current language, user is currently on !\nCustomizing Fusejs Options\nRefer https://fusejs.io/api/options.html for Options, Add those as shown below.\n1 2 3 4 5 6 7 8 9  params:fuseOpts:isCaseSensitive:falseshouldSort:truelocation:0distance:1000threshold:0.4minMatchCharLength:0keys:[\"title\",\"permalink\",\"summary\",\"content\"]   Draft Page indication adds [draft] mark to indicate draft pages.\n Post Cover Image In post’s page-variables add :\n1 2 3 4 5 6 7  cover:image:\"\"# can also paste direct link from external site# ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.pngalt:\"\"caption:\"\"relative:false# To use relative path for cover image, used in hugo Page-bundles  When you include images in the Page Bundle, multiple sizes of the image will automatically be provided using the HTML5 srcset field.\nTo reduce generation time and size of the site, you can disable this feature using\n1 2 3  params:cover:responsiveImages:false  To enable hyperlinks to the full image size on post pages, use\n1 2 3  params:cover:linkFullImages:true   Share Buttons on post Displays Share Buttons at Bottom of each post\nto show share buttons add\n1 2  params:ShowShareButtons:true   Show post reading time Displays Reading Time (the estimated time, in minutes, it takes to read the content.)\nTo show reading time add\n1 2  Params:ShowReadingTime:true   Show Table of Contents (Toc) on blog post Displays ToC on blog-pages\nTo show ToC add following to page-variables\n1  ShowToc:true  To keep Toc Open by default on a post add following to page-variables:\n1  TocOpen:true   BreadCrumb Navigation Adds BreadCrumb Navigation above Post’s Title to show subsections and Navigation to Home\n1 2  params:ShowBreadCrumbs:true  Can be diabled for particular page’s front-matter\n1 2 3 4  ---ShowBreadCrumbs:false---   Edit Link for Posts Add a button to suggest changes by using the file path of the post to link to a edit destination.\nFor site config use:\n1 2 3 4 5  Params:editPost:URL:\"https://github.com//content\"Text:\"Suggest Changes\"# edit textappendFilePath:true# to append file path to Edit link  Can be modified for individual pages\n1 2 3 4 5 6 7  ---editPost:URL:\"https://github.com//content\"Text:\"Suggest Changes\"# edit textappendFilePath:true# to append file path to Edit link---  The example above would yield the following link for the post file posts/post-name.md: https://github.com//content/posts/post-name.md\n   Parameter Required Default Value     editPost.URL true -   editPost.appendFilePath false false   editPost.Text false “Edit”    Since the link generated is a regular HTML anchor tag , you can also use other URL schemas like mailto://, e.g. URL: \"mailto://mail@example.com?subject=Suggesting changes for \"\n Other Posts suggestion below a post Adds a Previous / Next post suggestion under a single post\n1 2  params:ShowPostNavLinks:true   Multiple Authors To Use multiple authors for a post, in post-variables:\n1 2 3 4  ---author:[\"Me\",\"You\"]---  To use Multiple Authors Site-wide, in config.yml:\n1 2  params:author:[\"Me\",\"You\"]   Comments to add comments, create a html file\nlayouts/partials/comments.html\nand paste code provided by your comments provider\nalso in config add this\n1 2  params:comments:true  read more about this hugo-comments\n AccessKeys 1 2 3 4 5  c - ToC Open/Close g - Go To Top h - Home (according to current lang) t - Theme toggle / - Jumps to search page if in menu   What’s AccessKeys ?\n Enhanced SEO Enabled only when env: production\n Rich Results/Snippets Support  Twitter Cards Support  The Twitter Cards metadata, except twitter:image should not require additional configuration, since it is generated from metadata that you should already have (for instance the page title and description). The twitter:image uses the Post Cover Image, if present. In the absence of a cover images, the first image from the images frontmatter (a list) is used. 1 2 3  images:- image_01.png- image_02.png   Finally, if neither of those are provided, twitter:image comes from the first Page Bundle image with feature in the name, with a fallback to the first image with cover or thumbnail in the name.  OpenGraph support  The OpenGraph metadata, except og:image should not require additional configuration, since it is generated from metadata that you should already have (for instance the page title and description). The og:image uses the Post Cover Image, if present. In the absence of a cover images, the first image from the images frontmatter (a list) is used. 1 2 3  images:- image_01.png- image_02.png   Finally, if neither of those are provided, og:image comes from the first Page Bundle image with feature in the name, with a fallback to the first image with cover or thumbnail in the name. For pages, you can also add audio (using frontmatter audio: filename.ext) and/or videos. 1 2 3  videos:- filename01.mov- filename02.avi     Multilingual Support  Misc Scroll-Bar themed (by default) Smooth Scroll between in-page links (by default) Scroll-to-Top Button (by default) 1  Displays a Scroll-to-Top button in right-bottom corner   Google Analytics integration Syntax highlighting RSS feeds ","wordCount":"1191","inLanguage":"en","datePublished":"2021-01-20T00:00:00Z","dateModified":"2021-01-20T00:00:00Z","author":{"@type":"Person","name":"Aditya Telange"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://reorx.github.io/hugo-PaperModX/docs/features/"},"publisher":{"@type":"Organization","name":"PaperModX","logo":{"@type":"ImageObject","url":"https://reorx.github.io/hugo-PaperModX/favicon.ico"}}}</script><style>#icons{display:flex;flex-wrap:wrap;margin-top:2em}#icons .item{width:80px;height:50px;margin:10px}#icons .item .name{font-size:12px;user-select:all;text-align:center}#icons .item .icon{display:flex;justify-content:center}#icons .item svg{width:30px;height:30px}</style>
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style>
-<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
 </head>
 <body id=top>
@@ -83,7 +82,7 @@
 <h1 class=post-title>
 PaperMod Features
 </h1>
-<div class=post-meta><span title="2021-01-20 00:00:00 +0000 UTC">January 20, 2021</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Aditya Telange&nbsp;|&nbsp;<a href=https://github.com/reorx/hugo-PaperModX/tree/exampleSite/content/docs/features/index.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+<div class=post-meta><span title="2021-01-20 00:00:00 +0000 UTC">January 20, 2021</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Aditya Telange&nbsp;|&nbsp;<a href=https://github.com/reorx/hugo-PaperModX/tree/exampleSite/content/docs/features/index.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
 </div>
 </header> <div class="toc side right">
 <details open>
@@ -164,7 +163,7 @@ PaperMod Features
 <div class=post-content><blockquote>
 <p>source: <a href=https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/>https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/</a></p>
 </blockquote>
-<h3 id=intro>Intro<a hidden class=anchor aria-hidden=true href=#intro>#</a></h3>
+<h3 id=intro>Intro</h3>
 <ul>
 <li>
 <p><strong>We&rsquo;ll be using <code>yml/yaml</code> format for all examples down below, I recommend using <code>yml</code> over <code>toml</code> as it is easier to read.</strong></p>
@@ -174,7 +173,7 @@ PaperMod Features
 </li>
 </ul>
 <hr>
-<h3 id=assets-jscss>Assets (js/css)<a hidden class=anchor aria-hidden=true href=#assets-jscss>#</a></h3>
+<h3 id=assets-jscss>Assets (js/css)</h3>
 <p>The following is enabled by default</p>
 <ul>
 <li><a href=https://gohugo.io/hugo-pipes/minification/>minification</a> - makes the assets size smallest as possible.</li>
@@ -182,18 +181,35 @@ PaperMod Features
 <li><a href=https://gohugo.io/hugo-pipes/fingerprint/>fingerprint/integrity</a> check.</li>
 </ul>
 <hr>
-<h3 id=default-theme-lightdarkauto>Default Theme light/dark/auto<a hidden class=anchor aria-hidden=true href=#default-theme-lightdarkauto>#</a></h3>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
+<h3 id=default-theme-lightdarkauto>Default Theme light/dark/auto</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=c># defaultTheme: light</span><span class=w>
 </span><span class=w>    </span><span class=c># defaultTheme: dark</span><span class=w>
 </span><span class=w>    </span><span class=nt>defaultTheme</span><span class=p>:</span><span class=w> </span><span class=l>auto</span><span class=w> </span><span class=c># to switch between dark or light according to browser theme</span><span class=w>
-</span></code></pre></div></details>
+</span></code></pre></td></tr></table>
+</div>
+</div></details>
 <hr>
-<h3 id=theme-switch-toggle-enabled-by-default>Theme Switch Toggle (enabled by default)<a hidden class=anchor aria-hidden=true href=#theme-switch-toggle-enabled-by-default>#</a></h3>
+<h3 id=theme-switch-toggle-enabled-by-default>Theme Switch Toggle (enabled by default)</h3>
 <p>Shows icon besides title of page to change theme</p>
 <p>To disable it :</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>disableThemeToggle</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span></code></pre></div><p>You can refer following table for better understanding&mldr;</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>disableThemeToggle</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></code></pre></td></tr></table>
+</div>
+</div><p>You can refer following table for better understanding&mldr;</p>
 <table>
 <thead>
 <tr>
@@ -250,9 +266,21 @@ PaperMod Features
 </tbody>
 </table>
 <hr>
-<h3 id=archives-layout>Archives Layout<a hidden class=anchor aria-hidden=true href=#archives-layout>#</a></h3>
+<h3 id=archives-layout>Archives Layout</h3>
 <p>Create a page with <code>archive.md</code> in <code>content</code> directory with following content</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>.
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>.
 ├── config.yml
 ├── content/
 │   ├── archives.md   &lt;--- Create archive.md here
@@ -260,26 +288,55 @@ PaperMod Features
 ├── static/
 └── themes/
     └── PaperModX/
-</code></pre></div><p>and add the following to it</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
+</code></pre></td></tr></table>
+</div>
+</div><p>and add the following to it</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
 </span><span class=w></span><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;Archive&#34;</span><span class=w>
 </span><span class=w></span><span class=nt>layout</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;archives&#34;</span><span class=w>
 </span><span class=w></span><span class=nt>url</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;/archives/&#34;</span><span class=w>
 </span><span class=w></span><span class=nt>summary</span><span class=p>:</span><span class=w> </span><span class=l>archives</span><span class=w>
 </span><span class=w></span><span class=nn>---</span><span class=w>
 </span><span class=w>
-</span></code></pre></div><p><strong>Note:</strong> Archives Layout does not support Multilingual Month Translations.</p>
+</span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Note:</strong> Archives Layout does not support Multilingual Month Translations.</p>
 <hr>
-<h3 id=regular-mode-default-mode>Regular Mode (default-mode)<a hidden class=anchor aria-hidden=true href=#regular-mode-default-mode>#</a></h3>
+<h3 id=regular-mode-default-mode>Regular Mode (default-mode)</h3>
 <p><img loading=lazy src=images/regular.jpg alt=regular>
 </p>
 <hr>
-<h3 id=home-info-mode>Home-Info Mode<a hidden class=anchor aria-hidden=true href=#home-info-mode>#</a></h3>
+<h3 id=home-info-mode>Home-Info Mode</h3>
 <p><img loading=lazy src=images/homeinfo.jpg alt=homeinfo>
 </p>
 <p>Use 1st entry as some Information</p>
 <p>add following to config file</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>homeInfoParams</span><span class=p>:</span><span class=w>
 </span><span class=w>        </span><span class=nt>Title</span><span class=p>:</span><span class=w> </span><span class=l>Hi there wave</span><span class=w>
 </span><span class=w>        </span><span class=nt>Content</span><span class=p>:</span><span class=w> </span><span class=l>Can be Info, links, about...</span><span class=w>
@@ -289,13 +346,39 @@ PaperMod Features
 </span><span class=w>          </span><span class=nt>url</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&lt;link&gt;&#34;</span><span class=w>
 </span><span class=w>        </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&lt;platform 2&gt;&#34;</span><span class=w>
 </span><span class=w>          </span><span class=nt>url</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&lt;link2&gt;&#34;</span><span class=w>
-</span></code></pre></div><hr>
-<h3 id=profile-mode>Profile Mode<a hidden class=anchor aria-hidden=true href=#profile-mode>#</a></h3>
+</span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id=profile-mode>Profile Mode</h3>
 <p><img loading=lazy src=images/profile.jpg alt=profile>
 </p>
 <p>Shows Index/Home page as Full Page with Social Links and Image</p>
 <p>add following to config file</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>profileMode</span><span class=p>:</span><span class=w>
 </span><span class=w>        </span><span class=nt>enabled</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
 </span><span class=w>        </span><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&lt;Title&gt;&#34;</span><span class=w> </span><span class=c># optional default will be site title</span><span class=w>
@@ -315,17 +398,42 @@ PaperMod Features
 </span><span class=w>            </span><span class=nt>url</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&lt;link&gt;&#34;</span><span class=w>
 </span><span class=w>        </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&lt;platform 2&gt;&#34;</span><span class=w>
 </span><span class=w>            </span><span class=nt>url</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&lt;link2&gt;&#34;</span><span class=w>
-</span></code></pre></div><hr>
-<h3 id=search-page>Search Page<a hidden class=anchor aria-hidden=true href=#search-page>#</a></h3>
+</span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id=search-page>Search Page</h3>
 <p>PaperModX uses <a href=https://fusejs.io/getting-started/different-builds.html#explanation-of-different-builds>Fuse.js Basic</a> for seach functionality</p>
 <p>Add the following to site config, <code>config.yml</code></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>outputs</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>outputs</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>home</span><span class=p>:</span><span class=w>
 </span><span class=w>        </span>- <span class=l>HTML</span><span class=w>
 </span><span class=w>        </span>- <span class=l>RSS</span><span class=w>
 </span><span class=w>        </span>- <span class=l>JSON</span><span class=w> </span><span class=c># is necessary</span><span class=w>
-</span></code></pre></div><p>Create a page with <code>search.md</code> in <code>content</code> directory with following content</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Create a page with <code>search.md</code> in <code>content</code> directory with following content</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
 </span><span class=w></span><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;Search&#34;</span><span class=w> </span><span class=c># in any language you want</span><span class=w>
 </span><span class=w></span><span class=nt>layout</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;search&#34;</span><span class=w> </span><span class=c># is necessary</span><span class=w>
 </span><span class=w></span><span class=c># url: &#34;/archive&#34;</span><span class=w>
@@ -333,10 +441,20 @@ PaperMod Features
 </span><span class=w></span><span class=nt>summary</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;search&#34;</span><span class=w>
 </span><span class=w></span><span class=nn>---</span><span class=w>
 </span><span class=w>
-</span></code></pre></div><p>To hide a particular page from being searched, add it in post&rsquo;s fron&rsquo;t matter</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
+</span></code></pre></td></tr></table>
+</div>
+</div><p>To hide a particular page from being searched, add it in post&rsquo;s fron&rsquo;t matter</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
 </span><span class=w></span><span class=nt>searchHidden</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span></code></pre></div><blockquote>
+</span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
 <p>Search Page also has Key bindings:</p>
 <ul>
 <li>Arrow keys to move up/down the list</li>
@@ -348,7 +466,20 @@ PaperMod Features
 <p><strong>Note:</strong> Search will work only on current language, user is currently on !</p>
 <p><strong>Customizing Fusejs Options</strong></p>
 <p>Refer <a href=https://fusejs.io/api/options.html>https://fusejs.io/api/options.html</a> for Options, Add those as shown below.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>fuseOpts</span><span class=p>:</span><span class=w>
 </span><span class=w>        </span><span class=nt>isCaseSensitive</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
 </span><span class=w>        </span><span class=nt>shouldSort</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
@@ -357,75 +488,180 @@ PaperMod Features
 </span><span class=w>        </span><span class=nt>threshold</span><span class=p>:</span><span class=w> </span><span class=m>0.4</span><span class=w>
 </span><span class=w>        </span><span class=nt>minMatchCharLength</span><span class=p>:</span><span class=w> </span><span class=m>0</span><span class=w>
 </span><span class=w>        </span><span class=nt>keys</span><span class=p>:</span><span class=w> </span><span class=p>[</span><span class=s2>&#34;title&#34;</span><span class=p>,</span><span class=w> </span><span class=s2>&#34;permalink&#34;</span><span class=p>,</span><span class=w> </span><span class=s2>&#34;summary&#34;</span><span class=p>,</span><span class=w> </span><span class=s2>&#34;content&#34;</span><span class=p>]</span><span class=w>
-</span></code></pre></div><hr>
-<h3 id=draft-page-indication>Draft Page indication<a hidden class=anchor aria-hidden=true href=#draft-page-indication>#</a></h3>
+</span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id=draft-page-indication>Draft Page indication</h3>
 <p>adds <code>[draft]</code> mark to indicate draft pages.</p>
 <hr>
-<h3 id=post-cover-image>Post Cover Image<a hidden class=anchor aria-hidden=true href=#post-cover-image>#</a></h3>
+<h3 id=post-cover-image>Post Cover Image</h3>
 <p>In post&rsquo;s page-variables add :</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>cover</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>cover</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>image</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&lt;image path/url&gt;&#34;</span><span class=w>
 </span><span class=w>    </span><span class=c># can also paste direct link from external site</span><span class=w>
 </span><span class=w>    </span><span class=c># ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png</span><span class=w>
 </span><span class=w>    </span><span class=nt>alt</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&lt;alt text&gt;&#34;</span><span class=w>
 </span><span class=w>    </span><span class=nt>caption</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&lt;text&gt;&#34;</span><span class=w>
 </span><span class=w>    </span><span class=nt>relative</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w> </span><span class=c># To use relative path for cover image, used in hugo Page-bundles</span><span class=w>
-</span></code></pre></div><p>When you include images in the <a href=https://gohugo.io/content-management/page-bundles/>Page Bundle</a>, multiple sizes of the image will automatically be provided using the HTML5 <code>srcset</code> field.</p>
+</span></code></pre></td></tr></table>
+</div>
+</div><p>When you include images in the <a href=https://gohugo.io/content-management/page-bundles/>Page Bundle</a>, multiple sizes of the image will automatically be provided using the HTML5 <code>srcset</code> field.</p>
 <p>To reduce generation time and size of the site, you can disable this feature using</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>cover</span><span class=p>:</span><span class=w>
 </span><span class=w>        </span><span class=nt>responsiveImages</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
-</span></code></pre></div><p>To enable hyperlinks to the full image size on post pages, use</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
+</span></code></pre></td></tr></table>
+</div>
+</div><p>To enable hyperlinks to the full image size on post pages, use</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>cover</span><span class=p>:</span><span class=w>
 </span><span class=w>        </span><span class=nt>linkFullImages</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span></code></pre></div><hr>
-<h3 id=share-buttons-on-post>Share Buttons on post<a hidden class=anchor aria-hidden=true href=#share-buttons-on-post>#</a></h3>
+</span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id=share-buttons-on-post>Share Buttons on post</h3>
 <p>Displays Share Buttons at Bottom of each post</p>
 <p>to show share buttons add</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>ShowShareButtons</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span></code></pre></div><hr>
-<h3 id=show-post-reading-time>Show post reading time<a hidden class=anchor aria-hidden=true href=#show-post-reading-time>#</a></h3>
+</span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id=show-post-reading-time>Show post reading time</h3>
 <p>Displays Reading Time (the estimated time, in minutes, it takes to read the content.)</p>
 <p>To show reading time add</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>Params</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>Params</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>ShowReadingTime</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span></code></pre></div><hr>
-<h3 id=show-table-of-contents-toc-on-blog-post>Show Table of Contents (Toc) on blog post<a hidden class=anchor aria-hidden=true href=#show-table-of-contents-toc-on-blog-post>#</a></h3>
+</span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id=show-table-of-contents-toc-on-blog-post>Show Table of Contents (Toc) on blog post</h3>
 <p>Displays ToC on blog-pages</p>
 <p>To show ToC add following to page-variables</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>ShowToc</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span></code></pre></div><p>To keep Toc Open <strong>by default</strong> on a post add following to page-variables:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>TocOpen</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span></code></pre></div><hr>
-<h3 id=breadcrumb-navigation>BreadCrumb Navigation<a hidden class=anchor aria-hidden=true href=#breadcrumb-navigation>#</a></h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>ShowToc</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></code></pre></td></tr></table>
+</div>
+</div><p>To keep Toc Open <strong>by default</strong> on a post add following to page-variables:</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>TocOpen</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id=breadcrumb-navigation>BreadCrumb Navigation</h3>
 <p>Adds BreadCrumb Navigation above Post&rsquo;s Title to show subsections and Navigation to Home</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>ShowBreadCrumbs</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span></code></pre></div><p>Can be diabled for particular page&rsquo;s front-matter</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Can be diabled for particular page&rsquo;s front-matter</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
 </span><span class=w></span><span class=nt>ShowBreadCrumbs</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
 </span><span class=w></span><span class=nn>---</span><span class=w>
 </span><span class=w>
-</span></code></pre></div><hr>
-<h3 id=edit-link-for-posts>Edit Link for Posts<a hidden class=anchor aria-hidden=true href=#edit-link-for-posts>#</a></h3>
+</span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id=edit-link-for-posts>Edit Link for Posts</h3>
 <p>Add a button to suggest changes by using the file path of the post to link to a edit destination.</p>
 <p>For site config use:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>Params</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>Params</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>editPost</span><span class=p>:</span><span class=w>
 </span><span class=w>        </span><span class=nt>URL</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;https://github.com/&lt;path_to_repo&gt;/content&#34;</span><span class=w>
 </span><span class=w>        </span><span class=nt>Text</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;Suggest Changes&#34;</span><span class=w> </span><span class=c># edit text</span><span class=w>
 </span><span class=w>        </span><span class=nt>appendFilePath</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w> </span><span class=c># to append file path to Edit link</span><span class=w>
-</span></code></pre></div><p>Can be modified for individual pages</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Can be modified for individual pages</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
 </span><span class=w></span><span class=nt>editPost</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>URL</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;https://github.com/&lt;path_to_repo&gt;/content&#34;</span><span class=w>
 </span><span class=w>    </span><span class=nt>Text</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;Suggest Changes&#34;</span><span class=w> </span><span class=c># edit text</span><span class=w>
 </span><span class=w>    </span><span class=nt>appendFilePath</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w> </span><span class=c># to append file path to Edit link</span><span class=w>
 </span><span class=w></span><span class=nn>---</span><span class=w>
 </span><span class=w>
-</span></code></pre></div><p>The example above would yield the following link for the post file <code>posts/post-name.md</code>:
+</span></code></pre></td></tr></table>
+</div>
+</div><p>The example above would yield the following link for the post file <code>posts/post-name.md</code>:
 <a href=https://github.com/>https://github.com/</a>&lt;path_to_repo>/content/posts/post-name.md</p>
 <table>
 <thead>
@@ -457,44 +693,89 @@ PaperMod Features
 also use other URL schemas like <code>mailto://</code>, e.g.
 <code>URL: "mailto://mail@example.com?subject=Suggesting changes for "</code></p>
 <hr>
-<h3 id=other-posts-suggestion-below-a-post>Other Posts suggestion below a post<a hidden class=anchor aria-hidden=true href=#other-posts-suggestion-below-a-post>#</a></h3>
+<h3 id=other-posts-suggestion-below-a-post>Other Posts suggestion below a post</h3>
 <p>Adds a Previous / Next post suggestion under a single post</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>ShowPostNavLinks</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span></code></pre></div><hr>
-<h3 id=multiple-authors>Multiple Authors<a hidden class=anchor aria-hidden=true href=#multiple-authors>#</a></h3>
+</span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id=multiple-authors>Multiple Authors</h3>
 <p>To Use multiple authors for a post, in post-variables:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
 </span><span class=w></span><span class=nt>author</span><span class=p>:</span><span class=w> </span><span class=p>[</span><span class=s2>&#34;Me&#34;</span><span class=p>,</span><span class=w> </span><span class=s2>&#34;You&#34;</span><span class=p>]</span><span class=w>
 </span><span class=w></span><span class=nn>---</span><span class=w>
 </span><span class=w>
-</span></code></pre></div><p>To use Multiple Authors Site-wide, in <code>config.yml</code>:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
+</span></code></pre></td></tr></table>
+</div>
+</div><p>To use Multiple Authors Site-wide, in <code>config.yml</code>:</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>author</span><span class=p>:</span><span class=w> </span><span class=p>[</span><span class=s2>&#34;Me&#34;</span><span class=p>,</span><span class=w> </span><span class=s2>&#34;You&#34;</span><span class=p>]</span><span class=w>
-</span></code></pre></div><hr>
-<h3 id=comments>Comments<a hidden class=anchor aria-hidden=true href=#comments>#</a></h3>
+</span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id=comments>Comments</h3>
 <p>to add comments, create a html file</p>
 <p><code>layouts/partials/comments.html</code></p>
 <p>and paste code provided by your comments provider</p>
 <p>also in config add this</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>comments</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span></code></pre></div><p>read more about this <a href=https://gohugo.io/content-management/comments/>hugo-comments</a></p>
+</span></code></pre></td></tr></table>
+</div>
+</div><p>read more about this <a href=https://gohugo.io/content-management/comments/>hugo-comments</a></p>
 <hr>
-<h3 id=accesskeys>AccessKeys<a hidden class=anchor aria-hidden=true href=#accesskeys>#</a></h3>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text>c - ToC Open/Close
+<h3 id=accesskeys>AccessKeys</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-text data-lang=text>c - ToC Open/Close
 g - Go To Top
 h - Home (according to current lang)
 t - Theme toggle
 / - Jumps to search page if in menu
-</code></pre></div><p><a href=https://www.w3schools.com/tags/att_global_accesskey.asp>What&rsquo;s AccessKeys ?</a></p>
+</code></pre></td></tr></table>
+</div>
+</div><p><a href=https://www.w3schools.com/tags/att_global_accesskey.asp>What&rsquo;s AccessKeys ?</a></p>
 <hr>
-<h3 id=enhanced-seo>Enhanced SEO<a hidden class=anchor aria-hidden=true href=#enhanced-seo>#</a></h3>
+<h3 id=enhanced-seo>Enhanced SEO</h3>
 <p><strong>Enabled only when <code>env: production</code></strong></p>
 <ul>
 <li><a href="https://support.google.com/webmasters/answer/7506797?hl=en">Rich Results/Snippets Support</a></li>
 </ul>
-<h4 id=twitter-cards-support>Twitter Cards Support<a hidden class=anchor aria-hidden=true href=#twitter-cards-support>#</a></h4>
+<h4 id=twitter-cards-support>Twitter Cards Support</h4>
 <ul>
 <li>The Twitter Cards metadata, except <code>twitter:image</code> should not require
 additional configuration, since it is generated from metadata that
@@ -502,16 +783,25 @@ you should already have (for instance the page title and description).</li>
 <li>The <code>twitter:image</code> uses the <a href=#post-cover-image>Post Cover Image</a>, if present.</li>
 <li>In the absence of a cover images, the first image from the <code>images</code>
 frontmatter (a list) is used.
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=nt>images</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=nt>images</span><span class=p>:</span><span class=w>
 </span><span class=w>  </span>- <span class=l>image_01.png</span><span class=w>
 </span><span class=w>  </span>- <span class=l>image_02.png</span><span class=w>
-</span></code></pre></div></li>
+</span></code></pre></td></tr></table>
+</div>
+</div></li>
 <li>Finally, if neither of those are provided, <code>twitter:image</code> comes from the first
 <a href=https://gohugo.io/content-management/page-bundles/>Page Bundle</a>
 image with <code>feature</code> in the name, with a fallback to the first image with
 <code>cover</code> or <code>thumbnail</code> in the name.</li>
 </ul>
-<h4 id=opengraph-support>OpenGraph support<a hidden class=anchor aria-hidden=true href=#opengraph-support>#</a></h4>
+<h4 id=opengraph-support>OpenGraph support</h4>
 <ul>
 <li>The OpenGraph metadata, except <code>og:image</code> should not require
 additional configuration, since it is generated from metadata that
@@ -519,32 +809,57 @@ you should already have (for instance the page title and description).</li>
 <li>The <code>og:image</code> uses the <a href=#post-cover-image>Post Cover Image</a>, if present.</li>
 <li>In the absence of a cover images, the first image from the <code>images</code>
 frontmatter (a list) is used.
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=nt>images</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=nt>images</span><span class=p>:</span><span class=w>
 </span><span class=w>  </span>- <span class=l>image_01.png</span><span class=w>
 </span><span class=w>  </span>- <span class=l>image_02.png</span><span class=w>
-</span></code></pre></div></li>
+</span></code></pre></td></tr></table>
+</div>
+</div></li>
 <li>Finally, if neither of those are provided, <code>og:image</code> comes from the first
 <a href=https://gohugo.io/content-management/page-bundles/>Page Bundle</a>
 image with <code>feature</code> in the name, with a fallback to the first image with
 <code>cover</code> or <code>thumbnail</code> in the name.</li>
 <li>For pages, you can also add audio (using frontmatter <code>audio: filename.ext</code>) and/or
 videos.
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=nt>videos</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=nt>videos</span><span class=p>:</span><span class=w>
 </span><span class=w>  </span>- <span class=l>filename01.mov</span><span class=w>
 </span><span class=w>  </span>- <span class=l>filename02.avi</span><span class=w>
-</span></code></pre></div></li>
+</span></code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
 <hr>
-<h3 id=multilingual-support>Multilingual Support<a hidden class=anchor aria-hidden=true href=#multilingual-support>#</a></h3>
+<h3 id=multilingual-support>Multilingual Support</h3>
 <hr>
-<h3 id=misc>Misc<a hidden class=anchor aria-hidden=true href=#misc>#</a></h3>
-<h4 id=scroll-bar-themed-by-default>Scroll-Bar themed (by default)<a hidden class=anchor aria-hidden=true href=#scroll-bar-themed-by-default>#</a></h4>
-<h4 id=smooth-scroll-between-in-page-links-by-default>Smooth Scroll between in-page links (by default)<a hidden class=anchor aria-hidden=true href=#smooth-scroll-between-in-page-links-by-default>#</a></h4>
-<h4 id=scroll-to-top-button-by-default>Scroll-to-Top Button (by default)<a hidden class=anchor aria-hidden=true href=#scroll-to-top-button-by-default>#</a></h4>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text>Displays a Scroll-to-Top button in right-bottom corner
-</code></pre></div><h4 id=google-analytics-integration>Google Analytics integration<a hidden class=anchor aria-hidden=true href=#google-analytics-integration>#</a></h4>
-<h4 id=syntax-highlighting>Syntax highlighting<a hidden class=anchor aria-hidden=true href=#syntax-highlighting>#</a></h4>
-<h4 id=rss-feeds>RSS feeds<a hidden class=anchor aria-hidden=true href=#rss-feeds>#</a></h4>
+<h3 id=misc>Misc</h3>
+<h4 id=scroll-bar-themed-by-default>Scroll-Bar themed (by default)</h4>
+<h4 id=smooth-scroll-between-in-page-links-by-default>Smooth Scroll between in-page links (by default)</h4>
+<h4 id=scroll-to-top-button-by-default>Scroll-to-Top Button (by default)</h4>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-text data-lang=text>Displays a Scroll-to-Top button in right-bottom corner
+</code></pre></td></tr></table>
+</div>
+</div><h4 id=google-analytics-integration>Google Analytics integration</h4>
+<h4 id=syntax-highlighting>Syntax highlighting</h4>
+<h4 id=rss-feeds>RSS feeds</h4>
 </div>
 <footer class=post-footer>
 <nav class=paginav>

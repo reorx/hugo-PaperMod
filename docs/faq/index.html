@@ -8,8 +8,7 @@
 <meta name=description content="Frequently Asked Questions">
 <meta name=author content="Aditya Telange">
 <link rel=canonical href=https://reorx.github.io/hugo-PaperModX/docs/faq/>
-<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.29ef51424511b575c39b842ca46d73abfddab4a9392564a1299850ba45e6ab36.css integrity="sha256-Ke9RQkURtXXDm4QspG1zq/3atKk5JWShKZhQukXmqzY=" rel="preload stylesheet" as=style>
-<script defer crossorigin=anonymous src=/hugo-PaperModX/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.6a68a32452711b90e378168c2fbe4585ffb28d495301adfca2f118c2809e6a82.css integrity="sha256-amijJFJxG5DjeBaML75Fhf+yjUlTAa38ovEYwoCeaoI=" rel="preload stylesheet" as=style>
 <link rel=icon href=https://reorx.github.io/hugo-PaperModX/favicon.ico>
 <link rel=icon type=image/png sizes=16x16 href=https://reorx.github.io/hugo-PaperModX/favicon-16x16.png>
 <link rel=icon type=image/png sizes=32x32 href=https://reorx.github.io/hugo-PaperModX/favicon-32x32.png>
@@ -29,10 +28,10 @@
 <meta name=twitter:title content="FAQs">
 <meta name=twitter:description content="Frequently Asked Questions">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"PaperModX Docs","item":"https://reorx.github.io/hugo-PaperModX/docs/"},{"@type":"ListItem","position":2,"name":"FAQs","item":"https://reorx.github.io/hugo-PaperModX/docs/faq/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"FAQs","name":"FAQs","description":"Frequently Asked Questions","keywords":[],"articleBody":"Intro   We’ll be using yml/yaml format for all examples down below, I recommend using yml over toml as it is easier to read.\n  You can find any YML to TOML converters if necessary.\n   Override theme template By Hugo’s Lookup Order, you can override any part of a theme that you want. The following is a quick example.\nLet’s say you wish the list was different. All you have to do is copy the list template:\nyour-site/themes/papermod/layouts/_defaults/list.html And paste it under your own layouts folder:\nyour-site/layouts/_defaults/list.html Then you’re free to make any changes you want to the list. When Hugo builds your site, your copy of list.html will be used instead of the theme’s list.html.\n Enable Social-Metadata and SEO These include OpenGraph, Twitter Cards and Schema.\nparams:env:productionor set HUGO_ENV as “production” in system env-vars\n Failed to find a valid digest in the ‘integrity’ attribute for resource … ? Read about How Subresource Integrity helps: Subresource_Integrity\nWhy was the asset not loading ? : How_browsers_handle_Subresource_Integrity\nSolution:\nSet the following in config.yml\nparams:assets:disableFingerprinting:trueLinked Issues:\n https://stackoverflow.com/questions/65056585/hugo-theme-not-loading https://stackoverflow.com/questions/65040931/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource https://blog.gerardbeckerleg.com/posts/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource/   Bundling Custom css with theme’s assets  For adding custom css to be bundled inside one minimized css  Create folder in yout project directory as\n.(site root) ├── config.yml ├── content/ ├── theme/hugo-PaperMod/ └── assets/ └── css/ └── extended/ All css files inside assets/css/extended will be bundled !\nNote: blank.css is just the placeholder so that it doesn’t break the theme when no files are present under assets/css/extended\nLinked Issues:\n Papermod Theme: How to add custom CSS?   Custom Head / Footer Custom css/js can be added by way mentioned below.\n.(site root) ├── config.yml ├── content/ ├── theme/hugo-PaperMod/ └── layouts ├── partials │ ├── comments.html │ ├── extend_footer.html Create a html page in directory structure as shown above.\nContents of extend_head.html will be added to head of page.\nand contents of extend_footer.html will be added to bottom of page.\n Add menu to site You can add menu entries which will appear in the header of every page.\nTo do so, add a menu section to your site’s config.yml:\nmenu:main:- identifier:categoriesname:categoriesurl:/categories/weight:10- identifier:tagsname:tagsurl:/tags/weight:20- identifier:examplename:example.orgurl:https://example.orgweight:30name controls what will be displayed for the menu entry. url sets the URL that the entry points to. weight is used to control the positioning of entries.\nFor more information on menus, see the Hugo wiki page.\n Pin a Post Post can be pinned/ displayed top on the list by adding a weight= var to page-variables\nexample:\n---title:\"My Important post\"date:2020-09-15T11:30:03+00:00weight:1------title:\"My 2nd Important post\"date:2020-09-15T11:30:03+00:00weight:2--- Adding Custom Favicon(s) We support the following paths under /static directory and can be added accordingly.\n favicon.ico favicon-16x16.png favicon-32x32.png apple-touch-icon.png safari-pinned-tab.svg    Favicon(s) can be generated by Favicon.io\nand can be simply put in /static folder.\n  Other way is to add favicon(s) NOT located in /static folder.\nIn site config add the following:\nparams: assets: favicon: \"\" favicon16x16: \"\" favicon32x32: \"\" apple_touch_icon: \"\" safari_pinned_tab: \"\"  absolute url means direct links to external resource: ex. https://web.site/someimage.png  example:\nparams: assets: favicon: \"/favicon.ico\" favicon16x16: \"/favicon-16x16.png\" favicon32x32: \"/favicon-32x32.png\" apple_touch_icon: \"/apple-touch-icon.png\" safari_pinned_tab: \"/safari-pinned-tab.svg\"    Centering image in markdown Add #center after image to center align an image\n![name](path/to/image.png#center) When using figure shortcode\nuse align=center to center image with captions\nex.\n{{ figure align=center src=\"image.jpg\" }}  Using Hugo’s Syntax highlighter “chroma”   Disable Highlight.js in site config.yml\nparams:assets:disableHLJS:true  Set hugo’s markdown styling in site config.yml\nmarkup:highlight:# anchorLineNos: truecodeFences:trueguessSyntax:truelineNos:true# noClasses: falsestyle:monokai  If you want lineNos: true, the background won’t be proper. This will only work with noClasses: false or pygmentsUseClasses: true. Read Generate Syntax Highlighter CSS\nAdd the following to assets/css/extended/custom.css\n.chroma { background-color: unset; } More Info : Configure Markup - Highlight\n   Search not working ? If you are using a CDN to server assets from a different domain, search would break\nWhy? Take a look at fastsearch.js#L35.\nWe fetch the index.json (where the search function looks for the keywords typed) one level up of the website search.min.js is hosted on.\nWe have used this insted of assigning baseURL so as to work with multilingual websites ex. example.com/fr/ and websites being placed under a subdirectory ex. example.com/blog/.\nTo fix for single language websites hosting assets from CDN, this you may override fastsearch.js#L35 and placing appropriate URL as in\nxhr.open(\"GET\", \"https://example.com/index.json\");  References  Override a Hugo theme  ","wordCount":"723","inLanguage":"en","datePublished":"2021-01-20T00:00:00Z","dateModified":"2021-01-20T00:00:00Z","author":{"@type":"Person","name":"Aditya Telange"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://reorx.github.io/hugo-PaperModX/docs/faq/"},"publisher":{"@type":"Organization","name":"PaperModX","logo":{"@type":"ImageObject","url":"https://reorx.github.io/hugo-PaperModX/favicon.ico"}}}</script><style>#icons{display:flex;flex-wrap:wrap;margin-top:2em}#icons .item{width:80px;height:50px;margin:10px}#icons .item .name{font-size:12px;user-select:all;text-align:center}#icons .item .icon{display:flex;justify-content:center}#icons .item svg{width:30px;height:30px}</style>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"FAQs","name":"FAQs","description":"Frequently Asked Questions","keywords":[],"articleBody":"Intro   We’ll be using yml/yaml format for all examples down below, I recommend using yml over toml as it is easier to read.\n  You can find any YML to TOML converters if necessary.\n   Override theme template By Hugo’s Lookup Order, you can override any part of a theme that you want. The following is a quick example.\nLet’s say you wish the list was different. All you have to do is copy the list template:\n1  your-site/themes/papermod/layouts/_defaults/list.html   And paste it under your own layouts folder:\n1  your-site/layouts/_defaults/list.html   Then you’re free to make any changes you want to the list. When Hugo builds your site, your copy of list.html will be used instead of the theme’s list.html.\n Enable Social-Metadata and SEO These include OpenGraph, Twitter Cards and Schema.\n1 2  params:env:production  or set HUGO_ENV as “production” in system env-vars\n Failed to find a valid digest in the ‘integrity’ attribute for resource … ? Read about How Subresource Integrity helps: Subresource_Integrity\nWhy was the asset not loading ? : How_browsers_handle_Subresource_Integrity\nSolution:\nSet the following in config.yml\n1 2 3  params:assets:disableFingerprinting:true  Linked Issues:\n https://stackoverflow.com/questions/65056585/hugo-theme-not-loading https://stackoverflow.com/questions/65040931/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource https://blog.gerardbeckerleg.com/posts/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource/   Bundling Custom css with theme’s assets  For adding custom css to be bundled inside one minimized css  Create folder in yout project directory as\n.(site root) ├── config.yml ├── content/ ├── theme/hugo-PaperMod/ └── assets/ └── css/ └── extended/ All css files inside assets/css/extended will be bundled !\nNote: blank.css is just the placeholder so that it doesn’t break the theme when no files are present under assets/css/extended\nLinked Issues:\n Papermod Theme: How to add custom CSS?   Custom Head / Footer Custom css/js can be added by way mentioned below.\n.(site root) ├── config.yml ├── content/ ├── theme/hugo-PaperMod/ └── layouts ├── partials │ ├── comments.html │ ├── extend_footer.html Create a html page in directory structure as shown above.\nContents of extend_head.html will be added to head of page.\nand contents of extend_footer.html will be added to bottom of page.\n Add menu to site You can add menu entries which will appear in the header of every page.\nTo do so, add a menu section to your site’s config.yml:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14  menu:main:- identifier:categoriesname:categoriesurl:/categories/weight:10- identifier:tagsname:tagsurl:/tags/weight:20- identifier:examplename:example.orgurl:https://example.orgweight:30  name controls what will be displayed for the menu entry. url sets the URL that the entry points to. weight is used to control the positioning of entries.\nFor more information on menus, see the Hugo wiki page.\n Pin a Post Post can be pinned/ displayed top on the list by adding a weight= var to page-variables\nexample:\n1 2 3 4 5 6  ---title:\"My Important post\"date:2020-09-15T11:30:03+00:00weight:1---  1 2 3 4 5 6  ---title:\"My 2nd Important post\"date:2020-09-15T11:30:03+00:00weight:2---   Adding Custom Favicon(s) We support the following paths under /static directory and can be added accordingly.\n favicon.ico favicon-16x16.png favicon-32x32.png apple-touch-icon.png safari-pinned-tab.svg    Favicon(s) can be generated by Favicon.io\nand can be simply put in /static folder.\n  Other way is to add favicon(s) NOT located in /static folder.\nIn site config add the following:\nparams: assets: favicon: \"\" favicon16x16: \"\" favicon32x32: \"\" apple_touch_icon: \"\" safari_pinned_tab: \"\"  absolute url means direct links to external resource: ex. https://web.site/someimage.png  example:\nparams: assets: favicon: \"/favicon.ico\" favicon16x16: \"/favicon-16x16.png\" favicon32x32: \"/favicon-32x32.png\" apple_touch_icon: \"/apple-touch-icon.png\" safari_pinned_tab: \"/safari-pinned-tab.svg\"    Centering image in markdown Add #center after image to center align an image\n1  ![name](path/to/image.png#center)   When using figure shortcode\nuse align=center to center image with captions\nex.\n1  {{ figure align=center src=\"image.jpg\" }}    Using Hugo’s Syntax highlighter “chroma” Set hugo’s markdown styling in site config.yml\n1 2 3  markup:highlight:noClasses:false  noClasses has to be false to make highlight color follows the theme.\n Search not working ? If you are using a CDN to server assets from a different domain, search would break\nWhy? Take a look at fastsearch.js#L35.\nWe fetch the index.json (where the search function looks for the keywords typed) one level up of the website search.min.js is hosted on.\nWe have used this insted of assigning baseURL so as to work with multilingual websites ex. example.com/fr/ and websites being placed under a subdirectory ex. example.com/blog/.\nTo fix for single language websites hosting assets from CDN, this you may override fastsearch.js#L35 and placing appropriate URL as in\n1  xhr.open(\"GET\", \"https://example.com/index.json\");    References  Override a Hugo theme  ","wordCount":"726","inLanguage":"en","datePublished":"2021-01-20T00:00:00Z","dateModified":"2021-01-20T00:00:00Z","author":{"@type":"Person","name":"Aditya Telange"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://reorx.github.io/hugo-PaperModX/docs/faq/"},"publisher":{"@type":"Organization","name":"PaperModX","logo":{"@type":"ImageObject","url":"https://reorx.github.io/hugo-PaperModX/favicon.ico"}}}</script><style>#icons{display:flex;flex-wrap:wrap;margin-top:2em}#icons .item{width:80px;height:50px;margin:10px}#icons .item .name{font-size:12px;user-select:all;text-align:center}#icons .item .icon{display:flex;justify-content:center}#icons .item svg{width:30px;height:30px}</style>
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style>
-<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
 </head>
 <body id=top>
@@ -122,7 +121,7 @@ FAQs<sup><span class=entry-isdraft>&nbsp;&nbsp;[draft]</span></sup>
 </div>
 </details>
 </div>
-<div class=post-content><h2 id=intro>Intro<a hidden class=anchor aria-hidden=true href=#intro>#</a></h2>
+<div class=post-content><h2 id=intro>Intro</h2>
 <ul>
 <li>
 <p><strong>We&rsquo;ll be using <code>yml/yaml</code> format for all examples down below, I recommend using <code>yml</code> over <code>toml</code> as it is easier to read.</strong></p>
@@ -132,37 +131,68 @@ FAQs<sup><span class=entry-isdraft>&nbsp;&nbsp;[draft]</span></sup>
 </li>
 </ul>
 <hr>
-<h2 id=override-theme-template>Override theme template<a hidden class=anchor aria-hidden=true href=#override-theme-template>#</a></h2>
+<h2 id=override-theme-template>Override theme template</h2>
 <p>By Hugo&rsquo;s Lookup Order, you can override any part of a theme that you want. The following is a quick example.</p>
 <p>Let&rsquo;s say you wish the <code>list</code> was different. All you have to do is copy the <code>list</code> template:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>your-site/themes/papermod/layouts/_defaults/list.html
-</code></pre></div><p>And paste it under your own <code>layouts</code> folder:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>your-site/layouts/_defaults/list.html
-</code></pre></div><p>Then you&rsquo;re free to make any changes you want to the <code>list</code>.
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>your-site/themes/papermod/layouts/_defaults/list.html
+</code></pre></td></tr></table>
+</div>
+</div><p>And paste it under your own <code>layouts</code> folder:</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>your-site/layouts/_defaults/list.html
+</code></pre></td></tr></table>
+</div>
+</div><p>Then you&rsquo;re free to make any changes you want to the <code>list</code>.
 When Hugo builds your site, your copy of <code>list.html</code> will be used instead of the theme&rsquo;s <code>list.html</code>.</p>
 <hr>
-<h2 id=enable-social-metadata-and-seo>Enable Social-Metadata and SEO<a hidden class=anchor aria-hidden=true href=#enable-social-metadata-and-seo>#</a></h2>
+<h2 id=enable-social-metadata-and-seo>Enable Social-Metadata and SEO</h2>
 <p>These include OpenGraph, Twitter Cards and Schema.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>env</span><span class=p>:</span><span class=w> </span><span class=l>production</span><span class=w>
-</span></code></pre></div><p>or set <code>HUGO_ENV</code> as &ldquo;production&rdquo; in system env-vars</p>
+</span></code></pre></td></tr></table>
+</div>
+</div><p>or set <code>HUGO_ENV</code> as &ldquo;production&rdquo; in system env-vars</p>
 <hr>
-<h2 id=failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource-->Failed to find a valid digest in the &lsquo;integrity&rsquo; attribute for resource &mldr; ?<a hidden class=anchor aria-hidden=true href=#failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource-->#</a></h2>
+<h2 id=failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource-->Failed to find a valid digest in the &lsquo;integrity&rsquo; attribute for resource &mldr; ?</h2>
 <p>Read about How Subresource Integrity helps: <a href=https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity>Subresource_Integrity</a></p>
 <p>Why was the <code>asset</code> not loading ? : <a href=https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity#How_browsers_handle_Subresource_Integrity>How_browsers_handle_Subresource_Integrity</a></p>
 <p><strong>Solution:</strong></p>
 <p>Set the following in <code>config.yml</code></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>assets</span><span class=p>:</span><span class=w>
 </span><span class=w>        </span><span class=nt>disableFingerprinting</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span></code></pre></div><p>Linked Issues:</p>
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Linked Issues:</p>
 <ul>
 <li><a href=https://stackoverflow.com/questions/65056585/hugo-theme-not-loading>https://stackoverflow.com/questions/65056585/hugo-theme-not-loading</a></li>
 <li><a href=https://stackoverflow.com/questions/65040931/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource>https://stackoverflow.com/questions/65040931/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource</a></li>
 <li><a href=https://blog.gerardbeckerleg.com/posts/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource/>https://blog.gerardbeckerleg.com/posts/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource/</a></li>
 </ul>
 <hr>
-<h2 id=bundling-custom-css-with-themes-assets>Bundling Custom css with theme&rsquo;s assets<a hidden class=anchor aria-hidden=true href=#bundling-custom-css-with-themes-assets>#</a></h2>
+<h2 id=bundling-custom-css-with-themes-assets>Bundling Custom css with theme&rsquo;s assets</h2>
 <ul>
 <li>For adding custom css to be bundled inside one minimized css</li>
 </ul>
@@ -183,7 +213,7 @@ When Hugo builds your site, your copy of <code>list.html</code> will be used ins
 <li><a href=https://discourse.gohugo.io/t/papermod-theme-how-to-add-custom-css/30165>Papermod Theme: How to add custom CSS?</a></li>
 </ul>
 <hr>
-<h2 id=custom-head--footer>Custom Head / Footer<a hidden class=anchor aria-hidden=true href=#custom-head--footer>#</a></h2>
+<h2 id=custom-head--footer>Custom Head / Footer</h2>
 <p>Custom css/js can be added by way mentioned below.</p>
 <pre tabindex=0><code>.(site root)
 ├── config.yml
@@ -199,10 +229,28 @@ When Hugo builds your site, your copy of <code>list.html</code> will be used ins
 <p>Contents of <code>extend_head.html</code> will be added to <code>head</code> of page.</p>
 <p>and contents of <code>extend_footer.html</code> will be added to bottom of page.</p>
 <hr>
-<h2 id=add-menu-to-site>Add menu to site<a hidden class=anchor aria-hidden=true href=#add-menu-to-site>#</a></h2>
+<h2 id=add-menu-to-site>Add menu to site</h2>
 <p>You can add menu entries which will appear in the header of every page.</p>
 <p>To do so, add a <code>menu</code> section to your site&rsquo;s <code>config.yml</code>:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>menu</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>menu</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>main</span><span class=p>:</span><span class=w>
 </span><span class=w>        </span>- <span class=nt>identifier</span><span class=p>:</span><span class=w> </span><span class=l>categories</span><span class=w>
 </span><span class=w>          </span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>categories</span><span class=w>
@@ -216,28 +264,54 @@ When Hugo builds your site, your copy of <code>list.html</code> will be used ins
 </span><span class=w>          </span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>example.org</span><span class=w>
 </span><span class=w>          </span><span class=nt>url</span><span class=p>:</span><span class=w> </span><span class=l>https://example.org</span><span class=w>
 </span><span class=w>          </span><span class=nt>weight</span><span class=p>:</span><span class=w> </span><span class=m>30</span><span class=w>
-</span></code></pre></div><p><code>name</code> controls what will be displayed for the menu entry.
+</span></code></pre></td></tr></table>
+</div>
+</div><p><code>name</code> controls what will be displayed for the menu entry.
 <code>url</code> sets the URL that the entry points to.
 <code>weight</code> is used to control the positioning of entries.</p>
 <p>For more information on menus, see the <a href=https://gohugo.io/content-management/menus/>Hugo wiki page</a>.</p>
 <hr>
-<h2 id=pin-a-post>Pin a Post<a hidden class=anchor aria-hidden=true href=#pin-a-post>#</a></h2>
+<h2 id=pin-a-post>Pin a Post</h2>
 <p>Post can be pinned/ displayed top on the list by adding a <code>weight=&lt;num></code> var to page-variables</p>
 <p>example:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
 </span><span class=w></span><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;My Important post&#34;</span><span class=w>
 </span><span class=w></span><span class=nt>date</span><span class=p>:</span><span class=w> </span><span class=ld>2020-09-15T11:30:03</span><span class=m>+00</span><span class=p>:</span><span class=m>00</span><span class=w>
 </span><span class=w></span><span class=nt>weight</span><span class=p>:</span><span class=w> </span><span class=m>1</span><span class=w>
 </span><span class=w></span><span class=nn>---</span><span class=w>
 </span><span class=w>
-</span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
+</span></code></pre></td></tr></table>
+</div>
+</div><div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nn>---</span><span class=w>
 </span><span class=w></span><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;My 2nd Important post&#34;</span><span class=w>
 </span><span class=w></span><span class=nt>date</span><span class=p>:</span><span class=w> </span><span class=ld>2020-09-15T11:30:03</span><span class=m>+00</span><span class=p>:</span><span class=m>00</span><span class=w>
 </span><span class=w></span><span class=nt>weight</span><span class=p>:</span><span class=w> </span><span class=m>2</span><span class=w>
 </span><span class=w></span><span class=nn>---</span><span class=w>
 </span><span class=w>
-</span></code></pre></div><hr>
-<h2 id=adding-custom-favicons>Adding Custom Favicon(s)<a hidden class=anchor aria-hidden=true href=#adding-custom-favicons>#</a></h2>
+</span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id=adding-custom-favicons>Adding Custom Favicon(s)</h2>
 <p>We support the following paths under <code>/static</code> directory
 and can be added accordingly.</p>
 <ul>
@@ -276,54 +350,60 @@ assets:
 </code></pre></li>
 </ol>
 <hr>
-<h2 id=centering-image-in-markdown>Centering image in markdown<a hidden class=anchor aria-hidden=true href=#centering-image-in-markdown>#</a></h2>
+<h2 id=centering-image-in-markdown>Centering image in markdown</h2>
 <p>Add <code>#center</code> after image to center align an image</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-md data-lang=md>![<span class=nt>name</span>](<span class=na>path/to/image.png#center</span>)
-</code></pre></div><p><strong>When using <a href=https://gohugo.io/content-management/shortcodes/><code>figure</code></a> shortcode</strong></p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-md data-lang=md>![<span class=nt>name</span>](<span class=na>path/to/image.png#center</span>)
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>When using <a href=https://gohugo.io/content-management/shortcodes/><code>figure</code></a> shortcode</strong></p>
 <p>use <code>align=center</code> to center image with captions</p>
 <p>ex.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-md data-lang=md>{{<span class=p>&lt;</span> <span class=nt>figure</span> <span class=na>align</span><span class=o>=</span><span class=s>center</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;image.jpg&#34;</span> <span class=p>&gt;</span>}}
-</code></pre></div><hr>
-<h2 id=using-hugos-syntax-highlighter-chroma>Using Hugo&rsquo;s Syntax highlighter &ldquo;chroma&rdquo;<a hidden class=anchor aria-hidden=true href=#using-hugos-syntax-highlighter-chroma>#</a></h2>
-<ol>
-<li>
-<p>Disable Highlight.js in site <code>config.yml</code></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>params</span><span class=p>:</span><span class=w>
-</span><span class=w>    </span><span class=nt>assets</span><span class=p>:</span><span class=w>
-</span><span class=w>        </span><span class=nt>disableHLJS</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span></code></pre></div></li>
-<li>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-md data-lang=md>{{<span class=p>&lt;</span> <span class=nt>figure</span> <span class=na>align</span><span class=o>=</span><span class=s>center</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;image.jpg&#34;</span> <span class=p>&gt;</span>}}
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id=using-hugos-syntax-highlighter-chroma>Using Hugo&rsquo;s Syntax highlighter &ldquo;chroma&rdquo;</h2>
 <p>Set hugo&rsquo;s markdown styling in site <code>config.yml</code></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>markup</span><span class=p>:</span><span class=w>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-yml data-lang=yml><span class=nt>markup</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=nt>highlight</span><span class=p>:</span><span class=w>
-</span><span class=w>        </span><span class=c># anchorLineNos: true</span><span class=w>
-</span><span class=w>        </span><span class=nt>codeFences</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span><span class=w>        </span><span class=nt>guessSyntax</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span><span class=w>        </span><span class=nt>lineNos</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span><span class=w>        </span><span class=c># noClasses: false</span><span class=w>
-</span><span class=w>        </span><span class=nt>style</span><span class=p>:</span><span class=w> </span><span class=l>monokai</span><span class=w>
-</span></code></pre></div></li>
-<li>
-<p>If you want <code>lineNos: true</code>, the background won&rsquo;t be proper.
-This will only work with <code>noClasses: false</code> or <code>pygmentsUseClasses: true</code>.
-Read <a href=https://gohugo.io/content-management/syntax-highlighting/#generate-syntax-highlighter-css>Generate Syntax Highlighter CSS</a></p>
-<p>Add the following to <code>assets/css/extended/custom.css</code></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=p>.</span><span class=nc>chroma</span> <span class=p>{</span>
-    <span class=k>background-color</span><span class=p>:</span> <span class=kc>unset</span><span class=p>;</span>
-<span class=p>}</span>
-</code></pre></div><p>More Info : <a href=https://gohugo.io/getting-started/configuration-markup#highlight>Configure Markup - Highlight</a></p>
-</li>
-</ol>
+</span><span class=w>        </span><span class=nt>noClasses</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></code></pre></td></tr></table>
+</div>
+</div><p><code>noClasses</code> has to be <code>false</code> to make highlight color follows the theme.</p>
 <hr>
-<h2 id=search-not-working->Search not working ?<a hidden class=anchor aria-hidden=true href=#search-not-working->#</a></h2>
+<h2 id=search-not-working->Search not working ?</h2>
 <p>If you are using a CDN to server assets from a different domain, search would break</p>
 <p>Why? Take a look at <a href=https://github.com/adityatelange/hugo-PaperMod/blob/fb4988cfb6d0d6e4e489f17d89f0fa618def3396/assets/js/fastsearch.js#L35>fastsearch.js#L35</a>.</p>
 <p>We fetch the <code>index.json</code> (where the search function looks for the keywords typed) one level up of the website <code>search.min.js</code> is hosted on.</p>
 <p>We have used this insted of assigning <code>baseURL</code> so as to work with multilingual websites ex. <code>example.com/fr/</code> and websites being placed under a subdirectory ex. <code>example.com/blog/</code>.</p>
 <p>To fix for <em>single</em> language websites hosting assets from CDN, this you may <a href=#override-theme-template>override</a> <a href=https://github.com/adityatelange/hugo-PaperMod/blob/fb4988cfb6d0d6e4e489f17d89f0fa618def3396/assets/js/fastsearch.js#L35>fastsearch.js#L35</a> and placing appropriate URL as in</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nx>xhr</span><span class=p>.</span><span class=nx>open</span><span class=p>(</span><span class=s2>&#34;GET&#34;</span><span class=p>,</span> <span class=s2>&#34;https://example.com/index.json&#34;</span><span class=p>);</span>
-</code></pre></div><hr>
-<h2 id=references>References<a hidden class=anchor aria-hidden=true href=#references>#</a></h2>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nx>xhr</span><span class=p>.</span><span class=nx>open</span><span class=p>(</span><span class=s2>&#34;GET&#34;</span><span class=p>,</span> <span class=s2>&#34;https://example.com/index.json&#34;</span><span class=p>);</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id=references>References</h2>
 <ul>
 <li><a href=https://zwbetz.com/override-a-hugo-theme/>Override a Hugo theme</a></li>
 </ul>
