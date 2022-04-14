@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on PaperModX</title>
+    <link>https://reorx.github.io/hugo-PaperModX/posts/</link>
+    <description>Recent content in Posts on PaperModX</description>
+    <image>
+      <url>https://reorx.github.io/hugo-PaperModX/cover.png</url>
+      <link>https://reorx.github.io/hugo-PaperModX/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 12 Apr 2022 23:37:00 +0800</lastBuildDate><atom:link href="https://reorx.github.io/hugo-PaperModX/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PaperModX New Features</title>
+      <link>https://reorx.github.io/hugo-PaperModX/posts/papermodx-new-features/</link>
+      <pubDate>Tue, 12 Apr 2022 23:37:00 +0800</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/posts/papermodx-new-features/</guid>
+      <description>This page explains the new features and changes of PaperModX comparing to it&amp;rsquo;s origin PaperMod.
+Table of Contents (ToC) floating on the side By adding config:
+params:TocSide:&amp;#39;left&amp;#39;# or &amp;#39;right&amp;#39;ToC will float on the left/right side of the page. You can take a look at how &#39;right&#39; feels like in Installation | Update.
+The ToC box is responsive, it only shows on the side when minimum screen size is 1440px.
+this feature is enabled on this site.</description>
+    </item>
+    
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>https://reorx.github.io/hugo-PaperModX/posts/markdown-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/posts/markdown-syntax/</guid>
+      <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
+    </item>
+    
+    <item>
+      <title>Rich Content</title>
+      <link>https://reorx.github.io/hugo-PaperModX/posts/rich-content/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/posts/rich-content/</guid>
+      <description>A brief description of Hugo Shortcodes</description>
+    </item>
+    
+    <item>
+      <title>Placeholder Text</title>
+      <link>https://reorx.github.io/hugo-PaperModX/posts/placeholder-text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/posts/placeholder-text/</guid>
+      <description>Lorem Ipsum Dolor Si Amet</description>
+    </item>
+    
+    <item>
+      <title>Math Typesetting</title>
+      <link>https://reorx.github.io/hugo-PaperModX/posts/math-typesetting/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/posts/math-typesetting/</guid>
+      <description>A brief guide to setup KaTeX</description>
+    </item>
+    
+    <item>
+      <title>Emoji Support</title>
+      <link>https://reorx.github.io/hugo-PaperModX/posts/emoji-support/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/posts/emoji-support/</guid>
+      <description>Guide to emoji usage in Hugo</description>
+    </item>
+    
+  </channel>
+</rss>

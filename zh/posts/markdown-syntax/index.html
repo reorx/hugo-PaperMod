@@ -1,0 +1,502 @@
+<!doctype html><html lang=zh dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>Markdown 入门指南 | PaperModX</title>
+<meta name=keywords content="markdown,css,html,themes">
+<meta name=description content="Markdown 概述、工作原理以及用途。">
+<meta name=author content="markdown.xyz">
+<link rel=canonical href=https://reorx.github.io/hugo-PaperModX/zh/posts/markdown-syntax/>
+<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.eccb4bed811ae026c6db1e4b4d5b681e5b6ec61d22c875f0c33bc1ad27684970.css integrity="sha256-7MtL7YEa4CbG2x5LTVtoHltuxh0iyHXwwzvBrSdoSXA=" rel="preload stylesheet" as=style>
+<script defer crossorigin=anonymous src=/hugo-PaperModX/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://reorx.github.io/hugo-PaperModX/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://reorx.github.io/hugo-PaperModX/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://reorx.github.io/hugo-PaperModX/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://reorx.github.io/hugo-PaperModX/apple-touch-icon.png>
+<link rel=mask-icon href=https://reorx.github.io/hugo-PaperModX/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<link rel=alternate hreflang=en href=https://reorx.github.io/hugo-PaperModX/posts/markdown-syntax/>
+<link rel=alternate hreflang=zh href=https://reorx.github.io/hugo-PaperModX/zh/posts/markdown-syntax/>
+<meta property="og:title" content="Markdown 入门指南">
+<meta property="og:description" content="Markdown 概述、工作原理以及用途。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://reorx.github.io/hugo-PaperModX/zh/posts/markdown-syntax/"><meta property="og:image" content="https://reorx.github.io/hugo-PaperModX/cover.png"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2022-04-12T00:00:00+00:00">
+<meta property="article:modified_time" content="2022-04-12T00:00:00+00:00"><meta property="og:site_name" content="PaperModX">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://reorx.github.io/hugo-PaperModX/cover.png">
+<meta name=twitter:title content="Markdown 入门指南">
+<meta name=twitter:description content="Markdown 概述、工作原理以及用途。">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"文章列表","item":"https://reorx.github.io/hugo-PaperModX/zh/posts/"},{"@type":"ListItem","position":2,"name":"Markdown 入门指南","item":"https://reorx.github.io/hugo-PaperModX/zh/posts/markdown-syntax/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Markdown 入门指南","name":"Markdown 入门指南","description":"Markdown 概述、工作原理以及用途。","keywords":["markdown","css","html","themes"],"articleBody":"Markdown 入门  原文链接: Markdown 入门指南 | Markdown 指南中文版\n Markdown 的概述、工作原理，以及用途。\n Markdown 是什么？ Markdown 是一种轻量级的标记语言，可用于在纯文本文档中添加格式化元素。Markdown 由 John Gruber 于 2004 年创建，如今已成为世界上最受欢迎的标记语言之一。\n使用 Markdown 与使用 WYSIWYG 编辑器不同。在 Microsoft Word 之类的应用程序中，单击按钮以设置单词和短语的格式，并且，更改立即可见。而 Markdown 与此不同，当你创建 Markdown 格式的文件时，可以在文本中添加 Markdown 语法，以指示哪些单词和短语看起来应该有所不同。\n例如，要表示标题，只须在短语前面添加一个井号即可（例如， # Heading One）。或者要加粗一个短语，只须在短语前后各加两个星号即可（例如，**this text is bold**）。可能需要一段时间才能习惯在文本中看到 Markdown 语法，尤其是如果你已习惯了所见即所得的应用程序。以下屏幕截展示了 Markdown 文件在 VSCode 中显示的效果。\n你可以使用文本编辑器为纯文本文件添加 Markdown 格式的元素。或者，你也可以安装针对 macOS、Windows、Linux、iOS 和 Android 操作系统的 Markdown 应用程序。或者还可以使用一些基于 Web 的应用程序用于 Markdown 编写。\n依赖于你所使用的应用程序，你可能无法实时预览格式化的文档。但是没关系。根据 Gruber 的说法，Markdown 的语法被设计为可读性强且不显眼，因此即使 Markdown 文件中的文本未经过渲染也易于阅读。\n Markdown 语法的首要设计目标是尽可能易读。基于这个目标，Markdown 格式的文档能够以纯文本形式原样发布，而不会看起来像被填满了标签或格式化指令。\n 为什么要使用 Markdown？ 你可能想知道为什么人们使用 Markdown 而不是所用即所得（WYSIWYG）编辑器。当你可以通过按下界面中的按钮来设置文本格式时，为什么还要使用 Markdown 来书写呢？事实证明，人们使用 Markdown 而不是 WYSIWYG 编辑器的原因有两个：\n  Markdown 处处可用。人们使用它来创建 网站、文档、便签、书籍、演示文稿、邮件 和 技术文档。\n  Markdown 是可移植的。几乎可以使用任何应用程序打开包含 Markdown 格式的文本文件。如果你不喜欢当前使用的 Markdown 应用程序了，则可以将 Markdown 文件导入另一个 Markdown 应用程序中。这与 Microsoft Word 等文字处理应用程序形成了鲜明的对比，Microsoft Word 将你的内容锁定在专有文件格式中。\n  Markdown 是独立于平台的。你可以在运行任何操作系统的任何设备上创建 Markdown 格式的文本。\n  Markdown 能适应未来的变化。即使你正在使用的应用程序将来会在某个时候不能使用了，你仍然可以使用文本编辑器读取 Markdown 格式的文本。当涉及需要无限期保存的书籍、大学论文和其他里程碑式的文件时，这是一个重要的考虑因素。\n  Markdown 无处不在。例如 Reddit 和 GitHub 等网站都支持 Markdown，许多桌面和基于 Web 的应用程序也都支持 Markdown。\n  工欲善其事，必先利其器 Markdown 入门的最佳方式就是多使用它。由于有大量免费工具的存在，这比以前任何时候都更容易开始上手了。\n你甚至都不需要下载任何程序，就可以使用几种在线的 Markdown 编辑器来编写 Markdown。MDEditor 是最好的在线 Markdown 编辑器之一。进入其站点就可以开始在左侧窗格中书写了。渲染后的文档在右侧窗格预览。\n阅读本指南时，你可以打开 MDEditor 网站。这样，你就可以一边学习 Markdown 语法一边练习了。熟悉 Markdown 之后，你可以在台式计算机或移动设备上安装支持 Markdown 的应用程序。\nMarkdown 的工作原理 MDEditor 让 Markdown 的编写变得容易，因为它隐藏了幕后发生的事情，但是该过程的总体工作方式是值得探索的。\n在使用 Markdown 格式书写时，文本内容存储在带有 .md 或 .markdown 扩展名的纯文本文件中。那然后呢？你的 Markdown 格式的文件如何转换为 HTML 或可打印的文档呢？\n简单来说，你需要一个能够处理 Markdown 文件的 Markdown 应用程序。有许多应用程序可供选择，从简单的脚本到类似于 Microsoft Word 的桌面应用程序，应有尽有。尽管它们在视觉上有所不同，但所有应用程序都执行相同的操作。像 MDEditor 一样，它们都是将 Markdown 格式的文本转换为 HTML，以便可以在 Web 浏览器中显示。\nMarkdown 应用程序使用一种称为 Markdown 处理器（也通常称为“解析器”或“实现”）的东西将获取到的 Markdown 格式的文本输出为 HTML 格式。此时，可以在 Web 浏览器中查看你的文档，或者将其与样式表组合并打印。你可以在下图看到此过程的直观表示。\n注意： Markdown 应用程序和处理器是两个单独的组件。为了简洁起见，在下图中，我将它们组合为一个元素（即 “Markdown应用程序”）。  总而言之，这是一个四步的过程：\n 使用文本编辑器或 Markdown 专用的应用程序创建 Markdown 文件。该文件应带有 .md 或 .markdown 扩展名。 在 Markdown 应用程序中打开 Markdown 文件。 使用 Markdown 应用程序将 Markdown 文件转换为 HTML 文档。 在 web 浏览器中查看 HTML 文件，或使用 Markdown 应用程序将其转换为其他文件格式，例如 PDF。  从你的角度来看，该过程将根据你使用的应用程序的不同而有所不同。例如，MDEditor 本质上将第 1-3 步组合到一个单一、无缝的界面中，你要做的就是在左窗格中键入内容，然后转换结果就在右窗格中就神奇地出现了。但是，如果你使用的是其他工具（例如带有静态网站生成器的文本编辑器），则会发现该过程更为明显。\nMarkdown 有什么用？ Markdown 是做笔记、为网站创建内容以及生成可打印文档的快速、简便的方法。\n学习 Markdown 语法并不需要很长时间，一旦你知道如何使用它，你就可以在几乎所有地方使用 Markdown 进行书写了。大多数人使用 Markdown 来为网站创建内容，但是 Markdown 也可以很好地格式化从电子邮件到购物清单的所有内容。\n下面是一些你可以使用 Markdown 的场景。\n网站 Markdown 是为 web 而设计的，因此，市面上有很多专门用于创建网站内容的应用程序就不足为奇了。\n如果你您正在寻找利用 Markdown 文件创建网站的最简单方法，请参考 blot.im 和 smallvictori.es 两个站点。在你注册某个服务之后，它们将在你的计算机上创建一个 Dropbox 文件夹。你只需将 Markdown 文件拖放到该文件夹​​中，然后嗖的一声，这些文件就在你的网站上了。再简单不过了。\n如果您熟悉 HTML、CSS和版本管理工具，请试试 Jekyll，这是一个广受欢迎的静态网站生成器，它能将 Markdown 文件并构建为 HTML 网站。这种方法的优势之一是 GitHub Pages 为 Jekyll 生成的网站提供免费托管服务。如果 Jekyll 不是你的理想之选，你可以在 其它大量可用的静态站点生成器 中选择一个。\n注意： 此 Markdown指南 就是用 Jekyll 创建的。你可以在 GitHub 上查看其源码。  如果你想使用内容管理系统（CMS）来支撑你的网站，请试试 Ghost。这是一个免费的开源博客平台，具有出色的 Markdown 编辑器。如果你是 WordPress 用户，你将很高兴地知道 WordPress.com 上托管的网站都 支持 Markdown。自托管的 WordPress 网站可以使用 Jetpack 插件实现对 Markdown 的支持。\n文件资料 Markdown 并不具备像 Microsoft Word 这样的文字处理程序的所有功能，但是对于创建基本文件（例如作业和信件）来说已经足够了。你可以使用 Markdown 文档创作工具来创建 Markdown 格式的文档并将其导出为 PDF 或 HTML 格式。PDF 格式是关键，因为一旦有了 PDF 文档，您就可以使用它进行任何操作：打印、通过电子邮件发送或将其上传到网站。\n这是我推荐的一些Markdown文档创作工具：\n   平台 工具 链接     Mac MacDown https://macdown.uranusjr.com/   Mac Marked https://marked2app.com/   Mac / iOS / Android iA Writer https://ia.net/writer   Windows ghostwriter https://wereturtle.github.io/ghostwriter/   Windows Markdown Monster https://markdownmonster.west-wind.com/   Linux ReText https://github.com/retext-project/retext   Linux ghostwriter https://wereturtle.github.io/ghostwriter/   Web MDEditor https://www.zybuluo.com/mdeditor    提示：iA Writer 提供了模板用于预览、打印和导出 Markdown 格式的文档。例如，“ Academic – MLA 样式”的模板会缩进段落并添加双句间距。  笔记 在几乎所有方面，Markdown 都是记笔记的理想语法。不幸的是，两个最受欢迎的笔记应用程序 Evernote 和 OneNote 目前都不支持 Markdown。好消息是，其他一些笔记应用程序 是 支持 Markdown 的：\n Simplenote 是适用于所有平台的免费、简单的笔记应用程序。 Notable 是可以在各种平台上运行的笔记应用程序。 Bear 是适用于 Mac 和 iOS 设备的类似 Evernote 的应用程序。默认情况下，它并不专门针对 Markdown 的，但是你可以启用 Markdown 兼容模式。 Boostnote 自称是“专为程序员设计的开源笔记应用程序”。  如果你无法放弃 Evernote，可以试试 Marxico，一个专门针对 Evernote 的基于订阅付费的 Markdown编辑器，或在 Evernote 网站上使用 Markdown Here 插件。\n书籍 想要自行出版小说？请试试 Leanpub，该服务可将你的 Markdown 格式的文件转换为电子书。Leanpub 以 PDF、EPUB 和 MOBI 文件格式输出你的图书。如果你要创建纸版书籍，可以将 PDF 文件上传到类似 Kindle Direct Publishing 之类的服务提供商处。要了解有关使用 Markdown 编写和自行出版书籍的更多信息，请阅读 此博文。\n演示文稿 信不信由你，你可以将 Markdown 格式的文件转换成演示文稿。在 Markdown 中创建演示文稿需要一点时间来适应，但是一旦你掌握了它，你就能体会到比使用 PowerPoint 或 Keynote 之类的应用程序更快、更容易。Remark（GitHub 仓库）和 Cleaver（GitHub 仓库）一样，是一种基于浏览器的、流行的 Markdown 幻灯片工具。如果你使用的是 Mac，并且希望安装一个应用程序来使用的话，请试试 Deckset 或 Marked。\n邮件 如果你需要发送大量电子邮件，并且对大多数电子邮件提供商网站上可用的格式设置控件感到厌倦，那么你将很高兴地发现有一种使用 Markdown 编写电子邮件的简便方法：Markdown Here 是一个免费、开源的浏览器扩展程序，可将 Markdown 格式的文本转换为可用于发送的 HTML。\n文档 Markdown 非常适合技术文档。像 GitHub 这样的公司越来越多地转向使用 Markdown 来创建其文档了，请查看此 博文 以了解如何将 Markdown 格式的文档迁移到 Jekyll。如果你是为产品或服务编写文档，请试试以下的便捷工具：\n Read the Docs 可以将你所开源的 Markdown 文件生成文档网站。只需将你的 GitHub 仓库连接到他们的服务，然后你就可以将内容推送到该仓库中，Read the Docs 会完成其余的工作。他们还为 商业实体提供服务。 MkDocs 是一个快速、简单的静态站点生成器，专门用于构建项目文档。文档源文件使用 Markdown 编写，并使用一个 YAML 配置文件进行配置。MkDocs 有多个 内置主题，包括移植自 Read the Docs 的文档主题。最新的一个主题是 MkDocs Material。 Docusaurus 是一个静态网站生成器，专门用于创建文档网站。它支持翻译、搜索和版本控制。 VuePress 是基于 Vue 构建的静态站点生成器，并针对编写技术文档进行了优化。 Jekyll 前面已经提到过它了，但它也是将 Markdown 文件生成文档网站的一个不错的选择。如果你选择 Jekyll，请务必试试 Jekyll 文档主题。  Markdown 方言 使用 Markdown 的过程中，最令人困惑的地方是：实际上每个 Markdown 应用程序都实现了稍有不同的 Markdown 语法。Markdown 的这些变体通常被称为 flavors（方言）。掌握你的应用程序所实现的 Markdown 语法是你需要主义的。\n为了让你了解各 Markdown 变体的概念，将它们比作语言的方言（language dialects）可能会有所帮助。华雷斯城（Ciudad Juárez）的人说西班牙语，就像巴塞罗那（Barcelona）人一样，但是两个城市使用的方言之间有很大的不同。使用不同 Markdown 应用程序的人也是如此。MDEditor 支持的 Markdown 格式与 Ulysses 有着很大的不同。\n实际上，这意味着当一个应用程序说它支持 “Markdown” 时，你永远也不会确切地知到它的实际意思。它说的是仅支持 基本语法？还是所有基本语法加 扩展语法 ？或者是某些语法的组合呢？在你阅读其文档或开始使用该应用程序之前，你永远都不会知到。\n如果你只是新手，我能给你的最好建议就是选择一个具有良好 Markdown 支持的应用程序。这对保持 Markdown 文件的可移植性大有帮助。你可能需要在其它应用程序中保存或使用你的 Markdown 文件，要实现这一点，你应当从使用一个具有良好 Markdown 支持的应用程序开始。你可以在 Markdown 工具列表 中找到合适的应用程序。\n其它资源 网上有很多资源用来学习 Markdown。以下列出一些：\n John Gruber’s Markdown documentation. Markdown 的创建者编写的原始指南。 Markdown Tutorial. 一个开源网站，你能用浏览器在这个网站上尝试 Markdown。 Awesome Markdown. Markdown 工具和学习资源列表。 Typesetting Markdown. 这是一个系列教程，介绍了使用 pandoc 和 ConTeXt 对 Markdown 文档进行排版的系统。  ","wordCount":"557","inLanguage":"zh","datePublished":"2022-04-12T00:00:00Z","dateModified":"2022-04-12T00:00:00Z","author":{"@type":"Person","name":"markdown.xyz"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://reorx.github.io/hugo-PaperModX/zh/posts/markdown-syntax/"},"publisher":{"@type":"Organization","name":"PaperModX","logo":{"@type":"ImageObject","url":"https://reorx.github.io/hugo-PaperModX/favicon.ico"}}}</script><style>#icons{display:flex;flex-wrap:wrap;margin-top:2em}#icons .item{width:80px;height:50px;margin:10px}#icons .item .name{font-size:12px;user-select:all;text-align:center}#icons .item .icon{display:flex;justify-content:center}#icons .item svg{width:30px;height:30px}</style>
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript>
+</head>
+<body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://reorx.github.io/hugo-PaperModX/zh/ accesskey=h title="PaperModX (Alt + H)">PaperModX</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+<ul class=lang-switch><li>|</li>
+<li>
+<a href=https://reorx.github.io/hugo-PaperModX/ title=English aria-label=English>English</a>
+</li>
+</ul>
+</span>
+</div>
+<ul id=menu>
+<li>
+<a href=https://reorx.github.io/hugo-PaperModX/zh/archives/ title=归档>归档</a>
+</li>
+<li>
+<a href=https://reorx.github.io/hugo-PaperModX/zh/categories title=分类>分类</a>
+</li>
+<li>
+<a href=https://reorx.github.io/hugo-PaperModX/zh/tags title=标签>标签</a>
+</li>
+<li>
+<a href=https://reorx.github.io/hugo-PaperModX/zh/series title=系列>系列</a>
+</li>
+<li>
+<a href=https://reorx.github.io/hugo-PaperModX/zh/search/ title=搜索>搜索</a>
+</li>
+<li>
+<a href=https://reorx.com title=@Author>@Author</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class="main post">
+<article class=post-single>
+<header class=post-header>
+<div class=breadcrumbs><a href=https://reorx.github.io/hugo-PaperModX/zh/>主页</a>&nbsp;»&nbsp;<a href=https://reorx.github.io/hugo-PaperModX/zh/posts/>文章列表</a></div>
+<h1 class=post-title>
+Markdown 入门指南
+</h1>
+<div class=post-description>
+Markdown 概述、工作原理以及用途。
+</div>
+<div class=post-meta><span title="2022-04-12 00:00:00 +0000 UTC">四月 12, 2022</span>&nbsp;·&nbsp;3 分钟&nbsp;·&nbsp;markdown.xyz&nbsp;|&nbsp;
+<ul class=i18n_list>语言:
+<li>
+<a href=https://reorx.github.io/hugo-PaperModX/posts/markdown-syntax/>English</a>
+</li>
+</ul>&nbsp;|&nbsp;<a href=https://github.com/reorx/hugo-PaperModX/tree/exampleSite/content/posts/markdown-syntax.zh.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+</div>
+</header> <div class="toc side right">
+<details open>
+<summary accesskey=c title="(Alt + C)">
+<span class=details>目录</span>
+</summary>
+<div class=inner><ul>
+<li>
+<a href=#markdown-%e5%85%a5%e9%97%a8 aria-label="Markdown 入门">Markdown 入门</a><ul>
+<li>
+<a href=#markdown-%e6%98%af%e4%bb%80%e4%b9%88 aria-label="Markdown 是什么？">Markdown 是什么？</a></li>
+<li>
+<a href=#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e4%bd%bf%e7%94%a8-markdown aria-label="为什么要使用 Markdown？">为什么要使用 Markdown？</a></li>
+<li>
+<a href=#%e5%b7%a5%e6%ac%b2%e5%96%84%e5%85%b6%e4%ba%8b%e5%bf%85%e5%85%88%e5%88%a9%e5%85%b6%e5%99%a8 aria-label=工欲善其事，必先利其器>工欲善其事，必先利其器</a></li>
+<li>
+<a href=#markdown-%e7%9a%84%e5%b7%a5%e4%bd%9c%e5%8e%9f%e7%90%86 aria-label="Markdown 的工作原理">Markdown 的工作原理</a></li>
+<li>
+<a href=#markdown-%e6%9c%89%e4%bb%80%e4%b9%88%e7%94%a8 aria-label="Markdown 有什么用？">Markdown 有什么用？</a><ul>
+<li>
+<a href=#%e7%bd%91%e7%ab%99 aria-label=网站>网站</a></li>
+<li>
+<a href=#%e6%96%87%e4%bb%b6%e8%b5%84%e6%96%99 aria-label=文件资料>文件资料</a></li>
+<li>
+<a href=#%e7%ac%94%e8%ae%b0 aria-label=笔记>笔记</a></li>
+<li>
+<a href=#%e4%b9%a6%e7%b1%8d aria-label=书籍>书籍</a></li>
+<li>
+<a href=#%e6%bc%94%e7%a4%ba%e6%96%87%e7%a8%bf aria-label=演示文稿>演示文稿</a></li>
+<li>
+<a href=#%e9%82%ae%e4%bb%b6 aria-label=邮件>邮件</a></li>
+<li>
+<a href=#%e6%96%87%e6%a1%a3 aria-label=文档>文档</a></li></ul>
+</li>
+<li>
+<a href=#markdown-%e6%96%b9%e8%a8%80 aria-label="Markdown 方言">Markdown 方言</a></li>
+<li>
+<a href=#%e5%85%b6%e5%ae%83%e8%b5%84%e6%ba%90 aria-label=其它资源>其它资源</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</details>
+</div>
+<div class=post-content><h1 id=markdown-入门>Markdown 入门<a hidden class=anchor aria-hidden=true href=#markdown-入门>#</a></h1>
+<blockquote>
+<p>原文链接: <a href=https://www.markdown.xyz/getting-started/>Markdown 入门指南 | Markdown 指南中文版</a></p>
+</blockquote>
+<p><em>Markdown 的概述、工作原理，以及用途。</em></p>
+<h2 id=markdown-是什么>Markdown 是什么？<a hidden class=anchor aria-hidden=true href=#markdown-是什么>#</a></h2>
+<p>Markdown
+是一种轻量级的标记语言，可用于在纯文本文档中添加格式化元素。Markdown 由
+<a href=https://daringfireball.net/projects/markdown/>John Gruber</a> 于 2004
+年创建，如今已成为世界上最受欢迎的标记语言之一。</p>
+<p>使用 Markdown 与使用 <a href=https://en.wikipedia.org/wiki/WYSIWYG>WYSIWYG</a>
+编辑器不同。在 Microsoft Word
+之类的应用程序中，单击按钮以设置单词和短语的格式，并且，更改立即可见。而
+Markdown 与此不同，当你创建 Markdown 格式的文件时，可以在文本中添加
+Markdown 语法，以指示哪些单词和短语看起来应该有所不同。</p>
+<p>例如，要表示标题，只须在短语前面添加一个井号即可（例如，
+<code># Heading One</code>）。或者要加粗一个短语，只须在短语前后各加两个星号即可（例如，<code>**this text is bold**</code>）。可能需要一段时间才能习惯在文本中看到
+Markdown
+语法，尤其是如果你已习惯了所见即所得的应用程序。以下屏幕截展示了
+Markdown 文件在 <a href=https://code.visualstudio.com/>VSCode</a> 中显示的效果。</p>
+<p><img loading=lazy src=vscode.png alt>
+</p>
+<p>你可以使用文本编辑器为纯文本文件添加 Markdown
+格式的元素。或者，你也可以安装针对 macOS、Windows、Linux、iOS 和 Android
+操作系统的 Markdown 应用程序。或者还可以使用一些基于 Web 的应用程序用于
+Markdown 编写。</p>
+<p>依赖于你所使用的应用程序，你可能无法实时预览格式化的文档。但是没关系。<a href=https://daringfireball.net/projects/markdown/>根据
+Gruber 的说法</a>，Markdown
+的语法被设计为可读性强且不显眼，因此即使 Markdown
+文件中的文本未经过渲染也易于阅读。</p>
+<blockquote>
+<p>Markdown 语法的首要设计目标是尽可能易读。基于这个目标，Markdown
+格式的文档能够以纯文本形式原样发布，而不会看起来像被填满了标签或格式化指令。</p>
+</blockquote>
+<h2 id=为什么要使用-markdown>为什么要使用 Markdown？<a hidden class=anchor aria-hidden=true href=#为什么要使用-markdown>#</a></h2>
+<p>你可能想知道为什么人们使用 Markdown
+而不是所用即所得（WYSIWYG）编辑器。当你可以通过按下界面中的按钮来设置文本格式时，为什么还要使用
+Markdown 来书写呢？事实证明，人们使用 Markdown 而不是 WYSIWYG
+编辑器的原因有两个：</p>
+<ul>
+<li>
+<p>Markdown 处处可用。人们使用它来创建
+<a href=#websites>网站</a>、<a href=#documents>文档</a>、<a href=#notes>便签</a>、<a href=#books>书籍</a>、<a href=#presentations>演示文稿</a>、<a href=#email>邮件</a>
+和 <a href=#documentation>技术文档</a>。</p>
+</li>
+<li>
+<p>Markdown 是可移植的。几乎可以使用任何应用程序打开包含 Markdown
+格式的文本文件。如果你不喜欢当前使用的 Markdown 应用程序了，则可以将
+Markdown 文件导入另一个 Markdown 应用程序中。这与 Microsoft Word
+等文字处理应用程序形成了鲜明的对比，Microsoft Word
+将你的内容锁定在专有文件格式中。</p>
+</li>
+<li>
+<p>Markdown 是独立于平台的。你可以在运行任何操作系统的任何设备上创建
+Markdown 格式的文本。</p>
+</li>
+<li>
+<p>Markdown
+能适应未来的变化。即使你正在使用的应用程序将来会在某个时候不能使用了，你仍然可以使用文本编辑器读取
+Markdown
+格式的文本。当涉及需要无限期保存的书籍、大学论文和其他里程碑式的文件时，这是一个重要的考虑因素。</p>
+</li>
+<li>
+<p>Markdown 无处不在。例如 <a href=/tools/reddit/>Reddit</a> 和 GitHub
+等网站都支持 Markdown，许多桌面和基于 Web 的应用程序也都支持
+Markdown。</p>
+</li>
+</ul>
+<h2 id=工欲善其事必先利其器>工欲善其事，必先利其器<a hidden class=anchor aria-hidden=true href=#工欲善其事必先利其器>#</a></h2>
+<p>Markdown
+入门的最佳方式就是多使用它。由于有大量免费工具的存在，这比以前任何时候都更容易开始上手了。</p>
+<p>你甚至都不需要下载任何程序，就可以使用几种在线的 Markdown 编辑器来编写
+Markdown。<a href=https://www.zybuluo.com/mdeditor>MDEditor</a> 是最好的在线 Markdown
+编辑器之一。进入其站点就可以开始在左侧窗格中书写了。渲染后的文档在右侧窗格预览。</p>
+<p><img loading=lazy src=mdeditor.png alt>
+</p>
+<p>阅读本指南时，你可以打开 MDEditor 网站。这样，你就可以一边学习 Markdown
+语法一边练习了。熟悉 Markdown
+之后，你可以在台式计算机或移动设备上安装支持 Markdown 的应用程序。</p>
+<h2 id=markdown-的工作原理>Markdown 的工作原理<a hidden class=anchor aria-hidden=true href=#markdown-的工作原理>#</a></h2>
+<p>MDEditor 让 Markdown
+的编写变得容易，因为它隐藏了幕后发生的事情，但是该过程的总体工作方式是值得探索的。</p>
+<p>在使用 Markdown 格式书写时，文本内容存储在带有 <code>.md</code> 或 <code>.markdown</code>
+扩展名的纯文本文件中。那然后呢？你的 Markdown 格式的文件如何转换为 HTML
+或可打印的文档呢？</p>
+<p>简单来说，你需要一个能够处理 Markdown 文件的 <em>Markdown
+应用程序</em>。有许多应用程序可供选择，从简单的脚本到类似于 Microsoft Word
+的桌面应用程序，应有尽有。尽管它们在视觉上有所不同，但所有应用程序都执行相同的操作。像
+MDEditor 一样，它们都是将 Markdown 格式的文本转换为 HTML，以便可以在
+Web 浏览器中显示。</p>
+<p>Markdown 应用程序使用一种称为 <em>Markdown
+处理器</em>（也通常称为“解析器”或“实现”）的东西将获取到的 Markdown
+格式的文本输出为 HTML 格式。此时，可以在 Web
+浏览器中查看你的文档，或者将其与样式表组合并打印。你可以在下图看到此过程的直观表示。</p>
+<div class="alert alert-info">
+注意： Markdown
+应用程序和处理器是两个单独的组件。为了简洁起见，在下图中，我将它们组合为一个元素（即
+“Markdown应用程序”）。
+</div>
+<p><img loading=lazy src=process.png alt>
+</p>
+<p>总而言之，这是一个四步的过程：</p>
+<ol>
+<li>使用文本编辑器或 Markdown 专用的应用程序创建 Markdown
+文件。该文件应带有 <code>.md</code> 或 <code>.markdown</code> 扩展名。</li>
+<li>在 Markdown 应用程序中打开 Markdown 文件。</li>
+<li>使用 Markdown 应用程序将 Markdown 文件转换为 HTML 文档。</li>
+<li>在 web 浏览器中查看 HTML 文件，或使用 Markdown
+应用程序将其转换为其他文件格式，例如 PDF。</li>
+</ol>
+<p>从你的角度来看，该过程将根据你使用的应用程序的不同而有所不同。例如，MDEditor
+本质上将第 1-3
+步组合到一个单一、无缝的界面中，你要做的就是在左窗格中键入内容，然后转换结果就在右窗格中就神奇地出现了。但是，如果你使用的是其他工具（例如带有静态网站生成器的文本编辑器），则会发现该过程更为明显。</p>
+<h2 id=markdown-有什么用>Markdown 有什么用？<a hidden class=anchor aria-hidden=true href=#markdown-有什么用>#</a></h2>
+<p>Markdown 是做笔记、为网站创建内容以及生成可打印文档的快速、简便的方法。</p>
+<p>学习 Markdown
+语法并不需要很长时间，一旦你知道如何使用它，你就可以在几乎所有地方使用
+Markdown 进行书写了。大多数人使用 Markdown 来为网站创建内容，但是
+Markdown 也可以很好地格式化从电子邮件到购物清单的所有内容。</p>
+<p>下面是一些你可以使用 Markdown 的场景。</p>
+<h3 id=网站>网站<a hidden class=anchor aria-hidden=true href=#网站>#</a></h3>
+<p>Markdown 是为 web
+而设计的，因此，市面上有很多专门用于创建网站内容的应用程序就不足为奇了。</p>
+<p>如果你您正在寻找利用 Markdown 文件创建网站的最简单方法，请参考
+<a href=https://blot.im>blot.im</a> 和 <a href=https://smallvictori.es>smallvictori.es</a>
+两个站点。在你注册某个服务之后，它们将在你的计算机上创建一个 Dropbox
+文件夹。你只需将 Markdown
+文件拖放到该文件夹​​中，然后嗖的一声，这些文件就在你的网站上了。再简单不过了。</p>
+<p>如果您熟悉 HTML、CSS和版本管理工具，请试试
+<a href=/tools/jekyll/>Jekyll</a>，这是一个广受欢迎的静态网站生成器，它能将
+Markdown 文件并构建为 HTML 网站。这种方法的优势之一是 <a href=/tools/github-pages/>GitHub
+Pages</a> 为 Jekyll 生成的网站提供免费托管服务。如果
+Jekyll 不是你的理想之选，你可以在
+<a href=https://www.staticgen.com/>其它大量可用的静态站点生成器</a> 中选择一个。</p>
+<div class="alert alert-info">
+注意： 此 <b>Markdown指南</b> 就是用 Jekyll 创建的。你可以在
+GitHub 上查看其源码。
+</div>
+<p>如果你想使用内容管理系统（CMS）来支撑你的网站，请试试
+<a href=/tools/ghost/>Ghost</a>。这是一个免费的开源博客平台，具有出色的 Markdown
+编辑器。如果你是 WordPress 用户，你将很高兴地知道 WordPress.com
+上托管的网站都 <a href=https://en.support.wordpress.com/markdown/>支持
+Markdown</a>。自托管的
+WordPress 网站可以使用 <a href=https://jetpack.com/support/markdown/>Jetpack
+插件</a>实现对 Markdown 的支持。</p>
+<h3 id=文件资料>文件资料<a hidden class=anchor aria-hidden=true href=#文件资料>#</a></h3>
+<p>Markdown 并不具备像 Microsoft Word
+这样的文字处理程序的所有功能，但是对于创建基本文件（例如作业和信件）来说已经足够了。你可以使用
+Markdown 文档创作工具来创建 Markdown 格式的文档并将其导出为 PDF 或 HTML
+格式。PDF 格式是关键，因为一旦有了 PDF
+文档，您就可以使用它进行任何操作：打印、通过电子邮件发送或将其上传到网站。</p>
+<p>这是我推荐的一些Markdown文档创作工具：</p>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>工具</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mac</td>
+<td>MacDown</td>
+<td><a href=https://macdown.uranusjr.com/>https://macdown.uranusjr.com/</a></td>
+</tr>
+<tr>
+<td>Mac</td>
+<td>Marked</td>
+<td><a href=https://marked2app.com/>https://marked2app.com/</a></td>
+</tr>
+<tr>
+<td>Mac / iOS / Android</td>
+<td>iA Writer</td>
+<td><a href=https://ia.net/writer>https://ia.net/writer</a></td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>ghostwriter</td>
+<td><a href=https://wereturtle.github.io/ghostwriter/>https://wereturtle.github.io/ghostwriter/</a></td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Markdown Monster</td>
+<td><a href=https://markdownmonster.west-wind.com/>https://markdownmonster.west-wind.com/</a></td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>ReText</td>
+<td><a href=https://github.com/retext-project/retext>https://github.com/retext-project/retext</a></td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>ghostwriter</td>
+<td><a href=https://wereturtle.github.io/ghostwriter/>https://wereturtle.github.io/ghostwriter/</a></td>
+</tr>
+<tr>
+<td>Web</td>
+<td>MDEditor</td>
+<td><a href=https://www.zybuluo.com/mdeditor>https://www.zybuluo.com/mdeditor</a></td>
+</tr>
+</tbody>
+</table>
+<div class="alert alert-success">
+提示：iA Writer
+提供了模板用于预览、打印和导出 Markdown 格式的文档。例如，“ Academic –
+MLA 样式”的模板会缩进段落并添加双句间距。
+</div>
+<h3 id=笔记>笔记<a hidden class=anchor aria-hidden=true href=#笔记>#</a></h3>
+<p>在几乎所有方面，Markdown
+都是记笔记的理想语法。不幸的是，两个最受欢迎的笔记应用程序
+<a href=https://evernote.com/>Evernote</a> 和 <a href=https://www.onenote.com/>OneNote</a>
+目前都不支持 Markdown。好消息是，其他一些笔记应用程序 <em>是</em> 支持 Markdown
+的：</p>
+<ul>
+<li><a href=/tools/simplenote/>Simplenote</a>
+是适用于所有平台的免费、简单的笔记应用程序。</li>
+<li><a href=/tools/notable/>Notable</a> 是可以在各种平台上运行的笔记应用程序。</li>
+<li><a href=/tools/bear/>Bear</a> 是适用于 Mac 和 iOS 设备的类似 Evernote
+的应用程序。默认情况下，它并不专门针对 Markdown 的，但是你可以启用
+Markdown 兼容模式。</li>
+<li><a href=/tools/boostnote/>Boostnote</a>
+自称是“专为程序员设计的开源笔记应用程序”。</li>
+</ul>
+<p>如果你无法放弃 Evernote，可以试试
+<a href=https://marxi.co/>Marxico</a>，一个专门针对 Evernote 的基于订阅付费的
+Markdown编辑器，或在 Evernote 网站上使用 <a href=/tools/markdown-here/>Markdown
+Here</a> 插件。</p>
+<h3 id=书籍>书籍<a hidden class=anchor aria-hidden=true href=#书籍>#</a></h3>
+<p>想要自行出版小说？请试试 <a href=https://leanpub.com/>Leanpub</a>，该服务可将你的
+Markdown 格式的文件转换为电子书。Leanpub 以 PDF、EPUB 和 MOBI
+文件格式输出你的图书。如果你要创建纸版书籍，可以将 PDF 文件上传到类似
+<a href=https://kdp.amazon.com>Kindle Direct Publishing</a>
+之类的服务提供商处。要了解有关使用 Markdown
+编写和自行出版书籍的更多信息，请阅读
+<a href=https://medium.com/techspiration-ideas-making-it-happen/how-i-wrote-and-published-my-novel-using-only-open-source-tools-5cdfbd7c00ca>此博文</a>。</p>
+<h3 id=演示文稿>演示文稿<a hidden class=anchor aria-hidden=true href=#演示文稿>#</a></h3>
+<p>信不信由你，你可以将 Markdown 格式的文件转换成演示文稿。在 Markdown
+中创建演示文稿需要一点时间来适应，但是一旦你掌握了它，你就能体会到比使用
+PowerPoint 或 Keynote
+之类的应用程序更快、更容易。<a href=https://remarkjs.com>Remark</a>（<a href=https://github.com/gnab/remark>GitHub
+仓库</a>）和
+<a href=https://jdan.github.io/cleaver/>Cleaver</a>（<a href=https://github.com/jdan/cleaver>GitHub
+仓库</a>）一样，是一种基于浏览器的、流行的
+Markdown 幻灯片工具。如果你使用的是
+Mac，并且希望安装一个应用程序来使用的话，请试试
+<a href=https://www.decksetapp.com/>Deckset</a> 或
+<a href=https://marked2app.com/>Marked</a>。</p>
+<h3 id=邮件>邮件<a hidden class=anchor aria-hidden=true href=#邮件>#</a></h3>
+<p>如果你需要发送大量电子邮件，并且对大多数电子邮件提供商网站上可用的格式设置控件感到厌倦，那么你将很高兴地发现有一种使用
+Markdown 编写电子邮件的简便方法：<a href=/tools/markdown-here/>Markdown Here</a>
+是一个免费、开源的浏览器扩展程序，可将 Markdown
+格式的文本转换为可用于发送的 HTML。</p>
+<h3 id=文档>文档<a hidden class=anchor aria-hidden=true href=#文档>#</a></h3>
+<p>Markdown 非常适合技术文档。像 GitHub 这样的公司越来越多地转向使用
+Markdown 来创建其文档了，请查看此
+<a href=https://github.com/blog/1939-how-github-uses-github-to-document-github>博文</a>
+以了解如何将 Markdown 格式的文档迁移到
+<a href=/tools/jekyll/>Jekyll</a>。如果你是为产品或服务编写文档，请试试以下的便捷工具：</p>
+<ul>
+<li><a href=https://readthedocs.org>Read the Docs</a> 可以将你所开源的 Markdown
+文件生成文档网站。只需将你的 GitHub
+仓库连接到他们的服务，然后你就可以将内容推送到该仓库中，Read the
+Docs 会完成其余的工作。他们还为
+<a href=https://readthedocs.com/>商业实体提供服务</a>。</li>
+<li><a href=/tools/mkdocs/>MkDocs</a>
+是一个快速、简单的静态站点生成器，专门用于构建项目文档。文档源文件使用
+Markdown 编写，并使用一个 YAML 配置文件进行配置。MkDocs 有多个
+<a href=https://www.mkdocs.org/user-guide/styling-your-docs/>内置主题</a>，包括移植自
+<a href=https://readthedocs.org/>Read the Docs</a>
+的文档主题。最新的一个主题是 <a href=https://squidfunk.github.io/mkdocs-material/>MkDocs
+Material</a>。</li>
+<li><a href=/tools/docusaurus/>Docusaurus</a>
+是一个静态网站生成器，专门用于创建文档网站。它支持翻译、搜索和版本控制。</li>
+<li><a href=https://vuepress.vuejs.org/>VuePress</a> 是基于
+<a href=https://vuejs.org/>Vue</a>
+构建的静态站点生成器，并针对编写技术文档进行了优化。</li>
+<li><a href=/tools/jekyll/>Jekyll</a> 前面已经提到过它了，但它也是将 Markdown
+文件生成文档网站的一个不错的选择。如果你选择 Jekyll，请务必试试
+<a href=https://idratherbewriting.com/documentation-theme-jekyll/>Jekyll
+文档主题</a>。</li>
+</ul>
+<h2 id=markdown-方言>Markdown 方言<a hidden class=anchor aria-hidden=true href=#markdown-方言>#</a></h2>
+<p>使用 Markdown 的过程中，最令人困惑的地方是：实际上每个 Markdown
+应用程序都实现了稍有不同的 Markdown 语法。Markdown 的这些变体通常被称为
+<em>flavors（方言）</em>。掌握你的应用程序所实现的 Markdown
+语法是你需要主义的。</p>
+<p>为了让你了解各 Markdown 变体的概念，将它们比作语言的方言（language
+dialects）可能会有所帮助。华雷斯城（Ciudad
+Juárez）的人说西班牙语，就像巴塞罗那（Barcelona）人一样，但是两个城市使用的方言之间有很大的不同。使用不同
+Markdown 应用程序的人也是如此。MDEditor 支持的
+Markdown 格式与 Ulysses 有着很大的不同。</p>
+<p>实际上，这意味着当一个应用程序说它支持 “Markdown”
+时，你永远也不会确切地知到它的实际意思。它说的是仅支持
+<a href=/basic-syntax/>基本语法</a>？还是所有基本语法加
+<a href=/extended-syntax/>扩展语法</a>
+？或者是某些语法的组合呢？在你阅读其文档或开始使用该应用程序之前，你永远都不会知到。</p>
+<p>如果你只是新手，我能给你的最好建议就是选择一个具有良好 Markdown
+支持的应用程序。这对保持 Markdown
+文件的可移植性大有帮助。你可能需要在其它应用程序中保存或使用你的
+Markdown 文件，要实现这一点，你应当从使用一个具有良好 Markdown
+支持的应用程序开始。你可以在 <a href=/tools/>Markdown 工具列表</a>
+中找到合适的应用程序。</p>
+<h2 id=其它资源>其它资源<a hidden class=anchor aria-hidden=true href=#其它资源>#</a></h2>
+<p>网上有很多资源用来学习 Markdown。以下列出一些：</p>
+<ul>
+<li><a href=https://daringfireball.net/projects/markdown/>John Gruber’s Markdown
+documentation</a>.
+Markdown 的创建者编写的原始指南。</li>
+<li><a href=https://www.markdowntutorial.com/>Markdown Tutorial</a>.
+一个开源网站，你能用浏览器在这个网站上尝试 Markdown。</li>
+<li><a href=https://github.com/mundimark/awesome-markdown>Awesome Markdown</a>.
+Markdown 工具和学习资源列表。</li>
+<li><a href=https://dave.autonoma.ca/blog/2019/05/22/typesetting-markdown-part-1>Typesetting
+Markdown</a>.
+这是一个系列教程，介绍了使用 <a href=https://pandoc.org/>pandoc</a> 和
+<a href=https://www.contextgarden.net/>ConTeXt</a> 对 Markdown
+文档进行排版的系统。</li>
+</ul>
+</div>
+<footer class=post-footer>
+<ul class=post-tags>
+<li><a href=https://reorx.github.io/hugo-PaperModX/zh/tags/markdown/>markdown</a></li>
+<li><a href=https://reorx.github.io/hugo-PaperModX/zh/tags/css/>css</a></li>
+<li><a href=https://reorx.github.io/hugo-PaperModX/zh/tags/html/>html</a></li>
+<li><a href=https://reorx.github.io/hugo-PaperModX/zh/tags/themes/>themes</a></li>
+</ul>
+<div class=share-buttons>
+<a target=_blank rel="noopener noreferrer" aria-label="share Markdown 入门指南 on twitter" href="https://twitter.com/intent/tweet/?text=Markdown%20%e5%85%a5%e9%97%a8%e6%8c%87%e5%8d%97&url=https%3a%2f%2freorx.github.io%2fhugo-PaperModX%2fzh%2fposts%2fmarkdown-syntax%2f&hashtags=markdown%2ccss%2chtml%2cthemes"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM195.519 424.544c135.939.0 210.268-112.643 210.268-210.268.0-3.218.0-6.437-.153-9.502 14.406-10.421 26.973-23.448 36.935-38.314-13.18 5.824-27.433 9.809-42.452 11.648 15.326-9.196 26.973-23.602 32.49-40.92-14.252 8.429-30.038 14.56-46.896 17.931-13.487-14.406-32.644-23.295-53.946-23.295-40.767.0-73.87 33.104-73.87 73.87.0 5.824.613 11.494 1.992 16.858-61.456-3.065-115.862-32.49-152.337-77.241-6.284 10.881-9.962 23.601-9.962 37.088.0 25.594 13.027 48.276 32.95 61.456-12.107-.307-23.448-3.678-33.41-9.196v.92c0 35.862 25.441 65.594 59.311 72.49-6.13 1.686-12.72 2.606-19.464 2.606-4.751.0-9.348-.46-13.946-1.38 9.349 29.426 36.628 50.728 68.965 51.341-25.287 19.771-57.164 31.571-91.8 31.571-5.977.0-11.801-.306-17.625-1.073 32.337 21.15 71.264 33.41 112.95 33.41z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Markdown 入门指南 on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2freorx.github.io%2fhugo-PaperModX%2fzh%2fposts%2fmarkdown-syntax%2f&title=Markdown%20%e5%85%a5%e9%97%a8%e6%8c%87%e5%8d%97&summary=Markdown%20%e5%85%a5%e9%97%a8%e6%8c%87%e5%8d%97&source=https%3a%2f%2freorx.github.io%2fhugo-PaperModX%2fzh%2fposts%2fmarkdown-syntax%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Markdown 入门指南 on reddit" href="https://reddit.com/submit?url=https%3a%2f%2freorx.github.io%2fhugo-PaperModX%2fzh%2fposts%2fmarkdown-syntax%2f&title=Markdown%20%e5%85%a5%e9%97%a8%e6%8c%87%e5%8d%97"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Markdown 入门指南 on facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2freorx.github.io%2fhugo-PaperModX%2fzh%2fposts%2fmarkdown-syntax%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H342.978V319.085h66.6l12.672-82.621h-79.272v-53.617c0-22.603 11.073-44.636 46.58-44.636H425.6v-70.34s-32.71-5.582-63.982-5.582c-65.288.0-107.96 39.569-107.96 111.204v62.971h-72.573v82.621h72.573V512h-191.104c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Markdown 入门指南 on whatsapp" href="https://api.whatsapp.com/send?text=Markdown%20%e5%85%a5%e9%97%a8%e6%8c%87%e5%8d%97%20-%20https%3a%2f%2freorx.github.io%2fhugo-PaperModX%2fzh%2fposts%2fmarkdown-syntax%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zm-58.673 127.703c-33.842-33.881-78.847-52.548-126.798-52.568-98.799.0-179.21 80.405-179.249 179.234-.013 31.593 8.241 62.428 23.927 89.612l-25.429 92.884 95.021-24.925c26.181 14.28 55.659 21.807 85.658 21.816h.074c98.789.0 179.206-80.413 179.247-179.243.018-47.895-18.61-92.93-52.451-126.81zM263.976 403.485h-.06c-26.734-.01-52.954-7.193-75.828-20.767l-5.441-3.229-56.386 14.792 15.05-54.977-3.542-5.637c-14.913-23.72-22.791-51.136-22.779-79.287.033-82.142 66.867-148.971 149.046-148.971 39.793.014 77.199 15.531 105.329 43.692 28.128 28.16 43.609 65.592 43.594 105.4-.034 82.149-66.866 148.983-148.983 148.984zm81.721-111.581c-4.479-2.242-26.499-13.075-30.604-14.571-4.105-1.495-7.091-2.241-10.077 2.241-2.986 4.483-11.569 14.572-14.182 17.562-2.612 2.988-5.225 3.364-9.703 1.12-4.479-2.241-18.91-6.97-36.017-22.23C231.8 264.15 222.81 249.484 220.198 245s-.279-6.908 1.963-9.14c2.016-2.007 4.48-5.232 6.719-7.847 2.24-2.615 2.986-4.484 4.479-7.472 1.493-2.99.747-5.604-.374-7.846-1.119-2.241-10.077-24.288-13.809-33.256-3.635-8.733-7.327-7.55-10.077-7.688-2.609-.13-5.598-.158-8.583-.158-2.986.0-7.839 1.121-11.944 5.604-4.105 4.484-15.675 15.32-15.675 37.364.0 22.046 16.048 43.342 18.287 46.332 2.24 2.99 31.582 48.227 76.511 67.627 10.685 4.615 19.028 7.371 25.533 9.434 10.728 3.41 20.492 2.929 28.209 1.775 8.605-1.285 26.499-10.833 30.231-21.295 3.732-10.464 3.732-19.431 2.612-21.298-1.119-1.869-4.105-2.99-8.583-5.232z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Markdown 入门指南 on telegram" href="https://telegram.me/share/url?text=Markdown%20%e5%85%a5%e9%97%a8%e6%8c%87%e5%8d%97&url=https%3a%2f%2freorx.github.io%2fhugo-PaperModX%2fzh%2fposts%2fmarkdown-syntax%2f"><svg viewBox="2 2 28 28"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg>
+</a>
+</div>
+</footer>
+</article>
+</main>
+<footer class=footer>
+<span>&copy; 2022 <a href=https://reorx.github.io/hugo-PaperModX/zh/>PaperModX</a></span><span style=display:inline-block;margin-left:1em>
+<a href=https://creativecommons.org/licenses/by-sa/4.0/>CC BY-SA</a>
+</span>
+<span style=display:inline-block;margin-left:1em>
+Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://github.com/reorx/hugo-PaperMod rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>(function(){let a=document.getElementById('menu');a&&(a.scrollLeft=localStorage.getItem("menu-scroll-position"),a.onscroll=function(){localStorage.setItem("menu-scroll-position",a.scrollLeft)});const b=''=='1',c='1'=='1';if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||b||c)return;document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})})()</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+<script>document.querySelectorAll('pre > code').forEach(b=>{const c=b.parentNode.parentNode,a=document.createElement('button');a.classList.add('copy-code'),a.innerText='复制';function d(){a.innerText='已复制！',setTimeout(()=>{a.innerText='复制'},2e3)}a.addEventListener('click',e=>{if('clipboard'in navigator){navigator.clipboard.writeText(b.textContent),d();return}const a=document.createRange();a.selectNodeContents(b);const c=window.getSelection();c.removeAllRanges(),c.addRange(a);try{document.execCommand('copy'),d()}catch(a){}c.removeRange(a)}),c.classList.contains("highlight")?c.appendChild(a):c.parentNode.firstChild==c||(b.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?b.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(a):b.parentNode.appendChild(a))})</script>
+<script>(function(){const i='1'=='1';let a=window.scrollListeners;if(a===void 0&&(a=[],window.scrollListeners=a),!i||!document.querySelector('.toc')){for(const b of a)window.removeEventListener('scroll',b);return}const d=document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id]'),e='active';let b=d[0];f(b).classList.add(e);const h=()=>{const a=[];for(const b of d)if(j(b)<5)a.push(b);else break;a.length>0?newActiveHeading=a[a.length-1]:newActiveHeading=d[0],b!=newActiveHeading&&(f(b).classList.remove(e),b=newActiveHeading,f(b).classList.add(e))};let c=null;const g=()=>{c!==null&&clearTimeout(c),c=setTimeout(h,50)};window.addEventListener('scroll',g,!1),a.push(g);function f(a){const b=encodeURI(a.getAttribute('id')).toLowerCase();return document.querySelector(`.toc ul li a[href="#${b}"]`)}function j(a){if(!a.getClientRects().length)return 0;let b=a.getBoundingClientRect();return b.top}})()</script>
+<script src=/hugo-PaperModX/assets/js/instantclick.min.js data-no-instant></script>
+<script data-no-instant>InstantClick.init()</script>
+</body>
+</html>

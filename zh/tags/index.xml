@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on PaperModX</title>
+    <link>https://reorx.github.io/hugo-PaperModX/zh/tags/</link>
+    <description>Recent content in Tags on PaperModX</description>
+    <image>
+      <url>https://reorx.github.io/hugo-PaperModX/cover.png</url>
+      <link>https://reorx.github.io/hugo-PaperModX/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 12 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://reorx.github.io/hugo-PaperModX/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>css</title>
+      <link>https://reorx.github.io/hugo-PaperModX/zh/tags/css/</link>
+      <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/zh/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://reorx.github.io/hugo-PaperModX/zh/tags/html/</link>
+      <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/zh/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>markdown</title>
+      <link>https://reorx.github.io/hugo-PaperModX/zh/tags/markdown/</link>
+      <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/zh/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>themes</title>
+      <link>https://reorx.github.io/hugo-PaperModX/zh/tags/themes/</link>
+      <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/zh/tags/themes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

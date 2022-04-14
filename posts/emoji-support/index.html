@@ -1,0 +1,149 @@
+<!doctype html><html lang=en dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>Emoji Support | PaperModX</title>
+<meta name=keywords content="emoji">
+<meta name=description content="Guide to emoji usage in Hugo">
+<meta name=author content="Hugo Authors">
+<link rel=canonical href=https://reorx.github.io/hugo-PaperModX/posts/emoji-support/>
+<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.eccb4bed811ae026c6db1e4b4d5b681e5b6ec61d22c875f0c33bc1ad27684970.css integrity="sha256-7MtL7YEa4CbG2x5LTVtoHltuxh0iyHXwwzvBrSdoSXA=" rel="preload stylesheet" as=style>
+<script defer crossorigin=anonymous src=/hugo-PaperModX/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://reorx.github.io/hugo-PaperModX/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://reorx.github.io/hugo-PaperModX/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://reorx.github.io/hugo-PaperModX/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://reorx.github.io/hugo-PaperModX/apple-touch-icon.png>
+<link rel=mask-icon href=https://reorx.github.io/hugo-PaperModX/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<link rel=alternate hreflang=en href=https://reorx.github.io/hugo-PaperModX/posts/emoji-support/>
+<meta property="og:title" content="Emoji Support">
+<meta property="og:description" content="Guide to emoji usage in Hugo">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://reorx.github.io/hugo-PaperModX/posts/emoji-support/"><meta property="og:image" content="https://reorx.github.io/hugo-PaperModX/cover.png"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2019-03-05T00:00:00+00:00">
+<meta property="article:modified_time" content="2019-03-05T00:00:00+00:00">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://reorx.github.io/hugo-PaperModX/cover.png">
+<meta name=twitter:title content="Emoji Support">
+<meta name=twitter:description content="Guide to emoji usage in Hugo">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://reorx.github.io/hugo-PaperModX/posts/"},{"@type":"ListItem","position":2,"name":"Emoji Support","item":"https://reorx.github.io/hugo-PaperModX/posts/emoji-support/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Emoji Support","name":"Emoji Support","description":"Guide to emoji usage in Hugo","keywords":["emoji"],"articleBody":"Emoji can be enabled in a Hugo project in a number of ways.\nThe emojify function can be called directly in templates or Inline Shortcodes.\nTo enable emoji globally, set enableEmoji to true in your site’s configuration and then you can type emoji shorthand codes directly in content files; e.g.\n🙈 🙈 🙉 🙉 🙊 🙊\nThe Emoji cheat sheet is a useful reference for emoji shorthand codes.\n N.B. The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.\n.emoji { font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols; }  .emojify { font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols; font-size: 2rem; vertical-align: middle; } @media screen and (max-width:650px) { .nowrap { display: block; margin: 25px 0; } } ","wordCount":"164","inLanguage":"en","datePublished":"2019-03-05T00:00:00Z","dateModified":"2019-03-05T00:00:00Z","author":{"@type":"Person","name":"Hugo Authors"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://reorx.github.io/hugo-PaperModX/posts/emoji-support/"},"publisher":{"@type":"Organization","name":"PaperModX","logo":{"@type":"ImageObject","url":"https://reorx.github.io/hugo-PaperModX/favicon.ico"}}}</script><style>#icons{display:flex;flex-wrap:wrap;margin-top:2em}#icons .item{width:80px;height:50px;margin:10px}#icons .item .name{font-size:12px;user-select:all;text-align:center}#icons .item .icon{display:flex;justify-content:center}#icons .item svg{width:30px;height:30px}</style>
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript>
+</head>
+<body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://reorx.github.io/hugo-PaperModX/ accesskey=h title="PaperModX (Alt + H)">PaperModX</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+<ul class=lang-switch><li>|</li>
+<li>
+<a href=https://reorx.github.io/hugo-PaperModX/zh/ title=中文 aria-label=:cn:>🇨🇳</a>
+</li>
+</ul>
+</span>
+</div>
+<ul id=menu>
+<li>
+<a href=https://reorx.github.io/hugo-PaperModX/archives title=Archive>Archive</a>
+</li>
+<li>
+<a href=https://reorx.github.io/hugo-PaperModX/categories/ title=Categories>Categories</a>
+</li>
+<li>
+<a href=https://reorx.github.io/hugo-PaperModX/icons/ title=Icons>Icons</a>
+</li>
+<li>
+<a href=https://reorx.github.io/hugo-PaperModX/search/ title="Search (Alt + /)" data-no-instant accesskey=/>Search</a>
+</li>
+<li>
+<a href=https://reorx.github.io/hugo-PaperModX/tags/ title=Tags>Tags</a>
+</li>
+<li>
+<a href=https://reorx.com title=@Author>@Author</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class="main post">
+<article class=post-single>
+<header class=post-header>
+<h1 class=post-title>
+Emoji Support
+</h1>
+<div class=post-description>
+Guide to emoji usage in Hugo
+</div>
+<div class=post-meta><span title="2019-03-05 00:00:00 +0000 UTC">March 5, 2019</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Hugo Authors&nbsp;|&nbsp;<a href=https://github.com/reorx/hugo-PaperModX/tree/exampleSite/content/posts/emoji-support.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+</div>
+</header>
+<div class=post-content><p>Emoji can be enabled in a Hugo project in a number of ways.</p>
+<p>The <a href=https://gohugo.io/functions/emojify/><code>emojify</code></a> function can be called directly in templates or <a href=https://gohugo.io/templates/shortcode-templates/#inline-shortcodes>Inline Shortcodes</a>.</p>
+<p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your site&rsquo;s <a href=https://gohugo.io/getting-started/configuration/>configuration</a> and then you can type emoji shorthand codes directly in content files; e.g.</p>
+<p><span class=nowrap><span class=emojify>🙈</span> <code>🙈</code></span> <span class=nowrap><span class=emojify>🙉</span> <code>🙉</code></span> <span class=nowrap><span class=emojify>🙊</span> <code>🙊</code></span></p>
+<br>
+<p>The <a href=http://www.emoji-cheat-sheet.com/>Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
+<hr>
+<p><strong>N.B.</strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>.emoji {
+font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+}</code></pre></div>
+<style>.emojify{font-family:Apple Color Emoji,Segoe UI Emoji,NotoColorEmoji,Segoe UI Symbol,Android Emoji,EmojiSymbols;font-size:2rem;vertical-align:middle}@media screen and (max-width:650px){.nowrap{display:block;margin:25px 0}}</style>
+</div>
+<footer class=post-footer>
+<ul class=post-tags>
+<li><a href=https://reorx.github.io/hugo-PaperModX/tags/emoji/>emoji</a></li>
+</ul>
+<nav class=paginav>
+<a class=prev href=https://reorx.github.io/hugo-PaperModX/posts/math-typesetting/>
+<span class=title>« Prev Page</span>
+<br>
+<span>Math Typesetting</span>
+</a>
+</nav>
+<div class=share-buttons>
+<a target=_blank rel="noopener noreferrer" aria-label="share Emoji Support on twitter" href="https://twitter.com/intent/tweet/?text=Emoji%20Support&url=https%3a%2f%2freorx.github.io%2fhugo-PaperModX%2fposts%2femoji-support%2f&hashtags=emoji"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM195.519 424.544c135.939.0 210.268-112.643 210.268-210.268.0-3.218.0-6.437-.153-9.502 14.406-10.421 26.973-23.448 36.935-38.314-13.18 5.824-27.433 9.809-42.452 11.648 15.326-9.196 26.973-23.602 32.49-40.92-14.252 8.429-30.038 14.56-46.896 17.931-13.487-14.406-32.644-23.295-53.946-23.295-40.767.0-73.87 33.104-73.87 73.87.0 5.824.613 11.494 1.992 16.858-61.456-3.065-115.862-32.49-152.337-77.241-6.284 10.881-9.962 23.601-9.962 37.088.0 25.594 13.027 48.276 32.95 61.456-12.107-.307-23.448-3.678-33.41-9.196v.92c0 35.862 25.441 65.594 59.311 72.49-6.13 1.686-12.72 2.606-19.464 2.606-4.751.0-9.348-.46-13.946-1.38 9.349 29.426 36.628 50.728 68.965 51.341-25.287 19.771-57.164 31.571-91.8 31.571-5.977.0-11.801-.306-17.625-1.073 32.337 21.15 71.264 33.41 112.95 33.41z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Emoji Support on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2freorx.github.io%2fhugo-PaperModX%2fposts%2femoji-support%2f&title=Emoji%20Support&summary=Emoji%20Support&source=https%3a%2f%2freorx.github.io%2fhugo-PaperModX%2fposts%2femoji-support%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Emoji Support on reddit" href="https://reddit.com/submit?url=https%3a%2f%2freorx.github.io%2fhugo-PaperModX%2fposts%2femoji-support%2f&title=Emoji%20Support"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Emoji Support on facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2freorx.github.io%2fhugo-PaperModX%2fposts%2femoji-support%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H342.978V319.085h66.6l12.672-82.621h-79.272v-53.617c0-22.603 11.073-44.636 46.58-44.636H425.6v-70.34s-32.71-5.582-63.982-5.582c-65.288.0-107.96 39.569-107.96 111.204v62.971h-72.573v82.621h72.573V512h-191.104c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Emoji Support on whatsapp" href="https://api.whatsapp.com/send?text=Emoji%20Support%20-%20https%3a%2f%2freorx.github.io%2fhugo-PaperModX%2fposts%2femoji-support%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zm-58.673 127.703c-33.842-33.881-78.847-52.548-126.798-52.568-98.799.0-179.21 80.405-179.249 179.234-.013 31.593 8.241 62.428 23.927 89.612l-25.429 92.884 95.021-24.925c26.181 14.28 55.659 21.807 85.658 21.816h.074c98.789.0 179.206-80.413 179.247-179.243.018-47.895-18.61-92.93-52.451-126.81zM263.976 403.485h-.06c-26.734-.01-52.954-7.193-75.828-20.767l-5.441-3.229-56.386 14.792 15.05-54.977-3.542-5.637c-14.913-23.72-22.791-51.136-22.779-79.287.033-82.142 66.867-148.971 149.046-148.971 39.793.014 77.199 15.531 105.329 43.692 28.128 28.16 43.609 65.592 43.594 105.4-.034 82.149-66.866 148.983-148.983 148.984zm81.721-111.581c-4.479-2.242-26.499-13.075-30.604-14.571-4.105-1.495-7.091-2.241-10.077 2.241-2.986 4.483-11.569 14.572-14.182 17.562-2.612 2.988-5.225 3.364-9.703 1.12-4.479-2.241-18.91-6.97-36.017-22.23C231.8 264.15 222.81 249.484 220.198 245s-.279-6.908 1.963-9.14c2.016-2.007 4.48-5.232 6.719-7.847 2.24-2.615 2.986-4.484 4.479-7.472 1.493-2.99.747-5.604-.374-7.846-1.119-2.241-10.077-24.288-13.809-33.256-3.635-8.733-7.327-7.55-10.077-7.688-2.609-.13-5.598-.158-8.583-.158-2.986.0-7.839 1.121-11.944 5.604-4.105 4.484-15.675 15.32-15.675 37.364.0 22.046 16.048 43.342 18.287 46.332 2.24 2.99 31.582 48.227 76.511 67.627 10.685 4.615 19.028 7.371 25.533 9.434 10.728 3.41 20.492 2.929 28.209 1.775 8.605-1.285 26.499-10.833 30.231-21.295 3.732-10.464 3.732-19.431 2.612-21.298-1.119-1.869-4.105-2.99-8.583-5.232z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Emoji Support on telegram" href="https://telegram.me/share/url?text=Emoji%20Support&url=https%3a%2f%2freorx.github.io%2fhugo-PaperModX%2fposts%2femoji-support%2f"><svg viewBox="2 2 28 28"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg>
+</a>
+</div>
+</footer>
+</article>
+</main>
+<footer class=footer>
+<span>&copy; 2022 <a href=https://reorx.github.io/hugo-PaperModX/>PaperModX</a></span><span style=display:inline-block;margin-left:1em>
+<a href=https://creativecommons.org/licenses/by-sa/4.0/>CC BY-SA</a>
+</span>
+<span style=display:inline-block;margin-left:1em>
+Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://github.com/reorx/hugo-PaperMod rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>(function(){let a=document.getElementById('menu');a&&(a.scrollLeft=localStorage.getItem("menu-scroll-position"),a.onscroll=function(){localStorage.setItem("menu-scroll-position",a.scrollLeft)});const b=''=='1',c='1'=='1';if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||b||c)return;document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})})()</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+<script>document.querySelectorAll('pre > code').forEach(b=>{const c=b.parentNode.parentNode,a=document.createElement('button');a.classList.add('copy-code'),a.innerText='copy';function d(){a.innerText='copied!',setTimeout(()=>{a.innerText='copy'},2e3)}a.addEventListener('click',e=>{if('clipboard'in navigator){navigator.clipboard.writeText(b.textContent),d();return}const a=document.createRange();a.selectNodeContents(b);const c=window.getSelection();c.removeAllRanges(),c.addRange(a);try{document.execCommand('copy'),d()}catch(a){}c.removeRange(a)}),c.classList.contains("highlight")?c.appendChild(a):c.parentNode.firstChild==c||(b.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?b.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(a):b.parentNode.appendChild(a))})</script>
+<script>(function(){const i=''=='1';let a=window.scrollListeners;if(a===void 0&&(a=[],window.scrollListeners=a),!i||!document.querySelector('.toc')){for(const b of a)window.removeEventListener('scroll',b);return}const d=document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id]'),e='active';let b=d[0];f(b).classList.add(e);const h=()=>{const a=[];for(const b of d)if(j(b)<5)a.push(b);else break;a.length>0?newActiveHeading=a[a.length-1]:newActiveHeading=d[0],b!=newActiveHeading&&(f(b).classList.remove(e),b=newActiveHeading,f(b).classList.add(e))};let c=null;const g=()=>{c!==null&&clearTimeout(c),c=setTimeout(h,50)};window.addEventListener('scroll',g,!1),a.push(g);function f(a){const b=encodeURI(a.getAttribute('id')).toLowerCase();return document.querySelector(`.toc ul li a[href="#${b}"]`)}function j(a){if(!a.getClientRects().length)return 0;let b=a.getBoundingClientRect();return b.top}})()</script>
+<script src=/hugo-PaperModX/assets/js/instantclick.min.js data-no-instant></script>
+<script data-no-instant>InstantClick.init()</script>
+</body>
+</html>
