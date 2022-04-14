@@ -19,14 +19,5 @@
       <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
     </item>
     
-    <item>
-      <title>Placeholder Text</title>
-      <link>https://reorx.github.io/hugo-PaperModX/posts/placeholder-text/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://reorx.github.io/hugo-PaperModX/posts/placeholder-text/</guid>
-      <description>Lorem Ipsum Dolor Si Amet</description>
-    </item>
-    
   </channel>
 </rss>

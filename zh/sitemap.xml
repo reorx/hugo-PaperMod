@@ -2,43 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://reorx.github.io/hugo-PaperModX/zh/categories/</loc>
-    <lastmod>2022-04-12T00:00:00+00:00</lastmod>
+    <loc>https://reorx.github.io/hugo-PaperModX/zh/docs/papermodx-new-features/</loc>
+    <lastmod>2022-04-12T23:37:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://reorx.github.io/hugo-PaperModX/categories/"
+                href="https://reorx.github.io/hugo-PaperModX/docs/papermodx-new-features/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://reorx.github.io/hugo-PaperModX/zh/categories/"
+                href="https://reorx.github.io/hugo-PaperModX/zh/docs/papermodx-new-features/"
                 />
   </url><url>
-    <loc>https://reorx.github.io/hugo-PaperModX/zh/tags/css/</loc>
-    <lastmod>2022-04-12T00:00:00+00:00</lastmod>
+    <loc>https://reorx.github.io/hugo-PaperModX/zh/</loc>
+    <lastmod>2022-04-12T23:37:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://reorx.github.io/hugo-PaperModX/tags/css/"
+                href="https://reorx.github.io/hugo-PaperModX/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://reorx.github.io/hugo-PaperModX/zh/tags/css/"
+                href="https://reorx.github.io/hugo-PaperModX/zh/"
                 />
   </url><url>
-    <loc>https://reorx.github.io/hugo-PaperModX/zh/tags/html/</loc>
-    <lastmod>2022-04-12T00:00:00+00:00</lastmod>
+    <loc>https://reorx.github.io/hugo-PaperModX/zh/docs/</loc>
+    <lastmod>2022-04-12T23:37:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://reorx.github.io/hugo-PaperModX/tags/html/"
+                href="https://reorx.github.io/hugo-PaperModX/docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://reorx.github.io/hugo-PaperModX/zh/tags/html/"
+                href="https://reorx.github.io/hugo-PaperModX/zh/docs/"
+                />
+  </url><url>
+    <loc>https://reorx.github.io/hugo-PaperModX/zh/tags/example/</loc>
+    <lastmod>2022-04-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://reorx.github.io/hugo-PaperModX/tags/example/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://reorx.github.io/hugo-PaperModX/zh/tags/example/"
                 />
   </url><url>
     <loc>https://reorx.github.io/hugo-PaperModX/zh/tags/markdown/</loc>
@@ -67,43 +80,17 @@
                 href="https://reorx.github.io/hugo-PaperModX/zh/posts/markdown-syntax/"
                 />
   </url><url>
-    <loc>https://reorx.github.io/hugo-PaperModX/zh/</loc>
+    <loc>https://reorx.github.io/hugo-PaperModX/zh/tags/syntax/</loc>
     <lastmod>2022-04-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://reorx.github.io/hugo-PaperModX/"
+                href="https://reorx.github.io/hugo-PaperModX/tags/syntax/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://reorx.github.io/hugo-PaperModX/zh/"
-                />
-  </url><url>
-    <loc>https://reorx.github.io/hugo-PaperModX/zh/series/</loc>
-    <lastmod>2022-04-12T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://reorx.github.io/hugo-PaperModX/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://reorx.github.io/hugo-PaperModX/zh/series/"
-                />
-  </url><url>
-    <loc>https://reorx.github.io/hugo-PaperModX/zh/categories/syntax/</loc>
-    <lastmod>2022-04-12T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://reorx.github.io/hugo-PaperModX/categories/syntax/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://reorx.github.io/hugo-PaperModX/zh/categories/syntax/"
+                href="https://reorx.github.io/hugo-PaperModX/zh/tags/syntax/"
                 />
   </url><url>
     <loc>https://reorx.github.io/hugo-PaperModX/zh/tags/</loc>
@@ -119,45 +106,6 @@
                 href="https://reorx.github.io/hugo-PaperModX/zh/tags/"
                 />
   </url><url>
-    <loc>https://reorx.github.io/hugo-PaperModX/zh/tags/themes/</loc>
-    <lastmod>2022-04-12T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://reorx.github.io/hugo-PaperModX/tags/themes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://reorx.github.io/hugo-PaperModX/zh/tags/themes/"
-                />
-  </url><url>
-    <loc>https://reorx.github.io/hugo-PaperModX/zh/categories/themes/</loc>
-    <lastmod>2022-04-12T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://reorx.github.io/hugo-PaperModX/categories/themes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://reorx.github.io/hugo-PaperModX/zh/categories/themes/"
-                />
-  </url><url>
-    <loc>https://reorx.github.io/hugo-PaperModX/zh/series/themes-guide/</loc>
-    <lastmod>2022-04-12T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://reorx.github.io/hugo-PaperModX/series/themes-guide/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://reorx.github.io/hugo-PaperModX/zh/series/themes-guide/"
-                />
-  </url><url>
     <loc>https://reorx.github.io/hugo-PaperModX/zh/posts/</loc>
     <lastmod>2022-04-12T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -169,6 +117,30 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://reorx.github.io/hugo-PaperModX/zh/posts/"
+                />
+  </url><url>
+    <loc>https://reorx.github.io/hugo-PaperModX/zh/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://reorx.github.io/hugo-PaperModX/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://reorx.github.io/hugo-PaperModX/zh/categories/"
+                />
+  </url><url>
+    <loc>https://reorx.github.io/hugo-PaperModX/zh/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://reorx.github.io/hugo-PaperModX/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://reorx.github.io/hugo-PaperModX/zh/series/"
                 />
   </url><url>
     <loc>https://reorx.github.io/hugo-PaperModX/zh/archives/</loc>

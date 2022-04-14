@@ -11,20 +11,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 12 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://reorx.github.io/hugo-PaperModX/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>css</title>
-      <link>https://reorx.github.io/hugo-PaperModX/zh/tags/css/</link>
+      <title>example</title>
+      <link>https://reorx.github.io/hugo-PaperModX/zh/tags/example/</link>
       <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://reorx.github.io/hugo-PaperModX/zh/tags/css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>html</title>
-      <link>https://reorx.github.io/hugo-PaperModX/zh/tags/html/</link>
-      <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://reorx.github.io/hugo-PaperModX/zh/tags/html/</guid>
+      <guid>https://reorx.github.io/hugo-PaperModX/zh/tags/example/</guid>
       <description></description>
     </item>
     
@@ -38,11 +29,11 @@
     </item>
     
     <item>
-      <title>themes</title>
-      <link>https://reorx.github.io/hugo-PaperModX/zh/tags/themes/</link>
+      <title>syntax</title>
+      <link>https://reorx.github.io/hugo-PaperModX/zh/tags/syntax/</link>
       <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://reorx.github.io/hugo-PaperModX/zh/tags/themes/</guid>
+      <guid>https://reorx.github.io/hugo-PaperModX/zh/tags/syntax/</guid>
       <description></description>
     </item>
     

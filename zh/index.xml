@@ -9,7 +9,16 @@
       <link>https://reorx.github.io/hugo-PaperModX/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 12 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://reorx.github.io/hugo-PaperModX/zh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Apr 2022 23:37:00 +0800</lastBuildDate><atom:link href="https://reorx.github.io/hugo-PaperModX/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PaperModX 新功能说明</title>
+      <link>https://reorx.github.io/hugo-PaperModX/zh/docs/papermodx-new-features/</link>
+      <pubDate>Tue, 12 Apr 2022 23:37:00 +0800</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/zh/docs/papermodx-new-features/</guid>
+      <description>本文档描述 PaperModX 相比原版 PaperMod 增加的新功能和变化。</description>
+    </item>
+    
     <item>
       <title>Markdown 入门指南</title>
       <link>https://reorx.github.io/hugo-PaperModX/zh/posts/markdown-syntax/</link>
@@ -18,6 +27,7 @@
       <guid>https://reorx.github.io/hugo-PaperModX/zh/posts/markdown-syntax/</guid>
       <description>Markdown 概述、工作原理以及用途。</description>
     </item>
+    
     
     
   </channel>

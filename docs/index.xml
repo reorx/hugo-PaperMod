@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>PaperModX Docs on PaperModX</title>
+    <link>https://reorx.github.io/hugo-PaperModX/docs/</link>
+    <description>Recent content in PaperModX Docs on PaperModX</description>
+    <image>
+      <url>https://reorx.github.io/hugo-PaperModX/cover.png</url>
+      <link>https://reorx.github.io/hugo-PaperModX/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://reorx.github.io/hugo-PaperModX/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PaperModX New Features</title>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/papermodx-new-features/</link>
+      <pubDate>Tue, 12 Apr 2022 23:37:00 +0800</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/papermodx-new-features/</guid>
+      <description>This page explains the new features and changes of PaperModX comparing to the original PaperMod.</description>
+    </item>
+    
+    <item>
+      <title>Icons Preview</title>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/icons_preview/</link>
+      <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/icons_preview/</guid>
+      <description>Index of all icons in PaperModeX</description>
+    </item>
+    
+    <item>
+      <title>Installation | Update</title>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/installation/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/installation/</guid>
+      <description>Read Install and Update instructions here</description>
+    </item>
+    
+    <item>
+      <title>PaperMod Features</title>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/features/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/features/</guid>
+      <description>Learn About All Features in original PaperMod</description>
+    </item>
+    
+    <item>
+      <title>FAQs</title>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/faq/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/faq/</guid>
+      <description>Frequently Asked Questions</description>
+    </item>
+    
+    <item>
+      <title>Icons</title>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/icons/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/icons/</guid>
+      <description>Explain how to use icons in PaperModX</description>
+    </item>
+    
+    <item>
+      <title>Variables | Front Matter</title>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/variables/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/variables/</guid>
+      <description>List of Front Matter variables used by PaperModX</description>
+    </item>
+    
+    <item>
+      <title>Math Typesetting</title>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/math-typesetting/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/math-typesetting/</guid>
+      <description>A brief guide to setup KaTeX</description>
+    </item>
+    
+    <item>
+      <title>Emoji Support</title>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/emoji-support/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/emoji-support/</guid>
+      <description>Guide to emoji usage in Hugo</description>
+    </item>
+    
+  </channel>
+</rss>

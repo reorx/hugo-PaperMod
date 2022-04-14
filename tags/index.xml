@@ -9,31 +9,22 @@
       <link>https://reorx.github.io/hugo-PaperModX/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://reorx.github.io/hugo-PaperModX/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://reorx.github.io/hugo-PaperModX/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>PaperMod</title>
-      <link>https://reorx.github.io/hugo-PaperModX/tags/papermod/</link>
+      <title>example</title>
+      <link>https://reorx.github.io/hugo-PaperModX/tags/example/</link>
+      <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/tags/example/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>icons</title>
+      <link>https://reorx.github.io/hugo-PaperModX/tags/icons/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://reorx.github.io/hugo-PaperModX/tags/papermod/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>css</title>
-      <link>https://reorx.github.io/hugo-PaperModX/tags/css/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://reorx.github.io/hugo-PaperModX/tags/css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>html</title>
-      <link>https://reorx.github.io/hugo-PaperModX/tags/html/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://reorx.github.io/hugo-PaperModX/tags/html/</guid>
+      <guid>https://reorx.github.io/hugo-PaperModX/tags/icons/</guid>
       <description></description>
     </item>
     
@@ -47,11 +38,11 @@
     </item>
     
     <item>
-      <title>themes</title>
-      <link>https://reorx.github.io/hugo-PaperModX/tags/themes/</link>
+      <title>syntax</title>
+      <link>https://reorx.github.io/hugo-PaperModX/tags/syntax/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://reorx.github.io/hugo-PaperModX/tags/themes/</guid>
+      <guid>https://reorx.github.io/hugo-PaperModX/tags/syntax/</guid>
       <description></description>
     </item>
     
@@ -74,20 +65,11 @@
     </item>
     
     <item>
-      <title>text</title>
-      <link>https://reorx.github.io/hugo-PaperModX/tags/text/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      <title>math</title>
+      <link>https://reorx.github.io/hugo-PaperModX/tags/math/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://reorx.github.io/hugo-PaperModX/tags/text/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>emoji</title>
-      <link>https://reorx.github.io/hugo-PaperModX/tags/emoji/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://reorx.github.io/hugo-PaperModX/tags/emoji/</guid>
+      <guid>https://reorx.github.io/hugo-PaperModX/tags/math/</guid>
       <description></description>
     </item>
     

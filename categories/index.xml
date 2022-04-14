@@ -8,25 +8,6 @@
       <url>https://reorx.github.io/hugo-PaperModX/cover.png</url>
       <link>https://reorx.github.io/hugo-PaperModX/cover.png</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://reorx.github.io/hugo-PaperModX/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>syntax</title>
-      <link>https://reorx.github.io/hugo-PaperModX/categories/syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://reorx.github.io/hugo-PaperModX/categories/syntax/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>themes</title>
-      <link>https://reorx.github.io/hugo-PaperModX/categories/themes/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://reorx.github.io/hugo-PaperModX/categories/themes/</guid>
-      <description></description>
-    </item>
-    
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://reorx.github.io/hugo-PaperModX/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

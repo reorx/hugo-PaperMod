@@ -9,63 +9,68 @@
       <link>https://reorx.github.io/hugo-PaperModX/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 12 Apr 2022 23:37:00 +0800</lastBuildDate><atom:link href="https://reorx.github.io/hugo-PaperModX/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://reorx.github.io/hugo-PaperModX/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PaperModX New Features</title>
-      <link>https://reorx.github.io/hugo-PaperModX/posts/papermodx-new-features/</link>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/papermodx-new-features/</link>
       <pubDate>Tue, 12 Apr 2022 23:37:00 +0800</pubDate>
       
-      <guid>https://reorx.github.io/hugo-PaperModX/posts/papermodx-new-features/</guid>
-      <description>This page explains the new features and changes of PaperModX comparing to it&amp;rsquo;s origin PaperMod.
-Table of Contents (ToC) floating on the side By adding config:
-params:TocSide:&amp;#39;left&amp;#39;# or &amp;#39;right&amp;#39;ToC will float on the left/right side of the page. You can take a look at how &#39;right&#39; feels like in Installation | Update.
-The ToC box is responsive, it only shows on the side when minimum screen size is 1440px.
-this feature is enabled on this site.</description>
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/papermodx-new-features/</guid>
+      <description>This page explains the new features and changes of PaperModX comparing to the original PaperMod.</description>
+    </item>
+    
+    <item>
+      <title>Icons Preview</title>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/icons_preview/</link>
+      <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/icons_preview/</guid>
+      <description>Index of all icons in PaperModeX</description>
     </item>
     
     <item>
       <title>Installation | Update</title>
-      <link>https://reorx.github.io/hugo-PaperModX/posts/papermod/papermod-installation/</link>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/installation/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://reorx.github.io/hugo-PaperModX/posts/papermod/papermod-installation/</guid>
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/installation/</guid>
       <description>Read Install and Update instructions here</description>
     </item>
     
     <item>
-      <title>Features</title>
-      <link>https://reorx.github.io/hugo-PaperModX/posts/papermod/papermod-features/</link>
+      <title>PaperMod Features</title>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/features/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://reorx.github.io/hugo-PaperModX/posts/papermod/papermod-features/</guid>
-      <description>Learn About All Features in PaperMod</description>
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/features/</guid>
+      <description>Learn About All Features in original PaperMod</description>
     </item>
     
     <item>
       <title>FAQs</title>
-      <link>https://reorx.github.io/hugo-PaperModX/posts/papermod/papermod-faq/</link>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/faq/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://reorx.github.io/hugo-PaperModX/posts/papermod/papermod-faq/</guid>
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/faq/</guid>
       <description>Frequently Asked Questions</description>
     </item>
     
     <item>
       <title>Icons</title>
-      <link>https://reorx.github.io/hugo-PaperModX/posts/papermod/papermod-icons/</link>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/icons/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://reorx.github.io/hugo-PaperModX/posts/papermod/papermod-icons/</guid>
-      <description>List of all Icons supported by PaperMod</description>
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/icons/</guid>
+      <description>Explain how to use icons in PaperModX</description>
     </item>
     
     <item>
       <title>Variables | Front Matter</title>
-      <link>https://reorx.github.io/hugo-PaperModX/posts/papermod/papermod-variables/</link>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/variables/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://reorx.github.io/hugo-PaperModX/posts/papermod/papermod-variables/</guid>
-      <description>List of Front Matter variables used by PaperMod</description>
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/variables/</guid>
+      <description>List of Front Matter variables used by PaperModX</description>
     </item>
     
     <item>
@@ -97,30 +102,22 @@ this feature is enabled on this site.</description>
     
     <item>
       <title>Math Typesetting</title>
-      <link>https://reorx.github.io/hugo-PaperModX/posts/math-typesetting/</link>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/math-typesetting/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://reorx.github.io/hugo-PaperModX/posts/math-typesetting/</guid>
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/math-typesetting/</guid>
       <description>A brief guide to setup KaTeX</description>
     </item>
     
     <item>
       <title>Emoji Support</title>
-      <link>https://reorx.github.io/hugo-PaperModX/posts/emoji-support/</link>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/emoji-support/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://reorx.github.io/hugo-PaperModX/posts/emoji-support/</guid>
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/emoji-support/</guid>
       <description>Guide to emoji usage in Hugo</description>
     </item>
     
-    <item>
-      <title>Icons Preview</title>
-      <link>https://reorx.github.io/hugo-PaperModX/icons/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://reorx.github.io/hugo-PaperModX/icons/</guid>
-      <description></description>
-    </item>
     
     
   </channel>
