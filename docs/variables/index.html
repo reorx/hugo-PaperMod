@@ -8,7 +8,7 @@
 <meta name=description content="List of Front Matter variables used by PaperModX">
 <meta name=author content="Aditya Telange">
 <link rel=canonical href=https://reorx.github.io/hugo-PaperModX/docs/variables/>
-<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.b62ee0844778d158481324df7a631be98452768c8177bea932b585ca17df29b1.css integrity="sha256-ti7ghEd40VhIEyTfemMb6YRSdoyBd76pMrWFyhffKbE=" rel="preload stylesheet" as=style>
+<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.e8936be8845d674ebdf35e5e771675bc3667fdca0b71f5657c96eb2c69d93800.css integrity="sha256-6JNr6IRdZ069815edxZ1vDZn/coLcfVlfJbrLGnZOAA=" rel="preload stylesheet" as=style>
 <link rel=icon href=https://reorx.github.io/hugo-PaperModX/favicon.ico>
 <link rel=icon type=image/png sizes=16x16 href=https://reorx.github.io/hugo-PaperModX/favicon-16x16.png>
 <link rel=icon type=image/png sizes=32x32 href=https://reorx.github.io/hugo-PaperModX/favicon-32x32.png>
@@ -810,7 +810,7 @@ Powered by
 <script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
 <script>document.querySelectorAll('pre > code').forEach(b=>{const c=b.parentNode.parentNode,a=document.createElement('button');a.classList.add('copy-code'),a.innerText='copy';function d(){a.innerText='copied!',setTimeout(()=>{a.innerText='copy'},2e3)}a.addEventListener('click',e=>{if('clipboard'in navigator){navigator.clipboard.writeText(b.textContent),d();return}const a=document.createRange();a.selectNodeContents(b);const c=window.getSelection();c.removeAllRanges(),c.addRange(a);try{document.execCommand('copy'),d()}catch(a){}c.removeRange(a)}),c.classList.contains("highlight")?c.appendChild(a):c.parentNode.firstChild==c||(b.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?b.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(a):b.parentNode.appendChild(a))})</script>
 <script>(function(){const i='1'=='1';let a=window.scrollListeners;if(a===void 0&&(a=[],window.scrollListeners=a),!i||!document.querySelector('.toc')){for(const b of a)window.removeEventListener('scroll',b);window.scrollListeners=[];return}const d=document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id]'),e='active';let b=d[0];f(b).classList.add(e);const h=()=>{const a=[];for(const b of d)if(j(b)<5)a.push(b);else break;a.length>0?newActiveHeading=a[a.length-1]:newActiveHeading=d[0],b!=newActiveHeading&&(f(b).classList.remove(e),b=newActiveHeading,f(b).classList.add(e))};let c=null;const g=()=>{c!==null&&clearTimeout(c),c=setTimeout(h,50)};window.addEventListener('scroll',g,!1),a.push(g);function f(a){const b=encodeURI(a.getAttribute('id')).toLowerCase();return document.querySelector(`.toc ul li a[href="#${b}"]`)}function j(a){if(!a.getClientRects().length)return 0;let b=a.getBoundingClientRect();return b.top}})()</script>
-<script src=/hugo-PaperModX/assets/js/instantclick.min.js data-no-instant></script>
+<script src=/hugo-PaperModX/js/instantclick.js data-no-instant></script>
 <script data-no-instant>InstantClick.init()</script>
 </body>
 </html>
