@@ -8,7 +8,7 @@
 <meta name=description content="A brief guide to setup KaTeX">
 <meta name=author content="Hugo Authors">
 <link rel=canonical href=https://reorx.github.io/hugo-PaperModX/docs/math-typesetting/>
-<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.a46674bbcfdd044cd7fbc4b7d00b1271d3d69666dd26430c90cf816d3f371bc2.css integrity="sha256-pGZ0u8/dBEzX+8S30AsScdPWlmbdJkMMkM+BbT83G8I=" rel="preload stylesheet" as=style>
+<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.b62ee0844778d158481324df7a631be98452768c8177bea932b585ca17df29b1.css integrity="sha256-ti7ghEd40VhIEyTfemMb6YRSdoyBd76pMrWFyhffKbE=" rel="preload stylesheet" as=style>
 <link rel=icon href=https://reorx.github.io/hugo-PaperModX/favicon.ico>
 <link rel=icon type=image/png sizes=16x16 href=https://reorx.github.io/hugo-PaperModX/favicon-16x16.png>
 <link rel=icon type=image/png sizes=32x32 href=https://reorx.github.io/hugo-PaperModX/favicon-32x32.png>
@@ -31,7 +31,7 @@
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Math Typesetting","name":"Math Typesetting","description":"A brief guide to setup KaTeX","keywords":["math","syntax","example"],"articleBody":"Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.\nIn this example we will be using KaTeX\n Create a partial under /layouts/partials/math.html Within this partial reference the Auto-render Extension or host these scripts locally. Include the partial in your templates (extend_head.html) like so: refer ISSUE #236  1 2 3  {{ if or .Params.math .Site.Params.math }} {{ partial \"math.html\" . }} {{ end }}    To enable KaTex globally set the parameter math to true in a project’s configuration To enable KaTex on a per page basis include the parameter math: true in content files  Note: Use the online reference of Supported TeX Functions\n  Examples  Inline math: \\(\\varphi = \\dfrac{1+\\sqrt5}{2}= 1.6180339887…\\) Block math:\n$$ \\varphi = 1+\\frac{1} {1+\\frac{1} {1+\\frac{1} {1+\\cdots} } } $$\n","wordCount":"127","inLanguage":"en","datePublished":"2019-03-08T00:00:00Z","dateModified":"2019-03-08T00:00:00Z","author":{"@type":"Person","name":"Hugo Authors"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://reorx.github.io/hugo-PaperModX/docs/math-typesetting/"},"publisher":{"@type":"Organization","name":"PaperModX","logo":{"@type":"ImageObject","url":"https://reorx.github.io/hugo-PaperModX/favicon.ico"}}}</script><style>#icons{display:flex;flex-wrap:wrap;margin-top:2em}#icons .item{width:80px;height:50px;margin:10px}#icons .item .name{font-size:12px;user-select:all;text-align:center}#icons .item .icon{display:flex;justify-content:center}#icons .item svg{width:30px;height:30px}</style>
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style>
-<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary-bg:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
 </head>
 <body id=top>
@@ -84,7 +84,7 @@ Math Typesetting
 <div class=post-description>
 A brief guide to setup KaTeX
 </div>
-<div class=post-meta><span title="2019-03-08 00:00:00 +0000 UTC">March 8, 2019</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Hugo Authors&nbsp;|&nbsp;<a href=https://github.com/reorx/hugo-PaperModX/tree/exampleSite/content/docs/math-typesetting.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+<div class=post-meta><span title="2019-03-08 00:00:00 +0000 UTC">March 8, 2019</span><span class=delimiter>&nbsp;·&nbsp;</span>1 min&nbsp;|&nbsp;<a href=https://github.com/reorx/hugo-PaperModX/tree/exampleSite/content/docs/math-typesetting.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
 </div>
 </header> <div class="toc side right">
 <details open>
