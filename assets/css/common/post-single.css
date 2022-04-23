@@ -198,6 +198,7 @@ h6:hover .anchor {
 .post-content .highlight:not(table) {
     margin: var(--content-gap) auto;
     border-radius: var(--radius);
+    direction: ltr;
 }
 
 .post-content li > .highlight {
