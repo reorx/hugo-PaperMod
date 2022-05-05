@@ -10,23 +10,17 @@
 <link rel=canonical href=https://reorx.github.io/hugo-PaperModX/docs/math-typesetting/>
 <link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.7055a83db347f308dcb24f045d53d377e688e7d440bf834822babf2c301ba1bd.css integrity="sha256-cFWoPbNH8wjcsk8EXVPTd+aI59RAv4NIIrq/LDAbob0=" rel="preload stylesheet" as=style>
 <link rel=icon href=https://reorx.github.io/hugo-PaperModX/favicon.ico>
-<link rel=icon type=image/png sizes=16x16 href=https://reorx.github.io/hugo-PaperModX/favicon-16x16.png>
-<link rel=icon type=image/png sizes=32x32 href=https://reorx.github.io/hugo-PaperModX/favicon-32x32.png>
-<link rel=apple-touch-icon href=https://reorx.github.io/hugo-PaperModX/apple-touch-icon.png>
-<link rel=mask-icon href=https://reorx.github.io/hugo-PaperModX/safari-pinned-tab.svg>
-<meta name=theme-color content="#2e2e33">
-<meta name=msapplication-TileColor content="#2e2e33">
 <link rel=alternate hreflang=en href=https://reorx.github.io/hugo-PaperModX/docs/math-typesetting/>
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://reorx.github.io/hugo-PaperModX/cover.png">
+<meta name=twitter:title content="Math Typesetting">
+<meta name=twitter:description content="A brief guide to setup KaTeX">
 <meta property="og:title" content="Math Typesetting">
 <meta property="og:description" content="A brief guide to setup KaTeX">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://reorx.github.io/hugo-PaperModX/docs/math-typesetting/"><meta property="og:image" content="https://reorx.github.io/hugo-PaperModX/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2019-03-08T00:00:00+00:00">
 <meta property="article:modified_time" content="2019-03-08T00:00:00+00:00">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://reorx.github.io/hugo-PaperModX/cover.png">
-<meta name=twitter:title content="Math Typesetting">
-<meta name=twitter:description content="A brief guide to setup KaTeX">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"PaperModX Docs","item":"https://reorx.github.io/hugo-PaperModX/docs/"},{"@type":"ListItem","position":2,"name":"Math Typesetting","item":"https://reorx.github.io/hugo-PaperModX/docs/math-typesetting/"}]}</script>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Math Typesetting","name":"Math Typesetting","description":"A brief guide to setup KaTeX","keywords":["math","syntax","example"],"articleBody":"Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.\nIn this example we will be using KaTeX\n Create a partial under /layouts/partials/math.html Within this partial reference the Auto-render Extension or host these scripts locally. Include the partial in your templates (extend_head.html) like so: refer ISSUE #236  1 2 3  {{ if or .Params.math .Site.Params.math }} {{ partial \"math.html\" . }} {{ end }}    To enable KaTex globally set the parameter math to true in a project’s configuration To enable KaTex on a per page basis include the parameter math: true in content files  Note: Use the online reference of Supported TeX Functions\n  Examples  Inline math: \\(\\varphi = \\dfrac{1+\\sqrt5}{2}= 1.6180339887…\\) Block math:\n$$ \\varphi = 1+\\frac{1} {1+\\frac{1} {1+\\frac{1} {1+\\cdots} } } $$\n","wordCount":"127","inLanguage":"en","datePublished":"2019-03-08T00:00:00Z","dateModified":"2019-03-08T00:00:00Z","author":{"@type":"Person","name":"Hugo Authors"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://reorx.github.io/hugo-PaperModX/docs/math-typesetting/"},"publisher":{"@type":"Organization","name":"PaperModX","logo":{"@type":"ImageObject","url":"https://reorx.github.io/hugo-PaperModX/favicon.ico"}}}</script><style>#icons{display:flex;flex-wrap:wrap;margin-top:2em}#icons .item{width:80px;height:50px;margin:10px}#icons .item .name{font-size:12px;user-select:all;text-align:center}#icons .item .icon{display:flex;justify-content:center}#icons .item svg{width:30px;height:30px}</style>
 <noscript>
