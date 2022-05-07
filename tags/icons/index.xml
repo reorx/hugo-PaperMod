@@ -4,10 +4,6 @@
     <title>icons on PaperModX</title>
     <link>https://reorx.github.io/hugo-PaperModX/tags/icons/</link>
     <description>Recent content in icons on PaperModX</description>
-    <image>
-      <url>https://reorx.github.io/hugo-PaperModX/cover.png</url>
-      <link>https://reorx.github.io/hugo-PaperModX/cover.png</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://reorx.github.io/hugo-PaperModX/tags/icons/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -17,6 +13,62 @@
       
       <guid>https://reorx.github.io/hugo-PaperModX/docs/icons/</guid>
       <description>Explain how to use icons in PaperModX</description>
+      <content:encoded><![CDATA[<h2 id="social-icons">Social Icons</h2>
+<p>Go to <a href="icons_preview">Icons Preview</a> to see a complete list of icons</p>
+<p>Usage :</p>
+<pre tabindex="0"><code>socialIcons:
+    - name: &quot;kofi&quot;
+        url: &quot;https://kofi.com&quot;
+    - name: &quot;twitter&quot;
+        url: &quot;https://twitter.com&quot;
+</code></pre><hr>
+<h2 id="share-icons">Share Icons</h2>
+<table>
+<thead>
+<tr>
+<th>No.</th>
+<th>Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>twitter</code> (also generates hash tags from tags linked with post)</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>linkedin</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>reddit</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>facebook</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>whatsapp</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>telegram</code></td>
+</tr>
+</tbody>
+</table>
+<p>Usage:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">ShowShareButtons</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div>]]></content:encoded>
     </item>
     
   </channel>

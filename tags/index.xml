@@ -4,10 +4,6 @@
     <title>Tags on PaperModX</title>
     <link>https://reorx.github.io/hugo-PaperModX/tags/</link>
     <description>Recent content in Tags on PaperModX</description>
-    <image>
-      <url>https://reorx.github.io/hugo-PaperModX/cover.png</url>
-      <link>https://reorx.github.io/hugo-PaperModX/cover.png</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://reorx.github.io/hugo-PaperModX/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -17,6 +13,7 @@
       
       <guid>https://reorx.github.io/hugo-PaperModX/tags/example/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
@@ -26,6 +23,7 @@
       
       <guid>https://reorx.github.io/hugo-PaperModX/tags/icons/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
@@ -35,6 +33,7 @@
       
       <guid>https://reorx.github.io/hugo-PaperModX/tags/markdown/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
@@ -44,6 +43,7 @@
       
       <guid>https://reorx.github.io/hugo-PaperModX/tags/syntax/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
@@ -53,6 +53,7 @@
       
       <guid>https://reorx.github.io/hugo-PaperModX/tags/privacy/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
@@ -62,6 +63,7 @@
       
       <guid>https://reorx.github.io/hugo-PaperModX/tags/shortcodes/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
@@ -71,6 +73,7 @@
       
       <guid>https://reorx.github.io/hugo-PaperModX/tags/math/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
   </channel>
