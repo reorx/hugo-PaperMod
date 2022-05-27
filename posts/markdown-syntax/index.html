@@ -8,7 +8,7 @@
 <meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
 <meta name=author content="Hugo Authors">
 <link rel=canonical href=https://reorx.github.io/hugo-PaperModX/posts/markdown-syntax/>
-<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.3f0de516ecd0d764759b656ec357581f8cca37675b66d8dca8acdf2974bcb2c9.css integrity="sha256-Pw3lFuzQ12R1m2Vuw1dYH4zKN2dbZtjcqKzfKXS8ssk=" rel="preload stylesheet" as=style>
+<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.5aa4ba257d2892e3fe119341c7e7c03f77cdabe71023b3d267964c4af6dc0d1f.css integrity="sha256-WqS6JX0okuP+EZNBx+fAP3fNq+cQI7PSZ5ZMSvbcDR8=" rel="preload stylesheet" as=style>
 <link rel=icon href=https://reorx.github.io/hugo-PaperModX/favicon.ico>
 <link rel=apple-touch-icon href=https://reorx.github.io/hugo-PaperModX/apple-touch-icon.png>
 <link rel=alternate hreflang=en href=https://reorx.github.io/hugo-PaperModX/posts/markdown-syntax/>
@@ -34,8 +34,8 @@
 <style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary-bg:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
 </head>
-<body id=top>
-<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<body id=top><script data-no-instant>function switchTheme(a){switch(a){case'light':document.body.classList.remove('dark');break;case'dark':document.body.classList.add('dark');break;default:window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')}}function isDarkTheme(){return document.body.className.includes("dark")}function getPrefTheme(){return localStorage.getItem("pref-theme")}function setPrefTheme(a){switchTheme(a),localStorage.setItem("pref-theme",a)}const toggleThemeCallbacks=[];toggleThemeCallbacks.push(a=>{a?setPrefTheme('light'):setPrefTheme('dark')}),window.addEventListener('toggle-theme',function(){const a=isDarkTheme();toggleThemeCallbacks.forEach(b=>b(a))})</script>
+<script>(function(){const b='auto',a=getPrefTheme(),c=a||b;switchTheme(c)})()</script>
 <header class=header>
 <nav class=nav>
 <div class=logo>
@@ -392,9 +392,10 @@ Powered by
 </footer>
 <a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
 </a>
+<script src=/hugo-PaperModX/js/delegate-it.js data-no-instant></script>
+<script>(function(){const a=''=='1';if(a)return;document.getElementById("theme-toggle").addEventListener("click",()=>{window.dispatchEvent(new CustomEvent('toggle-theme'))})})()</script>
 <script>(function(){let a=document.getElementById('menu');a&&(a.scrollLeft=localStorage.getItem("menu-scroll-position"),a.onscroll=function(){localStorage.setItem("menu-scroll-position",a.scrollLeft)});const b=''=='1',c='1'=='1';if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||b||c)return;document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})})()</script>
 <script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
-<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
 <script>if(window.scrollListeners)for(const a of scrollListeners)window.removeEventListener('scroll',a);window.scrollListeners=[]</script>
 <script src=/hugo-PaperModX/js/medium-zoom.min.js data-no-instant></script>
 <script>document.querySelectorAll('pre > code').forEach(b=>{const c=b.parentNode.parentNode,a=document.createElement('button');a.classList.add('copy-code'),a.innerText='copy';function d(){a.innerText='copied!',setTimeout(()=>{a.innerText='copy'},2e3)}a.addEventListener('click',e=>{if('clipboard'in navigator){navigator.clipboard.writeText(b.textContent),d();return}const a=document.createRange();a.selectNodeContents(b);const c=window.getSelection();c.removeAllRanges(),c.addRange(a);try{document.execCommand('copy'),d()}catch(a){}c.removeRange(a)}),c.classList.contains("highlight")?c.appendChild(a):c.parentNode.firstChild==c||(b.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?b.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(a):b.parentNode.appendChild(a))})</script>
