@@ -8,7 +8,7 @@
 <meta name=description content="Theme PaperModX - https://github.com/reorx/hugo-PaperModX">
 <meta name=author content="Reorx">
 <link rel=canonical href=https://reorx.github.io/hugo-PaperModX/zh/tags/>
-<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.13248f7c3a3f483c1e521ce80dfbbf7e6a67aa208317ba1fbac34b3fc74d8acb.css integrity="sha256-EySPfDo/SDweUhzoDfu/fmpnqiCDF7ofusNLP8dNiss=" rel="preload stylesheet" as=style>
+<link crossorigin=anonymous href=/hugo-PaperModX/assets/css/stylesheet.min.6d18e61fa9b2fd4aa77d48860f68336251622d1ec116e585c74417707cbeebff.css integrity="sha256-bRjmH6my/UqnfUiGD2gzYlFiLR7BFuWFx0QXcHy+6/8=" rel="preload stylesheet" as=style>
 <link rel=icon href=https://reorx.github.io/hugo-PaperModX/favicon.ico>
 <link rel=apple-touch-icon href=https://reorx.github.io/hugo-PaperModX/apple-touch-icon.png>
 <link rel=alternate type=application/rss+xml href=https://reorx.github.io/hugo-PaperModX/zh/tags/index.xml>
@@ -33,7 +33,7 @@
 <style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary-bg:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
 </head>
-<body class=list id=top><script data-no-instant>function switchTheme(a){switch(a){case'light':document.body.classList.remove('dark');break;case'dark':document.body.classList.add('dark');break;default:window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')}}function isDarkTheme(){return document.body.className.includes("dark")}function getPrefTheme(){return localStorage.getItem("pref-theme")}function setPrefTheme(a){switchTheme(a),localStorage.setItem("pref-theme",a)}const toggleThemeCallbacks=[];toggleThemeCallbacks.push(a=>{a?setPrefTheme('light'):setPrefTheme('dark')}),window.addEventListener('toggle-theme',function(){const a=isDarkTheme();toggleThemeCallbacks.forEach(b=>b(a))})</script>
+<body class=list id=top><script data-no-instant>function switchTheme(a){switch(a){case'light':document.body.classList.remove('dark');break;case'dark':document.body.classList.add('dark');break;default:window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')}}function isDarkTheme(){return document.body.className.includes("dark")}function getPrefTheme(){return localStorage.getItem("pref-theme")}function setPrefTheme(a){switchTheme(a),localStorage.setItem("pref-theme",a)}const toggleThemeCallbacks={};toggleThemeCallbacks.main=a=>{a?setPrefTheme('light'):setPrefTheme('dark')},window.addEventListener('toggle-theme',function(){const a=isDarkTheme();for(const b in toggleThemeCallbacks)toggleThemeCallbacks[b](a)});function toggleThemeListener(){window.dispatchEvent(new CustomEvent('toggle-theme'))}</script>
 <script>(function(){const b='auto',a=getPrefTheme(),c=a||b;switchTheme(c)})()</script>
 <header class=header>
 <nav class=nav>
@@ -97,7 +97,7 @@ Powered by
 </footer>
 <a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
 </a>
-<script>(function(){const a=''=='1';if(a)return;document.getElementById("theme-toggle").addEventListener("click",()=>{window.dispatchEvent(new CustomEvent('toggle-theme'))})})()</script>
+<script>(function(){const b=''=='1';if(b)return;let a=document.getElementById("theme-toggle");a.removeEventListener('click',toggleThemeListener),a.addEventListener('click',toggleThemeListener)})()</script>
 <script>(function(){let a=document.getElementById('menu');a&&(a.scrollLeft=localStorage.getItem("menu-scroll-position"),a.onscroll=function(){localStorage.setItem("menu-scroll-position",a.scrollLeft)});const b=''=='1',c='1'=='1';if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||b||c)return;document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})})()</script>
 <script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
 <script>if(window.scrollListeners)for(const a of scrollListeners)window.removeEventListener('scroll',a);window.scrollListeners=[]</script>
