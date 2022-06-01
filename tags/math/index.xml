@@ -21,19 +21,10 @@
 <li>Include the partial in your templates (<a href="../faq/#custom-head--footer"><code>extend_head.html</code></a>) like so:</li>
 <li>refer <a href="https://github.com/adityatelange/hugo-PaperMod/issues/236">ISSUE #236</a></li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">{{</span> <span class="k">if</span> or .Params.math .Site.Params.math <span class="o">}}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">{{</span> <span class="k">if</span> or .Params.math .Site.Params.math <span class="o">}}</span>
 <span class="o">{{</span> partial <span class="s2">&#34;math.html&#34;</span> . <span class="o">}}</span>
 <span class="o">{{</span> end <span class="o">}}</span>
-</code></pre></td></tr></table>
-</div>
-</div><ul>
+</code></pre></div><ul>
 <li>To enable KaTex globally set the parameter <code>math</code> to <code>true</code> in a project&rsquo;s configuration</li>
 <li>To enable KaTex on a per page basis include the parameter <code>math: true</code> in content files</li>
 </ul>

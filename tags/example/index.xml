@@ -144,21 +144,7 @@ This is pre text
 &lt;/html&gt;
 </code></pre>
 <h4 id="code-block-with-hugos-internal-highlight-shortcode">Code block with Hugo&rsquo;s internal highlight shortcode</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
@@ -167,9 +153,7 @@ This is pre text
 <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Test<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
 <h4 id="gist">Gist</h4>
 <script type="application/javascript" src="https://gist.github.com/spf13/7896402.js"></script>
 
@@ -335,19 +319,10 @@ This is pre text
 <li>Include the partial in your templates (<a href="../faq/#custom-head--footer"><code>extend_head.html</code></a>) like so:</li>
 <li>refer <a href="https://github.com/adityatelange/hugo-PaperMod/issues/236">ISSUE #236</a></li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">{{</span> <span class="k">if</span> or .Params.math .Site.Params.math <span class="o">}}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">{{</span> <span class="k">if</span> or .Params.math .Site.Params.math <span class="o">}}</span>
 <span class="o">{{</span> partial <span class="s2">&#34;math.html&#34;</span> . <span class="o">}}</span>
 <span class="o">{{</span> end <span class="o">}}</span>
-</code></pre></td></tr></table>
-</div>
-</div><ul>
+</code></pre></div><ul>
 <li>To enable KaTex globally set the parameter <code>math</code> to <code>true</code> in a project&rsquo;s configuration</li>
 <li>To enable KaTex on a per page basis include the parameter <code>math: true</code> in content files</li>
 </ul>
@@ -389,18 +364,9 @@ $$</p>]]></content:encoded>
 <p>The <a href="http://www.emoji-cheat-sheet.com/">Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
 <hr>
 <p><strong>N.B.</strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">.emoji {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">.emoji {
 font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
-}</code></pre></td></tr></table>
-</div>
-</div>
+}</code></pre></div>
 
 
 <style>

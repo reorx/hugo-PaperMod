@@ -17,33 +17,17 @@
 comparing to the original PaperMod.</p>
 <h2 id="table-of-contents-toc-floating-on-the-side">Table of Contents (ToC) floating on the side</h2>
 <p>By adding config:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">params</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">TocSide</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;left&#39;</span><span class="w">  </span><span class="c"># or &#39;right&#39;</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>ToC will float on the left/right side of the page.
+</span></code></pre></div><p>ToC will float on the left/right side of the page.
 You can take a look at how <code>'right'</code> feels like in <a href="https://reorx.github.io/hugo-PaperModX/docs/installation/">Installation | Update</a>.</p>
 <p>The ToC box is responsive, it only shows on the side when minimum screen size is 1440px.</p>
 <p>This feature is enabled on this site.</p>
 <h2 id="instantclick-integration">InstantClick integration</h2>
 <p>By adding config:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">params</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">EnableInstantClick</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p><a href="http://instantclick.io/">InstantClick</a> will be enabled,
+</span></code></pre></div><p><a href="http://instantclick.io/">InstantClick</a> will be enabled,
 making navigation behaves like Single Page Application.</p>
 <p>Note that <code>/search</code> pages are omitted from InstantClick
 to prevent conflicts from search&rsquo;s JavaScript,
@@ -59,64 +43,30 @@ It&rsquo;s a good way to show personality and make your site feels more delightf
 <p>The default color is a purple vibe,
 you can customize the colors of link, link underline and their hover variants
 by override the following css variables in <code>assets/css/extended/custom.css</code> of your site.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
   <span class="nv">--link-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="p">);</span>
   <span class="nv">--link-hover-color</span><span class="p">:</span> <span class="mh">#573eaa</span><span class="p">;</span>
   <span class="nv">--link-underline-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">0</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">link</span><span class="o">-</span><span class="kc">color</span><span class="p">);</span>
   <span class="nv">--link-hover-underline-color</span><span class="p">:</span> <span class="mh">#573eaa</span><span class="p">;</span>
   <span class="nv">--link-hover-underline-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">0</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">link</span><span class="o">-</span><span class="n">hover</span><span class="o">-</span><span class="kc">underline</span><span class="o">-</span><span class="kc">color</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="customize-pagniator-size">Customize pagniator size</h2>
+</code></pre></div><h2 id="customize-pagniator-size">Customize pagniator size</h2>
 <p>In section pages, if you want the paginator size be different from the
 <a href="https://gohugo.io/templates/pagination/#configure-pagination">global config</a>,
 you can add <code>paginate</code> in the frontmatter to customize.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nn">---</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nn">---</span><span class="w">
 </span><span class="w"></span><span class="nt">paginate</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
 </span><span class="w"></span><span class="nn">---</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><h2 id="menus-external-link">Menus external link</h2>
+</span></code></pre></div><h2 id="menus-external-link">Menus external link</h2>
 <p>You can add <code>external: true</code> to a menu item&rsquo;s params to mark it as an external link,
 this will add a small icon to the end, and make the link open in new tab when clicked.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">menu</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">menu</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">main</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;@Author&#34;</span><span class="w">
 </span><span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://reorx.com&#34;</span><span class="w">
 </span><span class="w">      </span><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">        </span><span class="nt">external</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><h2 id="highlight-code-with-chroma-no-bullshit">Highlight code with Chroma, no bullshit</h2>
+</span></code></pre></div><h2 id="highlight-code-with-chroma-no-bullshit">Highlight code with Chroma, no bullshit</h2>
 <p>PaperMod uses highlight.js to highlight code blocks.
 In PaperModX, we use Chroma which is the recommended way in Hugo&rsquo;s
 <a href="https://gohugo.io/content-management/syntax-highlighting/#:~:text=Hugo%20uses%20Chroma%20as%20its%20code%20highlighter%3B%20it%20is%20built%20in%20Go%20and%20is%20really%2C%20really%20fast">official docs</a>,
@@ -157,6 +107,254 @@ to show all the icons, check it out at: <a href="https://reorx.github.io/hugo-Pa
     </item>
     
     <item>
+      <title>FAQs</title>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/faq/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/faq/</guid>
+      <description>Frequently Asked Questions</description>
+      <content:encoded><![CDATA[<h2 id="intro">Intro</h2>
+<ul>
+<li>
+<p><strong>We&rsquo;ll be using <code>yml/yaml</code> format for all examples down below, I recommend using <code>yml</code> over <code>toml</code> as it is easier to read.</strong></p>
+</li>
+<li>
+<p>You can find any <a href="https://www.google.com/search?q=yml+to+toml">YML to TOML</a> converters if necessary.</p>
+</li>
+</ul>
+<hr>
+<h2 id="override-theme-template">Override theme template</h2>
+<p>By Hugo&rsquo;s Lookup Order, you can override any part of a theme that you want. The following is a quick example.</p>
+<p>Let&rsquo;s say you wish the <code>list</code> was different. All you have to do is copy the <code>list</code> template:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">your-site/themes/papermod/layouts/_defaults/list.html
+</code></pre></div><p>And paste it under your own <code>layouts</code> folder:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">your-site/layouts/_defaults/list.html
+</code></pre></div><p>Then you&rsquo;re free to make any changes you want to the <code>list</code>.
+When Hugo builds your site, your copy of <code>list.html</code> will be used instead of the theme&rsquo;s <code>list.html</code>.</p>
+<hr>
+<h2 id="enable-social-metadata-and-seo">Enable Social-Metadata and SEO</h2>
+<p>These include OpenGraph, Twitter Cards and Schema.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">env</span><span class="p">:</span><span class="w"> </span><span class="l">production</span><span class="w">
+</span></code></pre></div><p>or set <code>HUGO_ENV</code> as &ldquo;production&rdquo; in system env-vars</p>
+<hr>
+<h2 id="failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource--">Failed to find a valid digest in the &lsquo;integrity&rsquo; attribute for resource &hellip; ?</h2>
+<p>Read about How Subresource Integrity helps: <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource_Integrity</a></p>
+<p>Why was the <code>asset</code> not loading ? : <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity#How_browsers_handle_Subresource_Integrity">How_browsers_handle_Subresource_Integrity</a></p>
+<p><strong>Solution:</strong></p>
+<p>Set the following in <code>config.yml</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">assets</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">disableFingerprinting</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></code></pre></div><p>Linked Issues:</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/65056585/hugo-theme-not-loading">https://stackoverflow.com/questions/65056585/hugo-theme-not-loading</a></li>
+<li><a href="https://stackoverflow.com/questions/65040931/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource">https://stackoverflow.com/questions/65040931/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource</a></li>
+<li><a href="https://blog.gerardbeckerleg.com/posts/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource/">https://blog.gerardbeckerleg.com/posts/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource/</a></li>
+</ul>
+<hr>
+<h2 id="bundling-custom-css-with-themes-assets">Bundling Custom css with theme&rsquo;s assets</h2>
+<ul>
+<li>For adding custom css to be bundled inside one minimized css</li>
+</ul>
+<p>Create folder in yout project directory as</p>
+<pre tabindex="0"><code>.(site root)
+├── config.yml
+├── content/
+├── theme/hugo-PaperMod/
+└── assets/
+    └── css/
+        └── extended/  &lt;---
+            ├── custom_css1.css &lt;---
+            └── any_name.css   &lt;---
+</code></pre><p>All <code>css</code> files inside <code>assets/css/extended</code> will be bundled !</p>
+<p><strong>Note</strong>: blank.css is just the placeholder so that it doesn&rsquo;t break the theme when no files are present under <code>assets/css/extended</code></p>
+<p>Linked Issues:</p>
+<ul>
+<li><a href="https://discourse.gohugo.io/t/papermod-theme-how-to-add-custom-css/30165">Papermod Theme: How to add custom CSS?</a></li>
+</ul>
+<hr>
+<h2 id="custom-head--footer">Custom Head / Footer</h2>
+<p>Custom css/js can be added by way mentioned below.</p>
+<pre tabindex="0"><code>.(site root)
+├── config.yml
+├── content/
+├── theme/hugo-PaperMod/
+└── layouts
+    ├── partials
+    │   ├── comments.html
+    │   ├── extend_footer.html &lt;---
+    │   └── extend_head.html   &lt;---
+    └── robots.txt
+</code></pre><p>Create a html page in directory structure as shown above.</p>
+<p>Contents of <code>extend_head.html</code> will be added to <code>head</code> of page.</p>
+<p>and contents of <code>extend_footer.html</code> will be added to bottom of page.</p>
+<hr>
+<h2 id="add-menu-to-site">Add menu to site</h2>
+<p>You can add menu entries which will appear in the header of every page.</p>
+<p>To do so, add a <code>menu</code> section to your site&rsquo;s <code>config.yml</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">menu</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">main</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">categories</span><span class="w">
+</span><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">categories</span><span class="w">
+</span><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/categories/</span><span class="w">
+</span><span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span><span class="w">        </span>- <span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">tags</span><span class="w">
+</span><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">tags</span><span class="w">
+</span><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/tags/</span><span class="w">
+</span><span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">20</span><span class="w">
+</span><span class="w">        </span>- <span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">example</span><span class="w">
+</span><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">example.org</span><span class="w">
+</span><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">https://example.org</span><span class="w">
+</span><span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">30</span><span class="w">
+</span></code></pre></div><p><code>name</code> controls what will be displayed for the menu entry.
+<code>url</code> sets the URL that the entry points to.
+<code>weight</code> is used to control the positioning of entries.</p>
+<p>For more information on menus, see the <a href="https://gohugo.io/content-management/menus/">Hugo wiki page</a>.</p>
+<hr>
+<h2 id="pin-a-post">Pin a Post</h2>
+<p>Post can be pinned/ displayed top on the list by adding a <code>weight=&lt;num&gt;</code> var to page-variables</p>
+<p>example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;My Important post&#34;</span><span class="w">
+</span><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2020-09-15T11:30:03</span><span class="m">+00</span><span class="p">:</span><span class="m">00</span><span class="w">
+</span><span class="w"></span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w">
+</span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;My 2nd Important post&#34;</span><span class="w">
+</span><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2020-09-15T11:30:03</span><span class="m">+00</span><span class="p">:</span><span class="m">00</span><span class="w">
+</span><span class="w"></span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w">
+</span></code></pre></div><hr>
+<h2 id="adding-custom-favicons">Adding Custom Favicon(s)</h2>
+<p>We support the following paths under <code>/static</code> directory
+and can be added accordingly.</p>
+<ul>
+<li><code>favicon.ico</code></li>
+<li><code>favicon-16x16.png</code></li>
+<li><code>favicon-32x32.png</code></li>
+<li><code>apple-touch-icon.png</code></li>
+<li><code>safari-pinned-tab.svg</code></li>
+</ul>
+<ol>
+<li>
+<p>Favicon(s) can be generated by <a href="https://favicon.io">Favicon.io</a></p>
+<p>and can be simply put in <code>/static</code> folder.</p>
+</li>
+<li>
+<p>Other way is to add favicon(s) NOT located in <code>/static</code> folder.</p>
+<p>In site config add the following:</p>
+<pre tabindex="0"><code>params:
+assets:
+    favicon: &quot;&lt;link / absolute url&gt;&quot;
+    favicon16x16:  &quot;&lt;link / absolute url&gt;&quot;
+    favicon32x32:  &quot;&lt;link / absolute url&gt;&quot;
+    apple_touch_icon:  &quot;&lt;link / absolute url&gt;&quot;
+    safari_pinned_tab:  &quot;&lt;link / absolute url&gt;&quot;
+</code></pre><ul>
+<li><code>absolute url</code> means direct links to external resource: ex. <a href="https://web.site/someimage.png">https://web.site/someimage.png</a></li>
+</ul>
+<p>example:</p>
+<pre tabindex="0"><code>params:
+assets:
+    favicon: &quot;/favicon.ico&quot;
+    favicon16x16:  &quot;/favicon-16x16.png&quot;
+    favicon32x32:  &quot;/favicon-32x32.png&quot;
+    apple_touch_icon:  &quot;/apple-touch-icon.png&quot;
+    safari_pinned_tab:  &quot;/safari-pinned-tab.svg&quot;
+</code></pre></li>
+</ol>
+<hr>
+<h2 id="centering-image-in-markdown">Centering image in markdown</h2>
+<p>Add <code>#center</code> after image to center align an image</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">![<span class="nt">name</span>](<span class="na">path/to/image.png#center</span>)
+</code></pre></div><p><strong>When using <a href="https://gohugo.io/content-management/shortcodes/"><code>figure</code></a> shortcode</strong></p>
+<p>use <code>align=center</code> to center image with captions</p>
+<p>ex.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">{{<span class="p">&lt;</span> <span class="nt">figure</span> <span class="na">align</span><span class="o">=</span><span class="s">center</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;image.jpg&#34;</span> <span class="p">&gt;</span>}}
+</code></pre></div><hr>
+<h2 id="using-hugos-syntax-highlighter-chroma">Using Hugo&rsquo;s Syntax highlighter &ldquo;chroma&rdquo;</h2>
+<p>Set hugo&rsquo;s markdown styling in site <code>config.yml</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">markup</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">highlight</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">noClasses</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></code></pre></div><p><code>noClasses</code> has to be <code>false</code> to make highlight color follows the theme.</p>
+<hr>
+<h2 id="search-not-working-">Search not working ?</h2>
+<p>If you are using a CDN to server assets from a different domain, search would break</p>
+<p>Why? Take a look at <a href="https://github.com/adityatelange/hugo-PaperMod/blob/fb4988cfb6d0d6e4e489f17d89f0fa618def3396/assets/js/fastsearch.js#L35">fastsearch.js#L35</a>.</p>
+<p>We fetch the <code>index.json</code> (where the search function looks for the keywords typed) one level up of the website <code>search.min.js</code> is hosted on.</p>
+<p>We have used this insted of assigning <code>baseURL</code> so as to work with multilingual websites ex. <code>example.com/fr/</code> and websites being placed under a subdirectory ex. <code>example.com/blog/</code>.</p>
+<p>To fix for <em>single</em> language websites hosting assets from CDN, this you may <a href="#override-theme-template">override</a> <a href="https://github.com/adityatelange/hugo-PaperMod/blob/fb4988cfb6d0d6e4e489f17d89f0fa618def3396/assets/js/fastsearch.js#L35">fastsearch.js#L35</a> and placing appropriate URL as in</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&#34;GET&#34;</span><span class="p">,</span> <span class="s2">&#34;https://example.com/index.json&#34;</span><span class="p">);</span>
+</code></pre></div><hr>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://zwbetz.com/override-a-hugo-theme/">Override a Hugo theme</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Icons</title>
+      <link>https://reorx.github.io/hugo-PaperModX/docs/icons/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/docs/icons/</guid>
+      <description>Explain how to use icons in PaperModX</description>
+      <content:encoded><![CDATA[<h2 id="social-icons">Social Icons</h2>
+<p>Go to <a href="icons_preview">Icons Preview</a> to see a complete list of icons</p>
+<p>Usage :</p>
+<pre tabindex="0"><code>socialIcons:
+    - name: &quot;kofi&quot;
+        url: &quot;https://kofi.com&quot;
+    - name: &quot;twitter&quot;
+        url: &quot;https://twitter.com&quot;
+</code></pre><hr>
+<h2 id="share-icons">Share Icons</h2>
+<table>
+<thead>
+<tr>
+<th>No.</th>
+<th>Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>twitter</code> (also generates hash tags from tags linked with post)</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>linkedin</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>reddit</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>facebook</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>whatsapp</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>telegram</code></td>
+</tr>
+</tbody>
+</table>
+<p>Usage:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">ShowShareButtons</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></code></pre></div>]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Installation | Update</title>
       <link>https://reorx.github.io/hugo-PaperModX/docs/installation/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
@@ -179,52 +377,22 @@ to show all the icons, check it out at: <a href="https://reorx.github.io/hugo-Pa
 <p>After you have created a new site, at <a href="https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme">Step 3</a> follow the steps:</p>
 <h3 id="method-1">Method 1</h3>
 <p>Inside the folder of your Hugo site, run:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/reorx/hugo-PaperModX themes/PaperModX --depth<span class="o">=</span><span class="m">1</span>
-</code></pre></td></tr></table>
-</div>
-</div><p><strong>Note</strong>: You may use <code> --branch v5.0</code> to end of above command if you want to stick to specific release.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/reorx/hugo-PaperModX themes/PaperModX --depth<span class="o">=</span><span class="m">1</span>
+</code></pre></div><p><strong>Note</strong>: You may use <code> --branch v5.0</code> to end of above command if you want to stick to specific release.</p>
 <blockquote>
 <p>Updating theme :</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> themes/PaperModX
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> themes/PaperModX
 git pull
-</code></pre></td></tr></table>
-</div>
-</div></blockquote>
+</code></pre></div></blockquote>
 <h3 id="method-2">Method 2</h3>
 <p>You can use as <a href="https://www.atlassian.com/git/tutorials/git-submodule">submodule</a> with</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git submodule add https://github.com/reorx/hugo-PaperModX.git themes/PaperModX --depth<span class="o">=</span><span class="m">1</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git submodule add https://github.com/reorx/hugo-PaperModX.git themes/PaperModX --depth<span class="o">=</span><span class="m">1</span>
 git submodule update --init --recursive <span class="c1"># needed when you reclone your repo (submodules may not get cloned automatically)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p><strong>Note</strong>: You may use <code> --branch v5.0</code> to end of above command if you want to stick to specific release.</p>
+</code></pre></div><p><strong>Note</strong>: You may use <code> --branch v5.0</code> to end of above command if you want to stick to specific release.</p>
 <blockquote>
 <p>Updating theme :</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git submodule update --remote --merge
-</code></pre></td></tr></table>
-</div>
-</div></blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git submodule update --remote --merge
+</code></pre></div></blockquote>
 <h3 id="method-3">Method 3</h3>
 <p>Or you can Download as Zip from Github Page and extract in your themes directory</p>
 <p>Direct Links:</p>
@@ -238,15 +406,8 @@ git submodule update --init --recursive <span class="c1"># needed when you reclo
 </ul>
 <h3 id="finally-">Finally &hellip;</h3>
 <p>Add in <code>config.yml</code>:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">theme</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;PaperModX&#34;</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><h3 id="method-4">Method 4</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">theme</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;PaperModX&#34;</span><span class="w">
+</span></code></pre></div><h3 id="method-4">Method 4</h3>
 <ul>
 <li>
 <p>Install <a href="https://go.dev/doc/install">Go programming language</a> in your operating system.</p>
@@ -291,145 +452,7 @@ git submodule update --init --recursive <span class="c1"># needed when you reclo
 <p><strong>Example Site Structure is present here</strong>: <a href="https://github.com/reorx/hugo-PaperModX/tree/exampleSite/">exampleSite</a></p>
 </blockquote>
 <p><strong>Use appropriately</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">  1
-</span><span class="lnt">  2
-</span><span class="lnt">  3
-</span><span class="lnt">  4
-</span><span class="lnt">  5
-</span><span class="lnt">  6
-</span><span class="lnt">  7
-</span><span class="lnt">  8
-</span><span class="lnt">  9
-</span><span class="lnt"> 10
-</span><span class="lnt"> 11
-</span><span class="lnt"> 12
-</span><span class="lnt"> 13
-</span><span class="lnt"> 14
-</span><span class="lnt"> 15
-</span><span class="lnt"> 16
-</span><span class="lnt"> 17
-</span><span class="lnt"> 18
-</span><span class="lnt"> 19
-</span><span class="lnt"> 20
-</span><span class="lnt"> 21
-</span><span class="lnt"> 22
-</span><span class="lnt"> 23
-</span><span class="lnt"> 24
-</span><span class="lnt"> 25
-</span><span class="lnt"> 26
-</span><span class="lnt"> 27
-</span><span class="lnt"> 28
-</span><span class="lnt"> 29
-</span><span class="lnt"> 30
-</span><span class="lnt"> 31
-</span><span class="lnt"> 32
-</span><span class="lnt"> 33
-</span><span class="lnt"> 34
-</span><span class="lnt"> 35
-</span><span class="lnt"> 36
-</span><span class="lnt"> 37
-</span><span class="lnt"> 38
-</span><span class="lnt"> 39
-</span><span class="lnt"> 40
-</span><span class="lnt"> 41
-</span><span class="lnt"> 42
-</span><span class="lnt"> 43
-</span><span class="lnt"> 44
-</span><span class="lnt"> 45
-</span><span class="lnt"> 46
-</span><span class="lnt"> 47
-</span><span class="lnt"> 48
-</span><span class="lnt"> 49
-</span><span class="lnt"> 50
-</span><span class="lnt"> 51
-</span><span class="lnt"> 52
-</span><span class="lnt"> 53
-</span><span class="lnt"> 54
-</span><span class="lnt"> 55
-</span><span class="lnt"> 56
-</span><span class="lnt"> 57
-</span><span class="lnt"> 58
-</span><span class="lnt"> 59
-</span><span class="lnt"> 60
-</span><span class="lnt"> 61
-</span><span class="lnt"> 62
-</span><span class="lnt"> 63
-</span><span class="lnt"> 64
-</span><span class="lnt"> 65
-</span><span class="lnt"> 66
-</span><span class="lnt"> 67
-</span><span class="lnt"> 68
-</span><span class="lnt"> 69
-</span><span class="lnt"> 70
-</span><span class="lnt"> 71
-</span><span class="lnt"> 72
-</span><span class="lnt"> 73
-</span><span class="lnt"> 74
-</span><span class="lnt"> 75
-</span><span class="lnt"> 76
-</span><span class="lnt"> 77
-</span><span class="lnt"> 78
-</span><span class="lnt"> 79
-</span><span class="lnt"> 80
-</span><span class="lnt"> 81
-</span><span class="lnt"> 82
-</span><span class="lnt"> 83
-</span><span class="lnt"> 84
-</span><span class="lnt"> 85
-</span><span class="lnt"> 86
-</span><span class="lnt"> 87
-</span><span class="lnt"> 88
-</span><span class="lnt"> 89
-</span><span class="lnt"> 90
-</span><span class="lnt"> 91
-</span><span class="lnt"> 92
-</span><span class="lnt"> 93
-</span><span class="lnt"> 94
-</span><span class="lnt"> 95
-</span><span class="lnt"> 96
-</span><span class="lnt"> 97
-</span><span class="lnt"> 98
-</span><span class="lnt"> 99
-</span><span class="lnt">100
-</span><span class="lnt">101
-</span><span class="lnt">102
-</span><span class="lnt">103
-</span><span class="lnt">104
-</span><span class="lnt">105
-</span><span class="lnt">106
-</span><span class="lnt">107
-</span><span class="lnt">108
-</span><span class="lnt">109
-</span><span class="lnt">110
-</span><span class="lnt">111
-</span><span class="lnt">112
-</span><span class="lnt">113
-</span><span class="lnt">114
-</span><span class="lnt">115
-</span><span class="lnt">116
-</span><span class="lnt">117
-</span><span class="lnt">118
-</span><span class="lnt">119
-</span><span class="lnt">120
-</span><span class="lnt">121
-</span><span class="lnt">122
-</span><span class="lnt">123
-</span><span class="lnt">124
-</span><span class="lnt">125
-</span><span class="lnt">126
-</span><span class="lnt">127
-</span><span class="lnt">128
-</span><span class="lnt">129
-</span><span class="lnt">130
-</span><span class="lnt">131
-</span><span class="lnt">132
-</span><span class="lnt">133
-</span><span class="lnt">134
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">baseURL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://examplesite.com/&#34;</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">baseURL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://examplesite.com/&#34;</span><span class="w">
 </span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">ExampleSite</span><span class="w">
 </span><span class="w"></span><span class="nt">paginate</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="w">
 </span><span class="w"></span><span class="nt">theme</span><span class="p">:</span><span class="w"> </span><span class="l">PaperModX</span><span class="w">
@@ -563,47 +586,9 @@ git submodule update --init --recursive <span class="c1"># needed when you reclo
 </span><span class="w"></span><span class="c">#         guessSyntax: true</span><span class="w">
 </span><span class="w"></span><span class="c">#         lineNos: true</span><span class="w">
 </span><span class="w"></span><span class="c">#         style: monokai</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><hr>
+</span></code></pre></div><hr>
 <h2 id="sample-pagemd">Sample <code>Page.md</code></h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
 </span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;My 1st post&#34;</span><span class="w">
 </span><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2020-09-15T11:30:03</span><span class="m">+00</span><span class="p">:</span><span class="m">00</span><span class="w">
 </span><span class="w"></span><span class="c"># weight: 1</span><span class="w">
@@ -635,18 +620,9 @@ git submodule update --init --recursive <span class="c1"># needed when you reclo
 </span><span class="w">    </span><span class="nt">Text</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Suggest Changes&#34;</span><span class="w"> </span><span class="c"># edit text</span><span class="w">
 </span><span class="w">    </span><span class="nt">appendFilePath</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># to append file path to Edit link</span><span class="w">
 </span><span class="w"></span><span class="nn">---</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>You can use it by creating <code>archetypes/post.md</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">hugo new --kind post &lt;name&gt;
-</code></pre></td></tr></table>
-</div>
-</div><hr>
+</span></code></pre></div><p>You can use it by creating <code>archetypes/post.md</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">hugo new --kind post &lt;name&gt;
+</code></pre></div><hr>
 ]]></content:encoded>
     </item>
     
@@ -679,34 +655,17 @@ git submodule update --init --recursive <span class="c1"># needed when you reclo
 </ul>
 <hr>
 <h3 id="default-theme-lightdarkauto">Default Theme light/dark/auto</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="c"># defaultTheme: light</span><span class="w">
 </span><span class="w">    </span><span class="c"># defaultTheme: dark</span><span class="w">
 </span><span class="w">    </span><span class="nt">defaultTheme</span><span class="p">:</span><span class="w"> </span><span class="l">auto</span><span class="w"> </span><span class="c"># to switch between dark or light according to browser theme</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div></details>
+</span></code></pre></div></details>
 <hr>
 <h3 id="theme-switch-toggle-enabled-by-default">Theme Switch Toggle (enabled by default)</h3>
 <p>Shows icon besides title of page to change theme</p>
 <p>To disable it :</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">disableThemeToggle</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>You can refer following table for better understanding&hellip;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">disableThemeToggle</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></code></pre></div><p>You can refer following table for better understanding&hellip;</p>
 <table>
 <thead>
 <tr>
@@ -765,19 +724,7 @@ git submodule update --init --recursive <span class="c1"># needed when you reclo
 <hr>
 <h3 id="archives-layout">Archives Layout</h3>
 <p>Create a page with <code>archive.md</code> in <code>content</code> directory with following content</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">.
 ├── config.yml
 ├── content/
 │   ├── archives.md   &lt;--- Create archive.md here
@@ -785,30 +732,15 @@ git submodule update --init --recursive <span class="c1"># needed when you reclo
 ├── static/
 └── themes/
     └── PaperModX/
-</code></pre></td></tr></table>
-</div>
-</div><p>and add the following to it</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
+</code></pre></div><p>and add the following to it</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
 </span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Archive&#34;</span><span class="w">
 </span><span class="w"></span><span class="nt">layout</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;archives&#34;</span><span class="w">
 </span><span class="w"></span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;/archives/&#34;</span><span class="w">
 </span><span class="w"></span><span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="l">archives</span><span class="w">
 </span><span class="w"></span><span class="nn">---</span><span class="w">
 </span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p><strong>Note:</strong> Archives Layout does not support Multilingual Month Translations.</p>
+</span></code></pre></div><p><strong>Note:</strong> Archives Layout does not support Multilingual Month Translations.</p>
 <hr>
 <h3 id="regular-mode-default-mode">Regular Mode (default-mode)</h3>
 <p><img loading="lazy" src="/hugo-PaperModX/docs/features/images/regular.jpg" alt="regular"  /></p>
@@ -817,21 +749,7 @@ git submodule update --init --recursive <span class="c1"># needed when you reclo
 <p><img loading="lazy" src="/hugo-PaperModX/docs/features/images/homeinfo.jpg" alt="homeinfo"  /></p>
 <p>Use 1st entry as some Information</p>
 <p>add following to config file</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">homeInfoParams</span><span class="p">:</span><span class="w">
 </span><span class="w">        </span><span class="nt">Title</span><span class="p">:</span><span class="w"> </span><span class="l">Hi there wave</span><span class="w">
 </span><span class="w">        </span><span class="nt">Content</span><span class="p">:</span><span class="w"> </span><span class="l">Can be Info, links, about...</span><span class="w">
@@ -841,38 +759,12 @@ git submodule update --init --recursive <span class="c1"># needed when you reclo
 </span><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;link&gt;&#34;</span><span class="w">
 </span><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;platform 2&gt;&#34;</span><span class="w">
 </span><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;link2&gt;&#34;</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><hr>
+</span></code></pre></div><hr>
 <h3 id="profile-mode">Profile Mode</h3>
 <p><img loading="lazy" src="/hugo-PaperModX/docs/features/images/profile.jpg" alt="profile"  /></p>
 <p>Shows Index/Home page as Full Page with Social Links and Image</p>
 <p>add following to config file</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">profileMode</span><span class="p">:</span><span class="w">
 </span><span class="w">        </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;Title&gt;&#34;</span><span class="w"> </span><span class="c"># optional default will be site title</span><span class="w">
@@ -892,42 +784,17 @@ git submodule update --init --recursive <span class="c1"># needed when you reclo
 </span><span class="w">            </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;link&gt;&#34;</span><span class="w">
 </span><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;platform 2&gt;&#34;</span><span class="w">
 </span><span class="w">            </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;link2&gt;&#34;</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><hr>
+</span></code></pre></div><hr>
 <h3 id="search-page">Search Page</h3>
 <p>PaperModX uses <a href="https://fusejs.io/getting-started/different-builds.html#explanation-of-different-builds">Fuse.js Basic</a> for seach functionality</p>
 <p>Add the following to site config, <code>config.yml</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">outputs</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">outputs</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">home</span><span class="p">:</span><span class="w">
 </span><span class="w">        </span>- <span class="l">HTML</span><span class="w">
 </span><span class="w">        </span>- <span class="l">RSS</span><span class="w">
 </span><span class="w">        </span>- <span class="l">JSON</span><span class="w"> </span><span class="c"># is necessary</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>Create a page with <code>search.md</code> in <code>content</code> directory with following content</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
+</span></code></pre></div><p>Create a page with <code>search.md</code> in <code>content</code> directory with following content</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
 </span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Search&#34;</span><span class="w"> </span><span class="c"># in any language you want</span><span class="w">
 </span><span class="w"></span><span class="nt">layout</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;search&#34;</span><span class="w"> </span><span class="c"># is necessary</span><span class="w">
 </span><span class="w"></span><span class="c"># url: &#34;/archive&#34;</span><span class="w">
@@ -935,20 +802,10 @@ git submodule update --init --recursive <span class="c1"># needed when you reclo
 </span><span class="w"></span><span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;search&#34;</span><span class="w">
 </span><span class="w"></span><span class="nn">---</span><span class="w">
 </span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>To hide a particular page from being searched, add it in post&rsquo;s fron&rsquo;t matter</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
+</span></code></pre></div><p>To hide a particular page from being searched, add it in post&rsquo;s fron&rsquo;t matter</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
 </span><span class="w"></span><span class="nt">searchHidden</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
+</span></code></pre></div><blockquote>
 <p>Search Page also has Key bindings:</p>
 <ul>
 <li>Arrow keys to move up/down the list</li>
@@ -960,20 +817,7 @@ git submodule update --init --recursive <span class="c1"># needed when you reclo
 <p><strong>Note:</strong> Search will work only on current language, user is currently on !</p>
 <p><strong>Customizing Fusejs Options</strong></p>
 <p>Refer <a href="https://fusejs.io/api/options.html">https://fusejs.io/api/options.html</a> for Options, Add those as shown below.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">fuseOpts</span><span class="p">:</span><span class="w">
 </span><span class="w">        </span><span class="nt">isCaseSensitive</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="w">        </span><span class="nt">shouldSort</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
@@ -982,180 +826,75 @@ git submodule update --init --recursive <span class="c1"># needed when you reclo
 </span><span class="w">        </span><span class="nt">threshold</span><span class="p">:</span><span class="w"> </span><span class="m">0.4</span><span class="w">
 </span><span class="w">        </span><span class="nt">minMatchCharLength</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
 </span><span class="w">        </span><span class="nt">keys</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;title&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;permalink&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;summary&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;content&#34;</span><span class="p">]</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><hr>
+</span></code></pre></div><hr>
 <h3 id="draft-page-indication">Draft Page indication</h3>
 <p>adds <code>[draft]</code> mark to indicate draft pages.</p>
 <hr>
 <h3 id="post-cover-image">Post Cover Image</h3>
 <p>In post&rsquo;s page-variables add :</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">cover</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">cover</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;image path/url&gt;&#34;</span><span class="w">
 </span><span class="w">    </span><span class="c"># can also paste direct link from external site</span><span class="w">
 </span><span class="w">    </span><span class="c"># ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png</span><span class="w">
 </span><span class="w">    </span><span class="nt">alt</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;alt text&gt;&#34;</span><span class="w">
 </span><span class="w">    </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;text&gt;&#34;</span><span class="w">
 </span><span class="w">    </span><span class="nt">relative</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c"># To use relative path for cover image, used in hugo Page-bundles</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>When you include images in the <a href="https://gohugo.io/content-management/page-bundles/">Page Bundle</a>, multiple sizes of the image will automatically be provided using the HTML5 <code>srcset</code> field.</p>
+</span></code></pre></div><p>When you include images in the <a href="https://gohugo.io/content-management/page-bundles/">Page Bundle</a>, multiple sizes of the image will automatically be provided using the HTML5 <code>srcset</code> field.</p>
 <p>To reduce generation time and size of the site, you can disable this feature using</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">cover</span><span class="p">:</span><span class="w">
 </span><span class="w">        </span><span class="nt">responsiveImages</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>To enable hyperlinks to the full image size on post pages, use</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></code></pre></div><p>To enable hyperlinks to the full image size on post pages, use</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">cover</span><span class="p">:</span><span class="w">
 </span><span class="w">        </span><span class="nt">linkFullImages</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><hr>
+</span></code></pre></div><hr>
 <h3 id="share-buttons-on-post">Share Buttons on post</h3>
 <p>Displays Share Buttons at Bottom of each post</p>
 <p>to show share buttons add</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">ShowShareButtons</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><hr>
+</span></code></pre></div><hr>
 <h3 id="show-post-reading-time">Show post reading time</h3>
 <p>Displays Reading Time (the estimated time, in minutes, it takes to read the content.)</p>
 <p>To show reading time add</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">Params</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">Params</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">ShowReadingTime</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><hr>
+</span></code></pre></div><hr>
 <h3 id="show-table-of-contents-toc-on-blog-post">Show Table of Contents (Toc) on blog post</h3>
 <p>Displays ToC on blog-pages</p>
 <p>To show ToC add following to page-variables</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">ShowToc</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>To keep Toc Open <strong>by default</strong> on a post add following to page-variables:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">TocOpen</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><hr>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">ShowToc</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></code></pre></div><p>To keep Toc Open <strong>by default</strong> on a post add following to page-variables:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">TocOpen</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></code></pre></div><hr>
 <h3 id="breadcrumb-navigation">BreadCrumb Navigation</h3>
 <p>Adds BreadCrumb Navigation above Post&rsquo;s Title to show subsections and Navigation to Home</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">ShowBreadCrumbs</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>Can be diabled for particular page&rsquo;s front-matter</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
+</span></code></pre></div><p>Can be diabled for particular page&rsquo;s front-matter</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
 </span><span class="w"></span><span class="nt">ShowBreadCrumbs</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="w"></span><span class="nn">---</span><span class="w">
 </span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><hr>
+</span></code></pre></div><hr>
 <h3 id="edit-link-for-posts">Edit Link for Posts</h3>
 <p>Add a button to suggest changes by using the file path of the post to link to a edit destination.</p>
 <p>For site config use:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">Params</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">Params</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">editPost</span><span class="p">:</span><span class="w">
 </span><span class="w">        </span><span class="nt">URL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://github.com/&lt;path_to_repo&gt;/content&#34;</span><span class="w">
 </span><span class="w">        </span><span class="nt">Text</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Suggest Changes&#34;</span><span class="w"> </span><span class="c"># edit text</span><span class="w">
 </span><span class="w">        </span><span class="nt">appendFilePath</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># to append file path to Edit link</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>Can be modified for individual pages</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
+</span></code></pre></div><p>Can be modified for individual pages</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
 </span><span class="w"></span><span class="nt">editPost</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">URL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://github.com/&lt;path_to_repo&gt;/content&#34;</span><span class="w">
 </span><span class="w">    </span><span class="nt">Text</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Suggest Changes&#34;</span><span class="w"> </span><span class="c"># edit text</span><span class="w">
 </span><span class="w">    </span><span class="nt">appendFilePath</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># to append file path to Edit link</span><span class="w">
 </span><span class="w"></span><span class="nn">---</span><span class="w">
 </span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>The example above would yield the following link for the post file <code>posts/post-name.md</code>:
+</span></code></pre></div><p>The example above would yield the following link for the post file <code>posts/post-name.md</code>:
 <a href="https://github.com/">https://github.com/</a>&lt;path_to_repo&gt;/content/posts/post-name.md</p>
 <table>
 <thead>
@@ -1189,80 +928,35 @@ also use other URL schemas like <code>mailto://</code>, e.g.
 <hr>
 <h3 id="other-posts-suggestion-below-a-post">Other Posts suggestion below a post</h3>
 <p>Adds a Previous / Next post suggestion under a single post</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">ShowPostNavLinks</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><hr>
+</span></code></pre></div><hr>
 <h3 id="multiple-authors">Multiple Authors</h3>
 <p>To Use multiple authors for a post, in post-variables:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
 </span><span class="w"></span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;Me&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;You&#34;</span><span class="p">]</span><span class="w">
 </span><span class="w"></span><span class="nn">---</span><span class="w">
 </span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>To use Multiple Authors Site-wide, in <code>config.yml</code>:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></code></pre></div><p>To use Multiple Authors Site-wide, in <code>config.yml</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;Me&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;You&#34;</span><span class="p">]</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><hr>
+</span></code></pre></div><hr>
 <h3 id="comments">Comments</h3>
 <p>to add comments, create a html file</p>
 <p><code>layouts/partials/comments.html</code></p>
 <p>and paste code provided by your comments provider</p>
 <p>also in config add this</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">comments</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>read more about this <a href="https://gohugo.io/content-management/comments/">hugo-comments</a></p>
+</span></code></pre></div><p>read more about this <a href="https://gohugo.io/content-management/comments/">hugo-comments</a></p>
 <hr>
 <h3 id="accesskeys">AccessKeys</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">c - ToC Open/Close
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">c - ToC Open/Close
 g - Go To Top
 h - Home (according to current lang)
 t - Theme toggle
 / - Jumps to search page if in menu
-</code></pre></td></tr></table>
-</div>
-</div><p><a href="https://www.w3schools.com/tags/att_global_accesskey.asp">What&rsquo;s AccessKeys ?</a></p>
+</code></pre></div><p><a href="https://www.w3schools.com/tags/att_global_accesskey.asp">What&rsquo;s AccessKeys ?</a></p>
 <hr>
 <h3 id="enhanced-seo">Enhanced SEO</h3>
 <p><strong>Enabled only when <code>env: production</code></strong></p>
@@ -1277,19 +971,10 @@ you should already have (for instance the page title and description).</li>
 <li>The <code>twitter:image</code> uses the <a href="#post-cover-image">Post Cover Image</a>, if present.</li>
 <li>In the absence of a cover images, the first image from the <code>images</code>
 frontmatter (a list) is used.
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">images</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">images</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span>- <span class="l">image_01.png</span><span class="w">
 </span><span class="w">  </span>- <span class="l">image_02.png</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div></li>
+</span></code></pre></div></li>
 <li>Finally, if neither of those are provided, <code>twitter:image</code> comes from the first
 <a href="https://gohugo.io/content-management/page-bundles/">Page Bundle</a>
 image with <code>feature</code> in the name, with a fallback to the first image with
@@ -1303,38 +988,20 @@ you should already have (for instance the page title and description).</li>
 <li>The <code>og:image</code> uses the <a href="#post-cover-image">Post Cover Image</a>, if present.</li>
 <li>In the absence of a cover images, the first image from the <code>images</code>
 frontmatter (a list) is used.
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">images</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">images</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span>- <span class="l">image_01.png</span><span class="w">
 </span><span class="w">  </span>- <span class="l">image_02.png</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div></li>
+</span></code></pre></div></li>
 <li>Finally, if neither of those are provided, <code>og:image</code> comes from the first
 <a href="https://gohugo.io/content-management/page-bundles/">Page Bundle</a>
 image with <code>feature</code> in the name, with a fallback to the first image with
 <code>cover</code> or <code>thumbnail</code> in the name.</li>
 <li>For pages, you can also add audio (using frontmatter <code>audio: filename.ext</code>) and/or
 videos.
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">videos</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">videos</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span>- <span class="l">filename01.mov</span><span class="w">
 </span><span class="w">  </span>- <span class="l">filename02.avi</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div></li>
+</span></code></pre></div></li>
 </ul>
 <hr>
 <h3 id="multilingual-support">Multilingual Support</h3>
@@ -1343,379 +1010,11 @@ videos.
 <h4 id="scroll-bar-themed-by-default">Scroll-Bar themed (by default)</h4>
 <h4 id="smooth-scroll-between-in-page-links-by-default">Smooth Scroll between in-page links (by default)</h4>
 <h4 id="scroll-to-top-button-by-default">Scroll-to-Top Button (by default)</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Displays a Scroll-to-Top button in right-bottom corner
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="google-analytics-integration">Google Analytics integration</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Displays a Scroll-to-Top button in right-bottom corner
+</code></pre></div><h4 id="google-analytics-integration">Google Analytics integration</h4>
 <h4 id="syntax-highlighting">Syntax highlighting</h4>
 <h4 id="rss-feeds">RSS feeds</h4>
 ]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>FAQs</title>
-      <link>https://reorx.github.io/hugo-PaperModX/docs/faq/</link>
-      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://reorx.github.io/hugo-PaperModX/docs/faq/</guid>
-      <description>Frequently Asked Questions</description>
-      <content:encoded><![CDATA[<h2 id="intro">Intro</h2>
-<ul>
-<li>
-<p><strong>We&rsquo;ll be using <code>yml/yaml</code> format for all examples down below, I recommend using <code>yml</code> over <code>toml</code> as it is easier to read.</strong></p>
-</li>
-<li>
-<p>You can find any <a href="https://www.google.com/search?q=yml+to+toml">YML to TOML</a> converters if necessary.</p>
-</li>
-</ul>
-<hr>
-<h2 id="override-theme-template">Override theme template</h2>
-<p>By Hugo&rsquo;s Lookup Order, you can override any part of a theme that you want. The following is a quick example.</p>
-<p>Let&rsquo;s say you wish the <code>list</code> was different. All you have to do is copy the <code>list</code> template:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">your-site/themes/papermod/layouts/_defaults/list.html
-</code></pre></td></tr></table>
-</div>
-</div><p>And paste it under your own <code>layouts</code> folder:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">your-site/layouts/_defaults/list.html
-</code></pre></td></tr></table>
-</div>
-</div><p>Then you&rsquo;re free to make any changes you want to the <code>list</code>.
-When Hugo builds your site, your copy of <code>list.html</code> will be used instead of the theme&rsquo;s <code>list.html</code>.</p>
-<hr>
-<h2 id="enable-social-metadata-and-seo">Enable Social-Metadata and SEO</h2>
-<p>These include OpenGraph, Twitter Cards and Schema.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">env</span><span class="p">:</span><span class="w"> </span><span class="l">production</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>or set <code>HUGO_ENV</code> as &ldquo;production&rdquo; in system env-vars</p>
-<hr>
-<h2 id="failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource--">Failed to find a valid digest in the &lsquo;integrity&rsquo; attribute for resource &hellip; ?</h2>
-<p>Read about How Subresource Integrity helps: <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource_Integrity</a></p>
-<p>Why was the <code>asset</code> not loading ? : <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity#How_browsers_handle_Subresource_Integrity">How_browsers_handle_Subresource_Integrity</a></p>
-<p><strong>Solution:</strong></p>
-<p>Set the following in <code>config.yml</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">assets</span><span class="p">:</span><span class="w">
-</span><span class="w">        </span><span class="nt">disableFingerprinting</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>Linked Issues:</p>
-<ul>
-<li><a href="https://stackoverflow.com/questions/65056585/hugo-theme-not-loading">https://stackoverflow.com/questions/65056585/hugo-theme-not-loading</a></li>
-<li><a href="https://stackoverflow.com/questions/65040931/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource">https://stackoverflow.com/questions/65040931/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource</a></li>
-<li><a href="https://blog.gerardbeckerleg.com/posts/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource/">https://blog.gerardbeckerleg.com/posts/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource/</a></li>
-</ul>
-<hr>
-<h2 id="bundling-custom-css-with-themes-assets">Bundling Custom css with theme&rsquo;s assets</h2>
-<ul>
-<li>For adding custom css to be bundled inside one minimized css</li>
-</ul>
-<p>Create folder in yout project directory as</p>
-<pre tabindex="0"><code>.(site root)
-├── config.yml
-├── content/
-├── theme/hugo-PaperMod/
-└── assets/
-    └── css/
-        └── extended/  &lt;---
-            ├── custom_css1.css &lt;---
-            └── any_name.css   &lt;---
-</code></pre><p>All <code>css</code> files inside <code>assets/css/extended</code> will be bundled !</p>
-<p><strong>Note</strong>: blank.css is just the placeholder so that it doesn&rsquo;t break the theme when no files are present under <code>assets/css/extended</code></p>
-<p>Linked Issues:</p>
-<ul>
-<li><a href="https://discourse.gohugo.io/t/papermod-theme-how-to-add-custom-css/30165">Papermod Theme: How to add custom CSS?</a></li>
-</ul>
-<hr>
-<h2 id="custom-head--footer">Custom Head / Footer</h2>
-<p>Custom css/js can be added by way mentioned below.</p>
-<pre tabindex="0"><code>.(site root)
-├── config.yml
-├── content/
-├── theme/hugo-PaperMod/
-└── layouts
-    ├── partials
-    │   ├── comments.html
-    │   ├── extend_footer.html &lt;---
-    │   └── extend_head.html   &lt;---
-    └── robots.txt
-</code></pre><p>Create a html page in directory structure as shown above.</p>
-<p>Contents of <code>extend_head.html</code> will be added to <code>head</code> of page.</p>
-<p>and contents of <code>extend_footer.html</code> will be added to bottom of page.</p>
-<hr>
-<h2 id="add-menu-to-site">Add menu to site</h2>
-<p>You can add menu entries which will appear in the header of every page.</p>
-<p>To do so, add a <code>menu</code> section to your site&rsquo;s <code>config.yml</code>:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">menu</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">main</span><span class="p">:</span><span class="w">
-</span><span class="w">        </span>- <span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">categories</span><span class="w">
-</span><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">categories</span><span class="w">
-</span><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/categories/</span><span class="w">
-</span><span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
-</span><span class="w">        </span>- <span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">tags</span><span class="w">
-</span><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">tags</span><span class="w">
-</span><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/tags/</span><span class="w">
-</span><span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">20</span><span class="w">
-</span><span class="w">        </span>- <span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">example</span><span class="w">
-</span><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">example.org</span><span class="w">
-</span><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">https://example.org</span><span class="w">
-</span><span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">30</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p><code>name</code> controls what will be displayed for the menu entry.
-<code>url</code> sets the URL that the entry points to.
-<code>weight</code> is used to control the positioning of entries.</p>
-<p>For more information on menus, see the <a href="https://gohugo.io/content-management/menus/">Hugo wiki page</a>.</p>
-<hr>
-<h2 id="pin-a-post">Pin a Post</h2>
-<p>Post can be pinned/ displayed top on the list by adding a <code>weight=&lt;num&gt;</code> var to page-variables</p>
-<p>example:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
-</span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;My Important post&#34;</span><span class="w">
-</span><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2020-09-15T11:30:03</span><span class="m">+00</span><span class="p">:</span><span class="m">00</span><span class="w">
-</span><span class="w"></span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
-</span><span class="w"></span><span class="nn">---</span><span class="w">
-</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nn">---</span><span class="w">
-</span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;My 2nd Important post&#34;</span><span class="w">
-</span><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2020-09-15T11:30:03</span><span class="m">+00</span><span class="p">:</span><span class="m">00</span><span class="w">
-</span><span class="w"></span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
-</span><span class="w"></span><span class="nn">---</span><span class="w">
-</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><hr>
-<h2 id="adding-custom-favicons">Adding Custom Favicon(s)</h2>
-<p>We support the following paths under <code>/static</code> directory
-and can be added accordingly.</p>
-<ul>
-<li><code>favicon.ico</code></li>
-<li><code>favicon-16x16.png</code></li>
-<li><code>favicon-32x32.png</code></li>
-<li><code>apple-touch-icon.png</code></li>
-<li><code>safari-pinned-tab.svg</code></li>
-</ul>
-<ol>
-<li>
-<p>Favicon(s) can be generated by <a href="https://favicon.io">Favicon.io</a></p>
-<p>and can be simply put in <code>/static</code> folder.</p>
-</li>
-<li>
-<p>Other way is to add favicon(s) NOT located in <code>/static</code> folder.</p>
-<p>In site config add the following:</p>
-<pre tabindex="0"><code>params:
-assets:
-    favicon: &quot;&lt;link / absolute url&gt;&quot;
-    favicon16x16:  &quot;&lt;link / absolute url&gt;&quot;
-    favicon32x32:  &quot;&lt;link / absolute url&gt;&quot;
-    apple_touch_icon:  &quot;&lt;link / absolute url&gt;&quot;
-    safari_pinned_tab:  &quot;&lt;link / absolute url&gt;&quot;
-</code></pre><ul>
-<li><code>absolute url</code> means direct links to external resource: ex. <a href="https://web.site/someimage.png">https://web.site/someimage.png</a></li>
-</ul>
-<p>example:</p>
-<pre tabindex="0"><code>params:
-assets:
-    favicon: &quot;/favicon.ico&quot;
-    favicon16x16:  &quot;/favicon-16x16.png&quot;
-    favicon32x32:  &quot;/favicon-32x32.png&quot;
-    apple_touch_icon:  &quot;/apple-touch-icon.png&quot;
-    safari_pinned_tab:  &quot;/safari-pinned-tab.svg&quot;
-</code></pre></li>
-</ol>
-<hr>
-<h2 id="centering-image-in-markdown">Centering image in markdown</h2>
-<p>Add <code>#center</code> after image to center align an image</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">![<span class="nt">name</span>](<span class="na">path/to/image.png#center</span>)
-</code></pre></td></tr></table>
-</div>
-</div><p><strong>When using <a href="https://gohugo.io/content-management/shortcodes/"><code>figure</code></a> shortcode</strong></p>
-<p>use <code>align=center</code> to center image with captions</p>
-<p>ex.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">{{<span class="p">&lt;</span> <span class="nt">figure</span> <span class="na">align</span><span class="o">=</span><span class="s">center</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;image.jpg&#34;</span> <span class="p">&gt;</span>}}
-</code></pre></td></tr></table>
-</div>
-</div><hr>
-<h2 id="using-hugos-syntax-highlighter-chroma">Using Hugo&rsquo;s Syntax highlighter &ldquo;chroma&rdquo;</h2>
-<p>Set hugo&rsquo;s markdown styling in site <code>config.yml</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">markup</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">highlight</span><span class="p">:</span><span class="w">
-</span><span class="w">        </span><span class="nt">noClasses</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p><code>noClasses</code> has to be <code>false</code> to make highlight color follows the theme.</p>
-<hr>
-<h2 id="search-not-working-">Search not working ?</h2>
-<p>If you are using a CDN to server assets from a different domain, search would break</p>
-<p>Why? Take a look at <a href="https://github.com/adityatelange/hugo-PaperMod/blob/fb4988cfb6d0d6e4e489f17d89f0fa618def3396/assets/js/fastsearch.js#L35">fastsearch.js#L35</a>.</p>
-<p>We fetch the <code>index.json</code> (where the search function looks for the keywords typed) one level up of the website <code>search.min.js</code> is hosted on.</p>
-<p>We have used this insted of assigning <code>baseURL</code> so as to work with multilingual websites ex. <code>example.com/fr/</code> and websites being placed under a subdirectory ex. <code>example.com/blog/</code>.</p>
-<p>To fix for <em>single</em> language websites hosting assets from CDN, this you may <a href="#override-theme-template">override</a> <a href="https://github.com/adityatelange/hugo-PaperMod/blob/fb4988cfb6d0d6e4e489f17d89f0fa618def3396/assets/js/fastsearch.js#L35">fastsearch.js#L35</a> and placing appropriate URL as in</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&#34;GET&#34;</span><span class="p">,</span> <span class="s2">&#34;https://example.com/index.json&#34;</span><span class="p">);</span>
-</code></pre></td></tr></table>
-</div>
-</div><hr>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://zwbetz.com/override-a-hugo-theme/">Override a Hugo theme</a></li>
-</ul>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Icons</title>
-      <link>https://reorx.github.io/hugo-PaperModX/docs/icons/</link>
-      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://reorx.github.io/hugo-PaperModX/docs/icons/</guid>
-      <description>Explain how to use icons in PaperModX</description>
-      <content:encoded><![CDATA[<h2 id="social-icons">Social Icons</h2>
-<p>Go to <a href="icons_preview">Icons Preview</a> to see a complete list of icons</p>
-<p>Usage :</p>
-<pre tabindex="0"><code>socialIcons:
-    - name: &quot;kofi&quot;
-        url: &quot;https://kofi.com&quot;
-    - name: &quot;twitter&quot;
-        url: &quot;https://twitter.com&quot;
-</code></pre><hr>
-<h2 id="share-icons">Share Icons</h2>
-<table>
-<thead>
-<tr>
-<th>No.</th>
-<th>Platform</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td><code>twitter</code> (also generates hash tags from tags linked with post)</td>
-</tr>
-<tr>
-<td>2</td>
-<td><code>linkedin</code></td>
-</tr>
-<tr>
-<td>3</td>
-<td><code>reddit</code></td>
-</tr>
-<tr>
-<td>4</td>
-<td><code>facebook</code></td>
-</tr>
-<tr>
-<td>5</td>
-<td><code>whatsapp</code></td>
-</tr>
-<tr>
-<td>6</td>
-<td><code>telegram</code></td>
-</tr>
-</tbody>
-</table>
-<p>Usage:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">ShowShareButtons</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div>]]></content:encoded>
     </item>
     
     <item>
@@ -2062,25 +1361,13 @@ assets:
 </tbody>
 </table>
 <h5 id="profilemodebuttons">profileMode.buttons</h5>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">profileMode</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">profileMode</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">buttons</span><span class="p">:</span><span class="w">
 </span><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Archive</span><span class="w">
 </span><span class="w">        </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;/archive&#34;</span><span class="w">
 </span><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Github</span><span class="w">
 </span><span class="w">        </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://github.com/&#34;</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><h4 id="assets">assets</h4>
+</span></code></pre></div><h4 id="assets">assets</h4>
 <table>
 <thead>
 <tr>
@@ -2175,19 +1462,7 @@ assets:
 </table>
 <h4 id="fuseopts">fuseOpts</h4>
 <p>Refer: <a href="https://fusejs.io/api/options.html">https://fusejs.io/api/options.html</a></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">fuseOpts</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">fuseOpts</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">isCaseSensitive</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="w">  </span><span class="nt">shouldSort</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="w">  </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
@@ -2195,41 +1470,18 @@ assets:
 </span><span class="w">  </span><span class="nt">threshold</span><span class="p">:</span><span class="w"> </span><span class="m">0.4</span><span class="w">
 </span><span class="w">  </span><span class="nt">minMatchCharLength</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
 </span><span class="w">  </span><span class="nt">keys</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;title&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;permalink&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;summary&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;content&#34;</span><span class="p">]</span><span class="w"> </span><span class="c">##  can be less but not more than shown in list</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><h4 id="socialicons">socialIcons</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">socialIcons</span><span class="p">:</span><span class="w">
+</span></code></pre></div><h4 id="socialicons">socialIcons</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">socialIcons</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;platform&gt;&#34;</span><span class="w">
 </span><span class="w">        </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;link&gt;&#34;</span><span class="w">
 </span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;platform 2&gt;&#34;</span><span class="w">
 </span><span class="w">        </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;link2&gt;&#34;</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><h4 id="editpost">editPost</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">editPost</span><span class="p">:</span><span class="w">
+</span></code></pre></div><h4 id="editpost">editPost</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">editPost</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">URL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://github.com/&lt;path_to_repo&gt;/content&#34;</span><span class="w">
 </span><span class="w">  </span><span class="nt">Text</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Suggest Changes&#34;</span><span class="w"> </span><span class="c"># edit text</span><span class="w">
 </span><span class="w">  </span><span class="nt">appendFilePath</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># to append file path to Edit link</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
+</span></code></pre></div><blockquote>
 <p>Note: Same format is being used by Page Variables</p>
 </blockquote>
 <hr>
@@ -2384,19 +1636,10 @@ assets:
 <li>Include the partial in your templates (<a href="../faq/#custom-head--footer"><code>extend_head.html</code></a>) like so:</li>
 <li>refer <a href="https://github.com/adityatelange/hugo-PaperMod/issues/236">ISSUE #236</a></li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">{{</span> <span class="k">if</span> or .Params.math .Site.Params.math <span class="o">}}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">{{</span> <span class="k">if</span> or .Params.math .Site.Params.math <span class="o">}}</span>
 <span class="o">{{</span> partial <span class="s2">&#34;math.html&#34;</span> . <span class="o">}}</span>
 <span class="o">{{</span> end <span class="o">}}</span>
-</code></pre></td></tr></table>
-</div>
-</div><ul>
+</code></pre></div><ul>
 <li>To enable KaTex globally set the parameter <code>math</code> to <code>true</code> in a project&rsquo;s configuration</li>
 <li>To enable KaTex on a per page basis include the parameter <code>math: true</code> in content files</li>
 </ul>
@@ -2438,18 +1681,9 @@ $$</p>]]></content:encoded>
 <p>The <a href="http://www.emoji-cheat-sheet.com/">Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
 <hr>
 <p><strong>N.B.</strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">.emoji {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">.emoji {
 font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
-}</code></pre></td></tr></table>
-</div>
-</div>
+}</code></pre></div>
 
 
 <style>

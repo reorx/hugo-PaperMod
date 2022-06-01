@@ -134,21 +134,7 @@ This is pre text
 &lt;/html&gt;
 </code></pre>
 <h4 id="code-block-with-hugos-internal-highlight-shortcode">Code block with Hugo&rsquo;s internal highlight shortcode</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
@@ -157,9 +143,7 @@ This is pre text
 <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Test<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
 <h4 id="gist">Gist</h4>
 <script type="application/javascript" src="https://gist.github.com/spf13/7896402.js"></script>
 

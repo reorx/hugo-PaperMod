@@ -58,17 +58,9 @@
 </tbody>
 </table>
 <p>Usage:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">ShowShareButtons</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div>]]></content:encoded>
+</span></code></pre></div>]]></content:encoded>
     </item>
     
   </channel>

@@ -18,21 +18,6 @@
     <loc>https://reorx.github.io/hugo-PaperModX/docs/icons_preview/</loc>
     <lastmod>2022-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://reorx.github.io/hugo-PaperModX/docs/installation/</loc>
-    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://reorx.github.io/hugo-PaperModX/docs/features/</loc>
-    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://reorx.github.io/hugo-PaperModX/docs/faq/</loc>
-    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://reorx.github.io/hugo-PaperModX/docs/icons/</loc>
-    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://reorx.github.io/hugo-PaperModX/docs/variables/</loc>
-    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://reorx.github.io/hugo-PaperModX/tags/example/</loc>
     <lastmod>2022-04-13T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -85,7 +70,22 @@
                 href="https://reorx.github.io/hugo-PaperModX/tags/"
                 />
   </url><url>
+    <loc>https://reorx.github.io/hugo-PaperModX/docs/faq/</loc>
+    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://reorx.github.io/hugo-PaperModX/docs/icons/</loc>
+    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://reorx.github.io/hugo-PaperModX/tags/icons/</loc>
+    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://reorx.github.io/hugo-PaperModX/docs/installation/</loc>
+    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://reorx.github.io/hugo-PaperModX/docs/features/</loc>
+    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://reorx.github.io/hugo-PaperModX/docs/variables/</loc>
     <lastmod>2021-01-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://reorx.github.io/hugo-PaperModX/tags/markdown/</loc>

@@ -16,33 +16,17 @@
       <content:encoded><![CDATA[<p>本文档描述 PaperModX 相比原版 PaperMod 增加的新功能和变化。</p>
 <h2 id="table-of-contents-toc-floating-on-the-side">Table of Contents (ToC) floating on the side</h2>
 <p>By adding config:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">params</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">TocSide</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;left&#39;</span><span class="w">  </span><span class="c"># or &#39;right&#39;</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>ToC will float on the left/right side of the page.
+</span></code></pre></div><p>ToC will float on the left/right side of the page.
 You can take a look at how <code>'right'</code> feels like in <a href="https://reorx.github.io/hugo-PaperModX/docs/installation/">Installation | Update</a>.</p>
 <p>The ToC box is responsive, it only shows on the side when minimum screen size is 1440px.</p>
 <p>This feature is enabled on this site.</p>
 <h2 id="instantclick-integration">InstantClick integration</h2>
 <p>By adding config:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">params</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">EnableInstantClick</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p><a href="http://instantclick.io/">InstantClick</a> will be enabled,
+</span></code></pre></div><p><a href="http://instantclick.io/">InstantClick</a> will be enabled,
 making navigation behaves like Single Page Application.</p>
 <p>Note that <code>/search</code> pages are omitted from InstantClick
 to prevent conflicts from search&rsquo;s JavaScript,
@@ -58,64 +42,30 @@ It&rsquo;s a good way to show personality and make your site feels more delightf
 <p>The default color is a purple vibe,
 you can customize the colors of link, link underline and their hover variants
 by override the following css variables in <code>assets/css/extended/custom.css</code> of your site.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
   <span class="nv">--link-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="p">);</span>
   <span class="nv">--link-hover-color</span><span class="p">:</span> <span class="mh">#573eaa</span><span class="p">;</span>
   <span class="nv">--link-underline-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">0</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">link</span><span class="o">-</span><span class="kc">color</span><span class="p">);</span>
   <span class="nv">--link-hover-underline-color</span><span class="p">:</span> <span class="mh">#573eaa</span><span class="p">;</span>
   <span class="nv">--link-hover-underline-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">0</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">link</span><span class="o">-</span><span class="n">hover</span><span class="o">-</span><span class="kc">underline</span><span class="o">-</span><span class="kc">color</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="customize-pagniator-size">Customize pagniator size</h2>
+</code></pre></div><h2 id="customize-pagniator-size">Customize pagniator size</h2>
 <p>In section pages, if you want the paginator size be different from the
 <a href="https://gohugo.io/templates/pagination/#configure-pagination">global config</a>,
 you can add <code>paginate</code> in the frontmatter to customize.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nn">---</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nn">---</span><span class="w">
 </span><span class="w"></span><span class="nt">paginate</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
 </span><span class="w"></span><span class="nn">---</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><h2 id="menus-external-link">Menus external link</h2>
+</span></code></pre></div><h2 id="menus-external-link">Menus external link</h2>
 <p>You can add <code>external: true</code> to a menu item&rsquo;s params to mark it as an external link,
 this will add a small icon to the end, and make the link open in new tab when clicked.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">menu</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">menu</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">main</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;@Author&#34;</span><span class="w">
 </span><span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://reorx.com&#34;</span><span class="w">
 </span><span class="w">      </span><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">        </span><span class="nt">external</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><h2 id="social-icons-from-simple-icons">Social icons from Simple Icons</h2>
+</span></code></pre></div><h2 id="social-icons-from-simple-icons">Social icons from Simple Icons</h2>
 <p>Add social icons with <code>-simple</code> suffix from <a href="https://simpleicons.org/">Simple Icons</a>.</p>
 <p>Available icons:</p>
 <ul>
