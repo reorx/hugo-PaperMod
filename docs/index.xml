@@ -743,10 +743,10 @@ git submodule update --init --recursive <span class="c1"># needed when you reclo
 </span></code></pre></div><p><strong>Note:</strong> Archives Layout does not support Multilingual Month Translations.</p>
 <hr>
 <h3 id="regular-mode-default-mode">Regular Mode (default-mode)</h3>
-<p><img loading="lazy" src="/hugo-PaperModX/docs/features/images/regular.jpg" alt="regular"  /></p>
+<p><img loading="lazy" src="/hugo-PaperModX/docs/features/images/regular.jpg" type="" alt="regular"  /></p>
 <hr>
 <h3 id="home-info-mode">Home-Info Mode</h3>
-<p><img loading="lazy" src="/hugo-PaperModX/docs/features/images/homeinfo.jpg" alt="homeinfo"  /></p>
+<p><img loading="lazy" src="/hugo-PaperModX/docs/features/images/homeinfo.jpg" type="" alt="homeinfo"  /></p>
 <p>Use 1st entry as some Information</p>
 <p>add following to config file</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
@@ -761,7 +761,7 @@ git submodule update --init --recursive <span class="c1"># needed when you reclo
 </span><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;link2&gt;&#34;</span><span class="w">
 </span></code></pre></div><hr>
 <h3 id="profile-mode">Profile Mode</h3>
-<p><img loading="lazy" src="/hugo-PaperModX/docs/features/images/profile.jpg" alt="profile"  /></p>
+<p><img loading="lazy" src="/hugo-PaperModX/docs/features/images/profile.jpg" type="" alt="profile"  /></p>
 <p>Shows Index/Home page as Full Page with Social Links and Image</p>
 <p>add following to config file</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">params</span><span class="p">:</span><span class="w">
