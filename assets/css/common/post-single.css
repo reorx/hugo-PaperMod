@@ -423,10 +423,17 @@ h6:hover .anchor {
     margin-inline-end: 12px;
 }
 
-.share-buttons a svg {
-    height: 30px;
-    width: 30px;
-    fill: currentColor;
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+    display: inline-flex;
+    color: var(--secondary);
+    margin-inline-start: 8px;
+    font-weight: 500;
+    user-select: none;
 }
 
 .paginav {
