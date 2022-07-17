@@ -88,10 +88,10 @@ function toggleThemeListener() {
                             {{- $img = $img.Resize "x30" }}
                         {{- end }}
                     {{- end }}
-                    <img src="{{ $img.Permalink }}" alt="logo" aria-label="logo"
+                    <img src="{{ $img.Permalink }}" alt="" aria-label="logo"
                         height="{{- site.Params.logo.iconHeight | default "30" -}}" width="{{- site.Params.logo.iconWidth | default "30" -}}">
                 {{- else }}
-                <img src="{{ $img.Permalink }}" alt="logo" aria-label="logo"
+                <img src="{{ $img.Permalink }}" alt="" aria-label="logo"
                     height="{{- site.Params.logo.iconHeight | default "30" -}}" width="{{- site.Params.logo.iconWidth | default "30" -}}">
                 {{- end -}}
                 {{- end -}}
