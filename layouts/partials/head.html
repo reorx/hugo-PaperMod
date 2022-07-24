@@ -36,6 +36,9 @@
 {{- if site.Params.analytics.bingsiteVerificationTag }}
 <meta name="msvalidate.01" content="{{ site.Params.analytics.bingsiteVerificationTag }}">
 {{- end }}
+{{- if site.Params.analytics.naver.SiteVerificationTag }}
+<meta name="naver-site-verification" content="{{ site.Params.analytics.naver.SiteVerificationTag }}">
+{{- end }}
 
 {{- /* Styles */}}
 {{- $theme_vars := (resources.Get "css/core/theme-vars.css") }}
