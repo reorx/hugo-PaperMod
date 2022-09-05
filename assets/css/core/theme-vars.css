@@ -27,6 +27,18 @@
     --line-yellow: url("data:image/svg+xml;charset=utf-8,%3Csvg preserveAspectRatio='none' width='120' height='6' viewBox='0 0 120 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M119 0.8C60 4 50-0.5 1 1.5' stroke='%23fc0' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
 }
 
+::selection {
+    background: var(--link-background-color);
+}
+
+::-moz-selection {
+    background: var(--link-background-color);
+}
+
+::-webkit-selection {
+    background: var(--link-background-color);
+}
+
 .dark {
     --theme: rgb(29, 30, 32);
     --entry: rgb(46, 46, 51);
