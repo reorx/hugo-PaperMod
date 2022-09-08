@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>My Newsletter on PaperModX</title>
+    <link>https://reorx.github.io/hugo-PaperModX/newsletter/</link>
+    <description>Recent content in My Newsletter on PaperModX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 07 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://reorx.github.io/hugo-PaperModX/newsletter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Newsletter: Hello World</title>
+      <link>https://reorx.github.io/hugo-PaperModX/newsletter/001-hello-world/</link>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://reorx.github.io/hugo-PaperModX/newsletter/001-hello-world/</guid>
+      <description>Welcome to PaperModX.</description>
+      <content:encoded><![CDATA[<p>Welcome to PaperModX.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

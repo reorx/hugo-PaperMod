@@ -18,6 +18,25 @@
     <loc>https://reorx.github.io/hugo-PaperModX/docs/icons_preview/</loc>
     <lastmod>2022-04-13T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://reorx.github.io/hugo-PaperModX/newsletter/</loc>
+    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://reorx.github.io/hugo-PaperModX/newsletter/001-hello-world/</loc>
+    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://reorx.github.io/hugo-PaperModX/</loc>
+    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://reorx.github.io/hugo-PaperModX/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://reorx.github.io/hugo-PaperModX/"
+                />
+  </url><url>
     <loc>https://reorx.github.io/hugo-PaperModX/tags/example/</loc>
     <lastmod>2022-04-13T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -29,19 +48,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://reorx.github.io/hugo-PaperModX/tags/example/"
-                />
-  </url><url>
-    <loc>https://reorx.github.io/hugo-PaperModX/</loc>
-    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://reorx.github.io/hugo-PaperModX/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://reorx.github.io/hugo-PaperModX/"
                 />
   </url><url>
     <loc>https://reorx.github.io/hugo-PaperModX/docs/</loc>
@@ -184,6 +190,10 @@
                 hreflang="en"
                 href="https://reorx.github.io/hugo-PaperModX/categories/"
                 />
+  </url><url>
+    <loc>https://reorx.github.io/hugo-PaperModX/docs/archives/</loc>
+  </url><url>
+    <loc>https://reorx.github.io/hugo-PaperModX/newsletter/archives/</loc>
   </url><url>
     <loc>https://reorx.github.io/hugo-PaperModX/search/</loc>
     <xhtml:link
