@@ -434,7 +434,6 @@ h6:hover .anchor {
     transform: scale(0.96);
 }
 
-
 .paginav {
     margin-top: var(--content-gap);
     display: flex;
