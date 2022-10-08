@@ -56,6 +56,10 @@
     --link-underline-shadow: 0 1px 0 var(--link-color);
     --link-hover-underline-color: var(--link-hover-color);
     --link-hover-underline-shadow: 0 2px 0 var(--link-hover-underline-color);
+
+    /* for type pages theming */
+    --signature: var(--primary);
+    --signature-bg: var(--secondary);
 }
 
 .list-page {
