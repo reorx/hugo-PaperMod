@@ -24,4 +24,10 @@
     {{- partial "disqus.html" (dict "page" $page "ctx" .) }}
   {{- end -}}
   {{- end -}}
+
+  {{- if $pageCommentSystems.giscus -}}
+  {{- with .giscus -}}
+    {{- partial "giscus.html" (dict "page" $page "ctx" .) }}
+  {{- end -}}
+  {{- end -}}
 {{- end -}}
