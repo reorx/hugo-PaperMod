@@ -486,6 +486,7 @@ patreon = '''
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 569 546" fill="currentColor" stroke="none">
     <g><circle cx="362.589996" cy="204.589996" data-fill="1" r="204.589996"></circle><rect data-fill="1" height="545.799988" width="100" x="0" y="0"></rect></g>
 </svg>
+'''
 paypal = '''
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
     stroke-linecap="round" stroke-linejoin="round">
