@@ -13,6 +13,9 @@
     <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
     <a href="https://github.com/reorx/hugo-PaperModX/" rel="noopener" target="_blank">PaperModX</a>
   </span>
+  {{ with .Site.Params.footer.customText }}
+    <div>{{ . | safeHTML }}</div>
+  {{ end }}
 </footer>
 {{- end }}
 
