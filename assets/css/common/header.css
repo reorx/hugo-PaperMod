@@ -31,7 +31,8 @@
     font-weight: 700;
 }
 
-.logo a img {
+.logo a img,
+.logo a svg {
     display: inline;
     vertical-align: middle;
     pointer-events: none;
@@ -81,9 +82,12 @@ body:not(.dark) #sun {
     color: var(--primary);
 }
 
+#menu a.active:hover {
+    color: var(--signature);
+}
 #menu .active {
-    color: var(--primary);
-    box-shadow: 0 2px 0 var(--primary);
+    color: var(--signature);
+    box-shadow: 0 2px 0 var(--signature);
 }
 
 #menu .external-link {

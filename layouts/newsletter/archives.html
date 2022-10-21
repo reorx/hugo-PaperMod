@@ -1,0 +1,33 @@
+{{- define "main" }}
+<div class="main-icon">＠</div>
+
+<div class="content">
+  <h1>{{ .Title }}</h1>
+  {{- partial "newsletter_sub_form.html"}}
+
+  {{/* get pages from the current page's section */}}
+  {{- $sections := slice .Section }}
+  {{- $pages := where (where site.RegularPages "Section" "in" $sections) "Params.hidden" "!=" true }}
+
+  {{/* TODO statistics */}}
+  <div class="list">
+  {{- range $pages }}
+    <div class="item">
+      <div class="date">
+        {{- if not .Date.IsZero -}}
+          {{ .Date | time.Format (default "January 2, 2006" site.Params.DateFormat) }}
+        {{- end }}
+      </div>
+      <div class="title">
+        <a href="{{ .Permalink }}">{{- .Title }}
+          {{- if .Draft }}<em>[Draft]</em>{{- end }}
+          {{- if .Weight }}<em>[Pinned]</em>{{- end }}
+        </a>
+      </div>
+      <div class="issueno">{{ with .Param "issueno" }}#{{ . }}{{ end }}</div>
+    </div>
+  {{- end }}
+  </div>
+
+</div>
+{{ end }}

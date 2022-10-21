@@ -9,7 +9,13 @@
   {{- end }}
 </header>
 
-{{- $pages := where site.AllPages "Type" "in" site.Params.mainSections }}
+{{/* get pages from the current page's section */}}
+{{/* in this way, archives.html could be used for section archives other than the only one archives of the whole site */}}
+{{- $sections := site.Params.mainSections }}
+{{- if .Section }}
+  {{- $sections = slice .Section }}
+{{- end }}
+{{- $pages := where (where site.RegularPages "Section" "in" $sections) "Params.hidden" "!=" true }}
 
 {{- range $pages.GroupByPublishDate "2006" }}
 {{- if ne .Key "0001" }}
@@ -22,7 +28,6 @@
     <h3 class="archive-month-header">{{- .Key }}<sup class="archive-count">&nbsp;&nbsp;{{ len .Pages }}</sup></h3>
     <div class="archive-posts">
       {{- range .Pages }}
-      {{- if eq .Kind "page" }}
       <div class="archive-entry">
         <h3 class="archive-entry-title">
           {{- .Title | markdownify }}
@@ -33,7 +38,6 @@
         </div>
         <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
       </div>
-      {{- end }}
       {{- end }}
     </div>
   </div>

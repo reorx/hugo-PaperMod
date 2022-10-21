@@ -23,5 +23,6 @@ _testmain.go
 *.test
 
 public/
+resources/
 .DS_Store
 .hugo_build.lock

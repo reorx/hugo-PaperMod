@@ -7,12 +7,17 @@
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
   {{- partial "breadcrumbs.html" . }}
-  <h1>{{ .Title }}</h1>
+  <h1>
+    {{/* see: https://gohugo.io/variables/taxonomy/#taxonomy-terms-page-variables */}}
+    {{- if eq .Kind "term" -}}{{- .Data.Singular }}: {{ end -}}
+    {{ .Title -}}
+  </h1>
   {{- if .Description }}
   <div class="post-description">
     {{ .Description | markdownify }}
   </div>
   {{- end }}
+  {{- partial "inline_links.html" . -}}
 </header>
 {{- end }}
 
@@ -26,10 +31,11 @@
 
 
 {{- $pages := .Pages }}
-
 {{- if .IsHome }}
-  {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{/* get all regular pages instead of pages in a section */}}
+  {{- $pages = where site.RegularPages "Section" "in" site.Params.mainSections }}
 {{- end }}
+{{- $pages = where $pages "Params.hidden" "!=" true }}
 
 {{/* related issue: https://github.com/gohugoio/hugo/issues/9003 */}}
 {{ $paginator := "" }}

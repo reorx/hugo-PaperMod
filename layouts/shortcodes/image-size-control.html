@@ -1,6 +1,7 @@
 <div class="image-size-control" style="
 {{- with (.Get "width") }}max-width: {{ . }};{{ end -}}
-{{- with (.Get "height") }}max-height: {{ . }};{{ end -}}
+{{- with (.Get "fixedWidth") }}width: {{ . }};{{ end -}}
+{{- with (.Get "height") }}height: {{ . }};{{ end -}}
 ">
   {{ .Page.RenderString .Inner }}
 </div>

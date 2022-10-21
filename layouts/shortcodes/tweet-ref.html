@@ -1,11 +1,8 @@
-<div class="tweet social-quote">
-  <div class="title">
-    {{ safeHTML (index site.Data.svg "twitter-simple") }}
-    {{ with .title }}<span>{{ . }}</span>{{ end }}
-  </div>
+<div class="tweet-ref">
+  {{- $url := .Get 0 -}}
+  From <a href="{{ $url }}">{{ strings.TrimPrefix "https://" $url }}</a>:
 
   {{- $dnt := true -}}
-  {{- $url := printf "https://twitter.com/%v/status/%v" .user .id -}}
   {{- $query := querify "url" $url "dnt" $dnt -}}
   {{- $request := printf "https://publish.twitter.com/oembed?%s" $query -}}
   {{- $json := getJSON $request -}}

@@ -1,0 +1,42 @@
+.links-container {
+  font-size: 16px;
+}
+.links-container blockquote {
+  margin: var(--gap) 0;
+  padding: 0 14px;
+  border-inline-start: 3px solid var(--primary);
+}
+.links .item {
+  padding: 12px;
+  background: var(--entry);
+  border-radius: var(--radius);
+  margin-bottom: var(--gap);
+  border: 1px solid var(--border);
+}
+
+.links .favicon {
+  display: inline-block;
+  background-size: 16px 16px;
+  width: 16px;
+  height: 16px;
+  image-rendering: -webkit-optimize-contrast;
+}
+.links .item .title .favicon {
+  margin-right: calc(var(--gap) / 2);
+  vertical-align: middle;
+}
+
+.links .item .title a:hover {
+  text-decoration: underline;
+}
+
+.links .item .description {
+  margin-left: calc(16px + var(--gap) / 2);
+  color: var(--secondary);
+}
+
+.links .item .description .delimiter::after {
+    content: "·";
+    margin-inline-start: .5em;
+    margin-inline-end: .5em;
+}

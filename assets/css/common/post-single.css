@@ -1,11 +1,10 @@
-.page-header,
 .post-header {
-    margin: 32px 0;
+    margin: var(--content-gap) 0 calc(var(--content-gap) * 1.5);
 }
 
 .post-title {
     font-size: 40px;
-    margin: var(--content-gap) 0;
+    margin-bottom: var(--content-gap);
 }
 
 .post-description {
@@ -13,7 +12,7 @@
     color: var(--secondary);
     opacity: .8;
     padding-left: .5em;
-    border-left: 3px solid var(--tertiary);
+    border-left: 8px solid var(--signature);
 }
 
 .post-meta,
@@ -142,7 +141,7 @@ h6:hover .anchor {
 }
 
 .post-content li {
-    margin-top: 10px;
+    margin-top: .5em;
 }
 
 .post-content li p {
@@ -246,6 +245,7 @@ h6:hover .anchor {
     padding: 4px 5px;
     border-radius: 3px;
     font-size: .95em;
+    font-family: var(--monospace);
 }
 .post-content pre code {
     /* reset inline code */
@@ -255,19 +255,40 @@ h6:hover .anchor {
     overflow-x: auto;
     border-radius: var(--radius);
     word-break: break-all;
+    font-family: var(--monospace);
 }
 .post-content .chroma code {
     background-color: inherit;
+    font-family: var(--monospace);
 }
 
 .post-content blockquote {
     margin: 20px 0;
     padding: 0 14px;
-    border-inline-start: 3px solid var(--primary);
+    border-inline-start: 3px solid var(--tertiary-bg);
+    opacity: 0.8;
 }
 
 .post-content sup {
     line-height: 1;
+}
+.post-content sup a {
+    box-shadow: none;
+    font-family: Helvetica, Arial, sans-serif;
+    color: var(--link-hover-color);
+}
+.post-content sup a:hover {
+    box-shadow: none;
+    text-decoration: underline;
+}
+.post-content sup a:before {
+    content: "[";
+}
+.post-content sup a:after {
+    content: "]";
+}
+.post-content sup:target {
+    background-color: var(--link-background-color);
 }
 
 .post-content hr {
@@ -383,6 +404,8 @@ h6:hover .anchor {
 
 .post-footer {
     margin-top: calc(var(--content-gap) * 1.5);
+    padding-bottom: calc(var(--content-gap) * 2);
+    border-bottom: 3px solid var(--tertiary);
 }
 
 .share-buttons {
@@ -435,7 +458,7 @@ h6:hover .anchor {
 }
 
 .paginav {
-    margin: var(--content-gap) 0;
+    margin-top: var(--content-gap);
     display: flex;
     line-height: 30px;
     border-radius: var(--radius);
@@ -495,6 +518,7 @@ h6:hover .anchor {
 .social-links {
     margin: calc(var(--content-gap) * 2) 0;
 }
+/* shortcode */
 .social-quote {
     padding: 1em;
 }
@@ -555,10 +579,7 @@ h6:hover .anchor {
 }
 
 .comments {
-    border-top: 1px solid var(--tertiary);
-}
-.comments {
-    margin: 40px 0 20px;
+    margin: var(--content-gap) 0;
 }
 .comments .title {
     margin: 20px 0;
@@ -572,4 +593,68 @@ h6:hover .anchor {
     font-size: 1rem;
     font-weight: bold;
     vertical-align: super;
+}
+
+/* footnotes */
+.footnotes {
+    font-size: .8em;
+    color: var(--primary-dim);
+    font-weight: 400;
+    padding: 1em;
+    background-color: var(--code-bg);
+}
+
+.footnotes a {
+    color: var(--primary-dim);
+    font-weight: 400;
+}
+
+.footnotes hr {
+    display: none;
+}
+.footnotes a {
+    box-shadow: none;
+    text-decoration: underline;
+}
+.footnotes a:hover {
+    box-shadow: none;
+    text-decoration: underline;
+}
+.footnotes ol {
+    margin: 0;
+}
+.footnotes ol li {
+    margin: 0 0 6px 0;
+}
+.footnotes ol li p {
+    line-height: 1.5em;
+    margin: 0;
+}
+/* fix tweet-ref makes the li markers sink at the bottom */
+.footnotes ol li > * {
+    vertical-align: top;
+}
+.footnotes ol li:target {
+    background-color: var(--link-background-color);
+}
+.footnotes ol:before {
+    content: "Footnotes";
+    font-size: 1.5em;
+    margin-left: -1em;
+    font-weight: 200;
+}
+
+/* shortcode */
+.tweet-ref {
+    width: calc(100% - 2em);
+    display: inline-block;
+}
+.tweet-ref blockquote {
+    margin: 3px 0 0 0;
+    border-inline-color: var(--tertiary);
+    line-height: 1.5em;
+}
+
+.tweet-ref blockquote a {
+    text-decoration: none;
 }

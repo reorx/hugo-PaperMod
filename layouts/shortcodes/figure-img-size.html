@@ -3,7 +3,7 @@
 <figure class="center align-center">
   <div class="image-size-control" style="
 {{- with $width }}max-width: {{ . }};{{ end -}}
-{{- with $height }}max-height: {{ . }};{{ end -}}
+{{- with $height }}height: {{ . }};{{ end -}}
 ">
     {{ .Page.RenderString .Inner }}
   </div>

@@ -1,4 +1,10 @@
-{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{/* get pages from the current page's section */}}
+{{- $sections := site.Params.mainSections }}
+{{- if .Section }}
+  {{- $sections = slice .Section }}
+{{- end }}
+{{- $pages := where (where site.RegularPages "Section" "in" $sections) "Params.hidden" "!=" true }}
+
 {{- if and (gt (len $pages) 1) (in $pages . ) }}
 <nav class="paginav">
   {{- with $pages.Next . }}

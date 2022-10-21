@@ -1,15 +1,15 @@
-{{- $pctx := . -}}
-{{- if .IsHome -}}{{ $pctx = site }}{{- end -}}
-{{- $pages := slice -}}
-{{- if or $.IsHome $.IsSection -}}
-{{- $pages = where $pctx.RegularPages "Type" "in" site.Params.mainSections }}
-{{- else -}}
-{{- $pages = $pctx.Pages -}}
-{{- end -}}
+{{- $pages := .Pages -}}
+{{- if $.IsHome -}}
+  {{/* get all regular pages instead of pages in a section */}}
+  {{- $pages = where site.RegularPages "Section" "in" site.Params.mainSections -}}
+{{- end }}
+{{- $pages = where $pages "Params.hidden" "!=" true -}}
+
 {{- $limit := site.Config.Services.RSS.Limit -}}
 {{- if ge $limit 1 -}}
 {{- $pages = $pages | first $limit -}}
 {{- end -}}
+
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>

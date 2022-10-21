@@ -1,0 +1,30 @@
+{{/* section is AKA list */}}
+
+{{- define "main" }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+</header>
+
+<article class="links-container">
+  <blockquote>
+    <p>{{ .Description }}</p>
+  </blockquote>
+
+  <div class="links">
+    {{ range site.Params.Links }}
+      <div class="item">
+        <div class="title">
+          {{- $url := urls.Parse .url }}
+          <span class="favicon" style="background-image: url({{ .favicon | default (printf "%s/favicon.ico" .url ) }});"></span
+            ><a href="{{ .url }}" target="_blank">{{ .name }}</a>
+        </div>
+        <div class="description">
+          {{- .domain | default $url.Host }}
+          {{- with .description }}<span class="delimiter"></span>{{ . }}{{- end }}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</article>
+
+{{- end }}

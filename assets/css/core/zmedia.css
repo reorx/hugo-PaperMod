@@ -39,7 +39,7 @@
 
 /* footer */
 @media screen and (max-width: 900px) {
-    .list .top-link {
+    .list-page .top-link {
         transform: translateY(-5rem);
     }
 }

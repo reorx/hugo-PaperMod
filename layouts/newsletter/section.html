@@ -1,0 +1,43 @@
+{{/* section is AKA list */}}
+
+{{- define "main" }}
+<div class="main-icon">＠</div>
+
+<div class="content">
+  <h1>{{ .Title }}</h1>
+  {{ with .Param "subtitle" }}<div class="subtitle">{{ . }}</div>{{ end }}
+
+  <div class="first-entry">
+    <section class="entry-content">{{ .Description | markdownify }}</section>
+    {{- partial "newsletter_sub_form.html"}}
+  </div>
+
+  {{ $pages := where .Pages "Params.hidden" "!=" true }}
+  {{ if $pages }}
+  <h2>最新通讯</h2>
+
+  <div class="list">
+  {{- range first 5 $pages }}
+    <div class="item">
+      <div class="date">
+        {{- if not .Date.IsZero -}}
+          {{ .Date | time.Format (default "January 2, 2006" site.Params.DateFormat) }}
+        {{- end }}
+      </div>
+      <div class="title">
+        <a href="{{ .Permalink }}">{{- .Title }}
+          {{- if .Draft }}<em>[Draft]</em>{{- end }}
+          {{- if .Weight }}<em>[Pinned]</em>{{- end }}
+        </a>
+      </div>
+      <div class="issueno">{{ with .Param "issueno" }}#{{ . }}{{ end }}</div>
+    </div>
+  {{- end }}
+  </div>
+  {{ end }}
+
+  <h2>相关链接</h2>
+
+  {{- partial "inline_links.html" . -}}
+</div>
+{{ end }}

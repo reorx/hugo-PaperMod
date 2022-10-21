@@ -117,7 +117,7 @@ img {
     background: 0 0;
 }
 
-.list:not(.dark)::-webkit-scrollbar-track {
+.list-page:not(.dark)::-webkit-scrollbar-track {
     background: var(--code-bg);
 }
 
@@ -127,7 +127,7 @@ img {
     border-radius: var(--radius);
 }
 
-.list:not(.dark)::-webkit-scrollbar-thumb {
+.list-page:not(.dark)::-webkit-scrollbar-thumb {
     border: 5px solid var(--code-bg);
 }
 

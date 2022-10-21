@@ -89,10 +89,10 @@ function toggleThemeListener() {
                         {{- end }}
                     {{- end }}
                     <img src="{{ $img.Permalink }}" alt="logo" aria-label="logo"
-                        height="{{- site.Params.logo.iconHeight | default "30" -}}">
+                        height="{{- site.Params.logo.iconHeight | default "30" -}}" width="{{- site.Params.logo.iconWidth | default "30" -}}">
                 {{- else }}
-                <img src="{{- site.Params.logo.icon | absURL -}}" alt="logo" aria-label="logo"
-                    height="{{- site.Params.logo.iconHeight | default "30" -}}">
+                <img src="{{ $img.Permalink }}" alt="logo" aria-label="logo"
+                    height="{{- site.Params.logo.iconHeight | default "30" -}}" width="{{- site.Params.logo.iconWidth | default "30" -}}">
                 {{- end -}}
                 {{- end -}}
                 {{- $label_text -}}
@@ -133,7 +133,7 @@ function toggleThemeListener() {
                 <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
                 {{- if $is_search -}}data-no-instant{{- end -}}
                 {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}
-                {{- if eq $menu_item_url $page_url }} class="active" {{- end }}
+                {{- if strings.HasPrefix $page_url $menu_item_url }} class="active" {{- end }}
                 {{- if .Params.External }} target="_blank" {{- end }}
                 >
                     {{- .Pre }}

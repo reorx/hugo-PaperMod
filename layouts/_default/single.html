@@ -1,15 +1,24 @@
 {{- define "main" }}
+{{- $isNewsletter := eq .Type "newsletter" }}
 
 <article class="post-single">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
+
+    {{- if $isNewsletter -}}
+      {{- partial "newsletter_brand.html" . }}
+    {{- end -}}
     <h1 class="post-title">
-      {{ .Title }}
-      {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+      {{- if $isNewsletter -}}
+        {{- replace .Title (.Param "titlePrefix") (.Param "titlePrefixReplace") -}}
+      {{- else -}}
+        {{- .Title -}}
+      {{- end -}}
+      {{- if .Draft -}}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end -}}
     </h1>
     {{- if .Description }}
     <div class="post-description">
-      {{ .Description }}
+      {{- .Description -}}
     </div>
     {{- end }}
     {{- if not (.Param "hideMeta") }}
@@ -46,6 +55,15 @@
 
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
+    {{- end }}
+
+    {{- if $isNewsletter }}
+      <div class="newsletter-sub">
+        <div class="notice">
+          感谢你能读到这里，如果觉得有趣的话，欢迎在下方输入邮箱进行订阅。
+        </div>
+        {{- partial "newsletter_sub_form.html"}}
+      </div>
     {{- end }}
   </footer>
 

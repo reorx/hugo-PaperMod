@@ -1,0 +1,37 @@
+/*
+color candidates:
+#48C0A3 青碧
+#519A73 蒼黃
+#1BD1A5 碧色
+#7BCFA6 玉色
+*/
+body.type-essays {
+  --signature: #48C0A3;
+  --signature-bg: rgba(72, 192, 164, 0.427);
+  --siguature-bg-dim: rgba(72, 192, 164, 0.298);
+  // override theme-vars
+  --link-hover-color: var(--signature);
+  --link-hover-underline-color: var(--signature);
+  --link-hover-underline-shadow: 0 2px 0 var(--link-hover-underline-color);
+  --link-background-color: var(--siguature-bg-dim);
+
+  .post-entry {
+    /* same as .post-header h2 */
+    .entry-title {
+      font-size: 24px;
+      line-height: 1.3;
+      margin-bottom: calc(var(--content-gap) / 2);
+      a {
+        color: var(--primary);
+        transition: var(--link-transition);
+        &:hover {
+          color: var(--link-hover-color);
+          box-shadow: var(--link-hover-underline-shadow);
+        }
+      }
+    }
+    .post-meta {
+      margin-bottom: var(--content-gap);
+    }
+  }
+}
