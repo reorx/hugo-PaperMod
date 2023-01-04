@@ -86,7 +86,7 @@ body:not(.dark) #sun {
     color: var(--signature);
 }
 #menu .active {
-    color: #ffff00;
+    color: #8a2be2;
     box-shadow: 0 2px 0 var(--signature);
 }
 
