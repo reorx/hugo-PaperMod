@@ -462,6 +462,13 @@ h6:hover .anchor {
     display: flex;
     line-height: 30px;
     border-radius: var(--radius);
+    background: var(--code-bg);
+}
+
+.paginav a {
+    padding-inline-start: 14px;
+    padding-inline-end: 14px;
+    border-radius: var(--radius);
 }
 
 .paginav svg {
