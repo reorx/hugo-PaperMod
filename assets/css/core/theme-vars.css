@@ -7,6 +7,7 @@
     --header-height: 60px;
     --footer-height: 80px;
     --radius: 8px;
+    --monospace: "Lucida Console", Monaco, "Consolas", monospace;
 
     --theme: rgb(255, 255, 255);
     --entry: rgb(255, 255, 255);

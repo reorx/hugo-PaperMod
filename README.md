@@ -10,6 +10,10 @@ Features and changes:
 - Social icons from [Simple Icons](https://simpleicons.org/)
 - Opinionated UI enhancements
 
+## Getting started
+
+You can use [reorx/papermodx-example](https://github.com/reorx/papermodx-example) as a boilerplate to create a new Hugo site with PaperModX theme. For detailed instructions please see the README of papermodx-example repo.
+
 ## Table of Contents (ToC) floating on the side
 
 By adding config:

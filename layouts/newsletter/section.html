@@ -14,7 +14,7 @@
 
   {{ $pages := where .Pages "Params.hidden" "!=" true }}
   {{ if $pages }}
-  <h2>最新通讯</h2>
+  <h2>Latest Issues</h2>
 
   <div class="list">
   {{- range first 5 $pages }}
@@ -36,7 +36,7 @@
   </div>
   {{ end }}
 
-  <h2>相关链接</h2>
+  <h2>Links</h2>
 
   {{- partial "inline_links.html" . -}}
 </div>

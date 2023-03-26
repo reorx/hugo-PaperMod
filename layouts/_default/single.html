@@ -56,7 +56,11 @@
     {{- if $isNewsletter }}
       <div class="newsletter-sub">
         <div class="notice">
-          感谢你能读到这里，如果觉得有趣的话，欢迎在下方输入邮箱进行订阅。
+          {{- if site.Params.newsletter.notice.usePartial }}
+            {{- partial "newsletter_notice.html"}}
+          {{- else }}
+            {{- site.Params.newsletter.notice.content | default "Thanks for reading, if you like it, please subscribe below." }}
+          {{- end }}
         </div>
         {{- partial "newsletter_sub_form.html"}}
       </div>
@@ -64,6 +68,7 @@
   </footer>
 
   {{- if not (.Param "noComments") }}
+    <div class="comments-separator"></div>
     {{- partial "comments.html" . }}
   {{- end }}
 </article>

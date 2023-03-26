@@ -13,6 +13,7 @@ body.type-newsletter {
   --signature: #CB3A56;
   --signature-bg: rgba(203, 58, 87, 0.239);
   --signature-bg-dim: rgba(203, 58, 87, 0.147);
+  --signature-bg-dimmer: rgba(203, 58, 87, 0.084);
   --main-border: 5px solid var(--signature);
   --icon-length: 50px;
   --icon-font-size: 32px;
@@ -43,19 +44,27 @@ body.type-newsletter {
   }
 
   /* shared */
-  .sub-form {
-    display: flex;
-    flex-direction: column;
-    margin: calc(var(--content-gap) * 1.5) 0;
+  .subscribe-form {
+    margin: calc(var(--content-gap) * 2) 0;
+
     form {
       display: flex;
+      flex-direction: column;
       line-height: 1.2em;
       flex-wrap: wrap;
     }
-    input {
+    .input-group {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .subscribe-option {
+      margin-top: 8px;
+    }
+    input[type=text] {
       border: 3px solid var(--signature-bg-dim);
       color: var(--secondary);
       border-radius: 0px;
+      border-color: var(--signature-bg);
       appearance: none;
       outline: none;
       background-color: var(--theme);
@@ -76,13 +85,40 @@ body.type-newsletter {
       margin-left: var(--content-gap);
       white-space: nowrap;
     }
+    label, .label {
+      font-size: .85em;
+      margin-right: 16px;
+    }
+    .label {
+      color: var(--secondary);
+      line-height: 1.2;
+    }
+    input[type=radio] {
+      margin-left: 0;
+      margin-top: 0;
+    }
   }
+
   @media screen and (max-width: $small) {
-    .sub-form {
+    .subscribe-form {
+      font-size: .9em;
+      input[type=text] {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
       button {
+        width: 96px;
         margin-left: 0;
-        margin-top: calc(var(--content-gap)/2);
-        flex-grow: 1;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .hide-for-sm {
+        display: none;
+      }
+      .label {
+        display: block;
+        width: 100%;
+        margin-bottom: 4px;
       }
     }
   }
@@ -284,18 +320,16 @@ body.type-newsletter.kind-page {
 
   .newsletter-sub {
     margin-top: calc(var(--content-gap) * 1.5);
-    background-color: var(--signature-bg-dim);
-    padding: 1em;
+    background-color: var(--signature-bg-dimmer);
+    padding: var(--content-gap) var(--gap);
     .notice {
-      font-size: .8em;
+      font-size: .9em;
+      font-weight: bold;
       color: var(--signature);
       line-height: 1.6;
     }
-    .sub-form {
-      margin: 1em 0;
-      input {
-        border-color: var(--signature-bg);
-      }
+    .subscribe-form {
+      margin: var(--content-gap) 0 0;
     }
   }
 }

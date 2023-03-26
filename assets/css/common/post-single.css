@@ -245,6 +245,7 @@ h6:hover .anchor {
     padding: 4px 5px;
     border-radius: 3px;
     font-size: .95em;
+    font-family: var(--monospace);
 }
 .post-content pre code {
     /* reset inline code */
@@ -254,15 +255,18 @@ h6:hover .anchor {
     overflow-x: auto;
     border-radius: var(--radius);
     word-break: break-all;
+    font-family: var(--monospace);
 }
 .post-content .chroma code {
     background-color: inherit;
+    font-family: var(--monospace);
 }
 
 .post-content blockquote {
     margin: 20px 0;
     padding: 0 14px;
-    border-inline-start: 3px solid var(--primary);
+    border-inline-start: 3px solid var(--tertiary-bg);
+    opacity: 0.8;
 }
 
 .post-content sup {
@@ -401,7 +405,10 @@ h6:hover .anchor {
 .post-footer {
     margin-top: calc(var(--content-gap) * 1.5);
     padding-bottom: calc(var(--content-gap) * 2);
-    border-bottom: 3px solid var(--tertiary);
+}
+.comments-separator {
+    height: 3px;
+    background-color: var(--tertiary);
 }
 
 .share-buttons {
