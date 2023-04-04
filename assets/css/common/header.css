@@ -71,6 +71,13 @@ body:not(.dark) #sun {
     margin-inline-start: var(--gap);
 }
 
+#menu li.search-icon svg {
+    width: 18px;
+    height: auto;
+    position: relative;
+    top: 5px;
+}
+
 #menu a {
     font-size: 16px;
     font-weight: 500;
