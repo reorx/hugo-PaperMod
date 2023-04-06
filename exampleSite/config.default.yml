@@ -20,7 +20,7 @@ params:
   mainSections:
     - docs
     - posts
-  disableAnchoredHeadings: true
+  disableAnchoredHeadings: false
   images: ["cover.png"]
   DateFormat: "2006-01-02"
   useCustomAnalytics: true
