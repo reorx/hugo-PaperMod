@@ -605,6 +605,7 @@ h6:hover .anchor {
     font-weight: 400;
     padding: 1em;
     background-color: var(--code-bg);
+    border-radius: var(--radius);
 }
 
 .footnotes a {
