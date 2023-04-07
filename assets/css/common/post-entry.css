@@ -9,6 +9,7 @@
     background: var(--entry);
     border-radius: var(--radius);
     border: 1px solid var(--border);
+    transition: var(--link-transition);
 }
 .post-entry:hover {
     border-color: var(--link-hover-color);

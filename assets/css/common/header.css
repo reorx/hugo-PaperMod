@@ -34,6 +34,7 @@
     font-size: 24px;
     font-weight: 700;
     margin-right: 20px;
+    transition: var(--link-transition);
 }
 
 .logo a:hover {
@@ -58,6 +59,7 @@
 button#theme-toggle {
     font-size: 26px;
     margin: auto 4px;
+    transition: var(--link-transition);
 }
 
 button#theme-toggle:hover {
@@ -90,6 +92,7 @@ body:not(.dark) #sun {
     color: var(--secondary);
     display: inline-block;
     line-height: 1.5em;
+    transition: var(--link-transition);
 }
 #menu a:hover {
     color: var(--link-hover-color);
