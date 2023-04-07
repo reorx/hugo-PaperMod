@@ -381,6 +381,7 @@ h6:hover .anchor {
 .toc ul {
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 .toc li ul {
     margin-inline-start: 20px;
@@ -396,6 +397,7 @@ h6:hover .anchor {
 }
 .toc li a:hover {
     text-decoration: underline;
+    color: var(--link-hover-color);
 }
 
 .toc summary:focus {
