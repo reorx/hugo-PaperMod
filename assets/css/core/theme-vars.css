@@ -19,6 +19,7 @@
     --content: rgb(31, 31, 31);
     --code-bg: rgb(245, 245, 245);
     --border: rgb(238, 238, 238);
+    --header-color: #dfe7f4;
     --link-background-color: #e8e3f7;
     --link-color: var(--primary);
     --link-hover-color: #573eaa;
@@ -50,6 +51,7 @@
     --content: rgb(196, 196, 197);
     --code-bg: rgb(55, 56, 62);
     --border: rgb(51, 51, 51);
+    --header-color: #28303f;
     --link-background-color: #5242746d;
     --link-color: var(--primary);
     --link-hover-color: #876fd6;
