@@ -10,7 +10,7 @@
     --monospace: "Lucida Console", Monaco, "Consolas", monospace;
 
     --theme: rgb(255, 255, 255);
-    --entry: rgb(255, 255, 255);
+    --entry: var(--code-bg);
     --primary: rgb(30, 30, 30);
     --primary-dim: rgb(60, 60, 60);
     --secondary: rgb(108, 108, 108);
@@ -64,7 +64,7 @@
 }
 
 .list-page {
-    background: var(--code-bg);
+    background: var(-theme);
 }
 
 .dark.list-page {
