@@ -20,11 +20,11 @@
     --code-bg: rgb(245, 245, 245);
     --border: rgb(238, 238, 238);
     --header-color: #dfe7f4;
-    --link-background-color: #e8e3f7;
+    --link-background-color: #6486ed4d;
     --link-color: var(--primary);
-    --link-hover-color: #573eaa;
+    --link-hover-color:  #6486ed;
     --link-underline-shadow: 0 1px 0 var(--link-color);
-    --link-hover-underline-color: #6549c0;
+    --link-hover-underline-color: var(--link-hover-color);
     --link-hover-underline-shadow: 0 2px 0 var(--link-hover-underline-color);
     --link-transition: all 0.3s ease;
     --line-yellow: url("data:image/svg+xml;charset=utf-8,%3Csvg preserveAspectRatio='none' width='120' height='6' viewBox='0 0 120 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M119 0.8C60 4 50-0.5 1 1.5' stroke='%23fc0' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
@@ -52,9 +52,9 @@
     --code-bg: rgb(55, 56, 62);
     --border: rgb(51, 51, 51);
     --header-color: #28303f;
-    --link-background-color: #5242746d;
+    --link-background-color: #6495ed4d;
     --link-color: var(--primary);
-    --link-hover-color: #876fd6;
+    --link-hover-color: #6495ed;
     --link-underline-shadow: 0 1px 0 var(--link-color);
     --link-hover-underline-color: var(--link-hover-color);
     --link-hover-underline-shadow: 0 2px 0 var(--link-hover-underline-color);
