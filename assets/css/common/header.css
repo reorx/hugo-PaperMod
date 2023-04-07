@@ -33,6 +33,11 @@
 .logo a {
     font-size: 24px;
     font-weight: 700;
+    margin-right: 20px;
+}
+
+.logo a:hover {
+    color: var(--link-hover-color);
 }
 
 .logo a img,
@@ -53,6 +58,10 @@
 button#theme-toggle {
     font-size: 26px;
     margin: auto 4px;
+}
+
+button#theme-toggle:hover {
+    color: var(--link-hover-color);
 }
 
 body.dark #moon {
@@ -83,7 +92,7 @@ body:not(.dark) #sun {
     line-height: 1.5em;
 }
 #menu a:hover {
-    color: var(--primary);
+    color: var(--link-hover-color);
 }
 
 #menu a.active:hover {
