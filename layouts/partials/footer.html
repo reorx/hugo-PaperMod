@@ -26,14 +26,9 @@
 
 {{- partial "extend_footer.html" . }}
 
+{{ if not site.Params.disableThemeToggle -}}
 <script>
   (function() {
-    /* theme toggle */
-    const disableThemeToggle = '{{ if site.Params.disableThemeToggle }}1{{ end }}' == '1';
-    if (disableThemeToggle) {
-      return;
-    }
-
     let button = document.getElementById("theme-toggle")
     // remove the listeners first to prevent adding duplicated listener when history goes back and forth
     button.removeEventListener('click', toggleThemeListener)
@@ -41,6 +36,7 @@
     button.addEventListener('click', toggleThemeListener)
   })();
 </script>
+{{- end }}
 
 <script>
   (function () {
