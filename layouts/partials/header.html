@@ -72,7 +72,7 @@ function toggleThemeListener() {
         <div class="logo">
             {{- $label_text := (site.Params.logo.text | default site.Title) }}
             {{- if site.Title }}
-            <a href="{{ "" | absURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
+            <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
                 {{- if site.Params.logo.icon }}
                 {{- $img := resources.Get site.Params.logo.icon }}
                 {{- if $img }}
@@ -88,25 +88,27 @@ function toggleThemeListener() {
                             {{- $img = $img.Resize "x30" }}
                         {{- end }}
                     {{- end }}
-                    <img src="{{ $img.Permalink }}" alt="logo" aria-label="logo"
+                    <img src="{{ $img.Permalink }}" alt="" aria-label="logo"
                         height="{{- site.Params.logo.iconHeight | default "30" -}}" width="{{- site.Params.logo.iconWidth | default "30" -}}">
                 {{- else }}
-                <img src="{{ $img.Permalink }}" alt="logo" aria-label="logo"
+                <img src="{{ $img.Permalink }}" alt="" aria-label="logo"
                     height="{{- site.Params.logo.iconHeight | default "30" -}}" width="{{- site.Params.logo.iconWidth | default "30" -}}">
                 {{- end -}}
+                {{- else if hasPrefix site.Params.label.iconSVG "<svg" }}
+                    {{ site.Params.label.iconSVG | safeHTML }}
                 {{- end -}}
                 {{- $label_text -}}
             </a>
             {{- end }}
-            <span class="logo-switches">
+            <div class="logo-switches">
                 {{- if (not site.Params.disableThemeToggle) }}
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -121,7 +123,30 @@ function toggleThemeListener() {
                     </svg>
                 </button>
                 {{- end }}
-            </span>
+            <!-- </span> -->
+                {{- $lang := .Lang}}
+                {{- $separator := or $label_text (not site.Params.disableThemeToggle)}}
+                {{- with site.Home.AllTranslations }}
+                <ul class="lang-switch">
+                    {{- if $separator }}<li>|</li>{{ end }}
+                    {{- range . -}}
+                    {{- if ne $lang .Lang }}
+                    <li>
+                        <a href="{{- .Permalink -}}" title="{{ .Language.Params.languageAltTitle | default (.Language.LanguageName | emojify) | default (.Lang | title) }}"
+                            aria-label="{{ .Language.LanguageName | default (.Lang | title) }}">
+                            {{- if (and site.Params.displayFullLangName (.Language.LanguageName)) }}
+                            {{- .Language.LanguageName | emojify -}}
+                            {{- else }}
+                            {{- .Lang | title -}}
+                            {{- end -}}
+                        </a>
+                    </li>
+                    {{- end -}}
+                    {{- end}}
+                </ul>
+                {{- end }}
+            </div>
+<!-- END HERE -->
         </div>
         {{- $currentPage := . }}
         <ul id="menu">
