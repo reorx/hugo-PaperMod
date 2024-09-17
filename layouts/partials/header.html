@@ -1,3 +1,4 @@
+{{ if not site.Params.disableThemeToggle -}}
 <script data-no-instant>
 function switchTheme(theme) {
   switch (theme) {
@@ -66,6 +67,7 @@ function toggleThemeListener() {
     switchTheme(theme);
   })();
 </script>
+{{- end }}
 
 <header class="header">
     <nav class="nav">
