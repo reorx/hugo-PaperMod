@@ -42,12 +42,12 @@
 {{- $reset := (resources.Get "css/core/reset.css") }}
 {{- $media := (resources.Get "css/core/zmedia.css") }}
 {{- $common := (resources.Match "css/common/*.css") | resources.Concat "assets/css/common.css" }}
-{{- $commonHighlight := (resources.Get "css/common/highlight.scss") | resources.ToCSS }}
+{{- $commonHighlight := (resources.Get "css/common/highlight.scss") | css.Sass }}
 
 {{- /* order is important */}}
 {{- $core := (slice $theme_vars $reset $common $commonHighlight $media) | resources.Concat "assets/css/core.css" }}
 {{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" }}
-{{- $extendedScss := (resources.Match "css/extended/*.scss") | resources.Concat "assets/css/extended.scss" | resources.ToCSS }}
+{{- $extendedScss := (resources.Match "css/extended/*.scss") | resources.Concat "assets/css/extended.scss" | css.Sass }}
 
 {{- /* bundle all required css */}}
 {{- /* Add extended css after theme style */ -}}
